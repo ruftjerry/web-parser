@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "doc_type": "single_product",
+    "domain": "audio",
+    "description": "marantz_mm_7025_stereo_power_amplifier",
+    "primary_entity": "Marantz MM-7025",
+    "search_anchors": [
+      "Marantz",
+      "Stereo Power Amplifier",
+      "MM-7025",
+      "Audio Equipment",
+      "Amplifier for sale"
+    ],
+    "extraction_mode": "detail",
+    "primary_currency": "USD"
+  },
+  "summary": [
+    "The Marantz MM-7025 Stereo Power Amplifier is currently listed for sale at $750.",
+    "This amplifier is in excellent condition and is confirmed to be in perfect working status.",
+    "It is compatible with AV Receivers and includes a Marantz trigger cable.",
+    "Inputs include both RCA and XLR options, enhancing its versatility for audio setups.",
+    "The item is being sold by a private party located in Watsonville, within the SF Bay Area and Santa Cruz, with local pickup only."
+  ],
+  "items": [
+    {
+      "name": "Marantz MM-7025 Stereo Power Amplifier",
+      "price": "$750",
+      "attributes": {
+        "condition": "Excellent",
+        "working_status": "Works perfectly",
+        "compatibility": "Works great with your AVR",
+        "includes": "Marantz trigger cable",
+        "inputs": "RCA and XLR",
+        "seller": "private party",
+        "location": "Watsonville, SF Bay Area, Santa Cruz",
+        "date_posted": "2025-08-13",
+        "shipping": "Local pickup"
+      }
+    }
+  ]
+}

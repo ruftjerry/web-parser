@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "doc_type": "product_list",
+    "domain": "audio",
+    "description": "floor_speakers_best_buy",
+    "primary_entity": "Floor Speakers",
+    "search_anchors": [
+      "floor speakers",
+      "home audio",
+      "Black Friday deals",
+      "Best Buy",
+      "audio speakers"
+    ],
+    "extraction_mode": "list"
+  },
+  "summary": [
+    "Total Items Found: 15",
+    "Price Range: $139.59 - $637.49",
+    "Average Price: $319.02"
+  ],
+  "items": [
+    {
+      "name": "JBL - Stage2 280F 2.5-Way Dual 8\" Floorstanding Loudspeaker - Each - Espresso",
+      "price": "$399.95",
+      "attributes": {
+        "rating": "4.7",
+        "reviews": "20 reviews",
+        "financing": "suggested payments with 12‑Month Financing",
+        "availability": "Pick up in 1 hour, Get it by Tue, Nov 25",
+        "shipping": "FREE"
+      }
+    },
+    {
+      "name": "Klipsch - Reference 800 Series Dual 8\" 600-Watt Passive 2-Way Floor Standing Speaker (Each) - Black",
+      "price": "$229.99",
+      "attributes": {
+        "rating": "4.8",
+        "reviews": "258 reviews",
+        "financing": "suggested payments with 12‑Month Financing",
+        "availability": "Pick up in 1 hour, Get it by Tue, Nov 25",
+        "shipping": "FREE"
+      }
+    },
+    {
+      "name": "Sony - CS Speaker – 3-way 4-driver hi-res Floor-Standing speaker (2025) each - Black",
+      "price": "$198",
+      "attributes": {
+        "rating": "4.8",
+        "reviews": "4 reviews",
+        "availability": "Pick up in 1 hour, Get it by Tue, Nov 25",
+        "shipping": "FREE"
+      }
+    },
+    {
+      "name": "JBL - Stage2 260F 2.5-Way Dual 6.5-inch (165mm) Floorstanding Loudspeaker - Each - Latte",
+      "price": "$329.95",
+      "attributes": {
+        "rating": "4.8",
+        "reviews": "29",
+        "financing": "12‑Month Financing",
+        "availability": "Pick up in 1 hour, Get it tomorrow, FREE"
+      }
+    },
+    {
+      "name": "Polk Audio - Monitor XT60 Tower Speaker - Midnight Black",
+      "price": "$139.59/mo.",
+      "attributes": {
+        "rating": "4.7",
+        "reviews": "117",
+        "deal": "Black Friday Deal",
+        "additional_details": "Add to cart"
+      }
+    },
+    {
+      "name": "Polk Audio - Monitor XT70 Tower Speaker - Midnight Black",
+      "price": "$399.95",
+      "attributes": {
+        "reviews": "4.8 (96 reviews)",
+        "sku": "$33.33/mo.",
+        "comp_value": "$659.95",
+        "savings": "$260",
+        "availability": "Add to cart",
+        "is_related": true
+      }
+    },
+    {
+      "name": "VEVOR - Floorstanding Tower Speakers, 2-Way",
+      "price": "$289.99",
+      "attributes": {
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "KEF - Q11 Meta Floorstanding Speaker (Each) - Black",
+      "price": "$229.99",
+      "attributes": {
+        "rating": "4.9",
+        "reviews": "14 reviews",
+        "financing": "suggested payments with 24‑Month Financing",
+        "availability": "Pick up in 1 hour, Get it by Tue, Nov 25",
+        "shipping": "FREE"
+      }
+    },
+    {
+      "name": "Klipsch - Reference Premiere Dual 6.5\" 500-Watt Passive 2-Way Floor Speaker (Each) - Ebony",
+      "price": "$489.99",
+      "attributes": {
+        "rating": "5.0",
+        "reviews": "12 reviews",
+        "financing": "suggested payments with 12‑Month Financing",
+        "availability": "Pick up Fri, Dec 5, Get it by Tue, Dec 2",
+        "shipping": "FREE"
+      }
+    },
+    {
+      "name": "Package - Polk Audio - Monitor XT60 Tower Speaker - Midnight Black (2 pack)",
+      "price": "$312.49",
+      "attributes": {
+        "rating": "4.7",
+        "reviews": "117 reviews",
+        "package_price": "Price for 2 pack",
+        "availability": "Get everything in 3 days",
+        "shipping": "FREE",
+        "is_related": true
+      }
+    },
+    {
+      "name": "Klipsch - Reference Series Dual 6-1/2\" 400-Watt Passive 2-Way Floor Speaker (Each) - Black",
+      "price": "from $248.99",
+      "attributes": {
+        "rating": "4.9",
+        "reviews": "126 reviews",
+        "financing": "suggested payments with 12‑Month Financing",
+        "pickup": "Pick up in 1 hour",
+        "shipping": "FREE"
+      }
+    },
+    {
+      "name": "Klipsch - Reference 800 Series Dual 8\" 600-Watt Passive 2-Way Floor Standing Speaker (Each) - Black",
+      "price": "$637.49",
+      "attributes": {
+        "financing": "$35.42/mo.",
+        "sku": "$31.67/mo.",
+        "savings": "Save $212.50",
+        "comp_value": "$849.99",
+        "is_related": true
+      }
+    },
+    {
+      "name": "JBL - Stage2 280F 2.5-Way Dual 8\" Floorstanding…",
+      "price": "$399.95",
+      "attributes": {
+        "reviews": "20",
+        "deal": "Black Friday Deal",
+        "comp_value": "$659.95"
+      }
+    },
+    {
+      "name": "Sony - CS Speaker – 3-way 4- driver hi-res Floor-Standing…",
+      "price": "$199.99",
+      "attributes": {
+        "reviews": "4",
+        "deal": "Black Friday Deal",
+        "comp_value": "$299.99"
+      }
+    },
+    {
+      "name": "Polk Audio - Monitor XT70 Tower Speaker - Midnight…",
+      "price": "$279.00",
+      "attributes": {
+        "reviews": "96",
+        "comp_value": "$349.00"
+      }
+    }
+  ]
+}

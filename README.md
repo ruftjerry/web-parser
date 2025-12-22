@@ -1,28 +1,62 @@
-# The Pi-Catcher (Web Parser) 📥
 
-A "Drop-and-Forget" archival engine running on a Raspberry Pi 5. It turns raw web pages into clean, permanent archives.
+---
 
-## The Concept
+# The Pi-Catcher: Research Assistant 📥
 
-Instead of fighting anti-bot protections with scrapers, we use the **Browser** to capture the page (Visual Truth) and the **Pi** to process it (Data Truth).
+A "Drop-and-Forget" archival engine running on a Raspberry Pi 5. This tool turns messy web pages (Amazon, eBay, specialized retail) into structured, high-context Markdown research notes using LLM-powered extraction.
 
-1. **Capture (Mac):** You save a page using the **SingleFile** extension.
-2. **Transport:** The file saves directly to a network folder (`Pi_Inbox`) monitored by the Pi.
-3. **Process (Pi):** A background service detects the new file and instantly creates:
-* **PDF:** A full-color, print-accurate snapshot (using Playwright).
-* **Markdown:** A clean, LLM-ready text file with metadata (using BS4).
+## 🎯 The Mission
 
+Modern product pages and search grids are filled with "noise" (ads, trackers, related items) that make traditional scraping difficult. **The Pi-Catcher** leverages the reasoning power of an LLM to "see" what a human sees, extracting key specs and pricing from single items or complex lists.
 
+## 🛠️ The Pipeline: Non-Destructive Parsing
 
-## Architecture
+The system uses a three-stage approach to ensure you never lose the original source data while gaining maximum utility:
 
-* **Hardware:** Raspberry Pi 5
-* **Trigger:** Filesystem Watcher (`watchdog`)
-* **PDF Engine:** Playwright (Headless Chromium)
-* **Text Engine:** BeautifulSoup4 + Markdownify
-* **Service:** Systemd (Auto-starts on boot)
+1. **The HTML Source:** Keeps the original `SingleFile` or `PDF` for archival.
+2. **The Raw Attempt:** A text-heavy extraction of the page content.
+3. **The Clean Result:** The LLM-parsed Markdown file containing organized specs, prices, and summaries.
 
-## Installation
+### Supported Scenarios:
+
+* **Single Listings:** Specific items (e.g., a camera on eBay) including condition, bid amounts, and technical specs.
+* **Grids/Lists:** Search result pages or category pages (e.g., Micro Center CPU lists) converted into clean Markdown tables.
+* **Research Areas:** Audio gear, photography equipment, computer hardware, and individual company product pages.
+
+---
+
+## 📂 Project Structure
+
+```text
+/home/pi5/projects/web-parser
+│
+├── Pi_Inbox/                     <-- THE HOT FOLDER (Map this to your Mac/PC)
+│   ├── Research_Queue/           <-- Drop SingleFile HTML or PDFs here
+│   └── Processed_Archive/        <-- Completed runs (grouped by date/item)
+│
+├── Scripts/
+│   ├── folder_watcher.py         <-- The Traffic Cop (Monitors the Inbox)
+│   ├── research_assistant.py     <-- Logic: Sends context to LLM & parses MD
+│   └── utils.py                  <-- Cleaning & file handling helpers
+│
+├── venv/                         <-- Python Virtual Environment
+├── requirements.txt              <-- Dependencies (Watchdog, OpenAI/Anthropic)
+└── README.md
+
+```
+
+---
+
+## ⚙️ Architecture
+
+* **Hardware:** Raspberry Pi 5 (Optimized for 24/7 background processing).
+* **Trigger:** `watchdog` (Filesystem Event Handler).
+* **Extraction Engine:** LLM-based (GPT-4o or Claude 3.5 Sonnet) to handle unpredictable web layouts.
+* **Capture Source:** **SingleFile** Browser Extension (preferred for HTML context) or **Print to PDF**.
+
+---
+
+## 🚀 Installation & Setup
 
 ### 1. Python Environment
 
@@ -32,42 +66,47 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
-pip install watchdog playwright beautifulsoup4 markdownify
-playwright install chromium
+pip install watchdog beautifulsoup4 markdownify openai
 
 ```
 
-### 2. Mac Setup (The Capture Tool)
+### 2. Configure the Watcher
 
-* **Extension:** Install **SingleFile** (Chrome/Edge/Safari).
-* **Filename Template:** `{date-iso}_{time-iso} {page-title}`
-* **Destination:** Map the `Pi_Inbox` network drive and drag it to your Finder Sidebar favorites.
+Update `Scripts/folder_watcher.py` to point to your Raspberry Pi's network-attached storage or local folder.
 
-### 3. The Script (`server.py`)
+### 3. Service Management (Systemd)
 
-The script monitors `/home/pi5/Desktop/Pi_Inbox`. It ignores Mac metadata files (`._`) and auto-renames files based on the actual HTML `<title>` tag.
-
-### 4. Service Management (Systemd)
-
-The script runs as a background service named `web-parser`.
+The parser runs as a background service so it's always ready when you save a file.
 
 ```bash
-# Check status (Is it alive?)
+# Check if the service is running
 sudo systemctl status web-parser
 
-# Restart (After changing code)
+# Restart after updating the LLM prompt
 sudo systemctl restart web-parser
 
-# View Live Logs (Watch it work)
+# Watch the live logs as you drop files
 journalctl -u web-parser -f
 
 ```
 
-## Usage
+---
 
-1. Navigate to any webpage (Job post, eBay listing, Article).
-2. Click **SingleFile** and save to **Pi_Inbox**.
-3. Check the folder in 5 seconds. You will see:
-* `YYYYMMDD_HHMMSS_Page_Title.pdf`
-* `YYYYMMDD_HHMMSS_Page_Title.md`
-* *(Original HTML is moved to `/processed_html`)*
+## 🖥️ Usage
+
+1. **Capture:** Use **SingleFile** to save a product page (e.g., a vintage lens on eBay).
+2. **Drop:** Move that file into the `Pi_Inbox/Research_Queue` folder.
+3. **Analyze:** The Pi-Catcher detects the file, sends the text to the LLM, and creates a folder in `Processed_Archive` containing:
+* `source.html` (The original file).
+* `research_notes.md` (The clean, structured data).
+
+
+
+---
+
+## 🛠️ Development Focus
+
+* **`research_assistant.py`**: This is where the Prompt Engineering lives. It instructs the LLM to identify if the page is a **Single Item** or a **List/Grid** and format the output accordingly.
+* **Data Integrity**: The script ensures no data is deleted. If an LLM call fails, the raw HTML remains safe in the inbox for a retry.
+
+---

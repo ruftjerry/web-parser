@@ -1,0 +1,549 @@
+{
+  "meta": {
+    "doc_type": "product_list",
+    "domain": "audio",
+    "description": "electronics_for_sale_amplifier_near_scotts_valley",
+    "primary_entity": "Amplifier",
+    "search_anchors": [
+      "amplifier",
+      "speakers",
+      "audio system",
+      "cables",
+      "DAC"
+    ],
+    "extraction_mode": "list",
+    "primary_currency": "USD"
+  },
+  "summary": [],
+  "items": [
+    {
+      "name": "AMP Crown 1160MA Harman 35W Powered Amplifier",
+      "price": "$200",
+      "attributes": {
+        "location": "san jose north",
+        "date": "11/4"
+      }
+    },
+    {
+      "name": "AMP TOA A-724 240W Amplifier A-700 Series",
+      "price": "$200",
+      "attributes": {
+        "location": "san jose north",
+        "date": "11/4",
+        "is_accessory": true
+      }
+    },
+    {
+      "name": "Onkyo M-282 power amplifier",
+      "price": "$200",
+      "attributes": {
+        "location": "san jose west",
+        "date": "11/18"
+      }
+    },
+    {
+      "name": "The Fisher 60 Integrated Amplifier Record Player Turntable",
+      "price": "$200",
+      "attributes": {
+        "location": "san jose west",
+        "date": "11/24"
+      }
+    },
+    {
+      "name": "Crown XLS 802 (XLS802) 2-Channel Power Amplifier",
+      "price": "$250",
+      "attributes": {
+        "location": "morgan hill",
+        "date": "11/2"
+      }
+    },
+    {
+      "name": "Yoko da-x88pro digital karaoke mixing amplifier.",
+      "price": "$250",
+      "attributes": {
+        "location": "san jose north",
+        "date": "11/19"
+      }
+    },
+    {
+      "name": "Triad Brand 250-Watt Sub-Woofer Power Amplifier",
+      "price": "$250",
+      "attributes": {
+        "location": "san jose downtown",
+        "date": "11/20",
+        "is_parts_only": true
+      }
+    },
+    {
+      "name": "Onkyo Brand Audiophile-Quality Two-Channel Audio Power Amplifier",
+      "price": "$300",
+      "attributes": {
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Sony Brand Home Theater Receiver with 500 Watt Amplifier: STR-DA1ES",
+      "price": "$300",
+      "attributes": {
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Denon Home Amp Wireless Integrated Stereo Amplifier - Like New",
+      "price": "$450",
+      "attributes": {
+        "location": "san jose east",
+        "date": "5h ago"
+      }
+    },
+    {
+      "name": "Russound AP-48 Eight Channel Power Amplifier for Multi-room, Multi-zon",
+      "price": "$450",
+      "attributes": {
+        "location": "santa clara",
+        "date": "11/24"
+      }
+    },
+    {
+      "name": "Rotel RA-1520 Stereo Integrated Amplifier",
+      "price": "$500",
+      "attributes": {
+        "location": "campbell",
+        "date": "5m ago"
+      }
+    },
+    {
+      "name": "Eico ST-70 Amplifier",
+      "price": "$550",
+      "attributes": {
+        "location": "san jose west",
+        "date": "11/20"
+      }
+    },
+    {
+      "name": "Vintage Tube MONO Block Amplifier",
+      "price": "$599",
+      "attributes": {
+        "condition": "Untested",
+        "location": "gilroy",
+        "date": "11/20"
+      }
+    },
+    {
+      "name": "H. H. Scott 330 D AM/FM Tube Stereomaster & 299 Stereo Amplifier",
+      "price": "$599",
+      "attributes": {
+        "location": "gilroy",
+        "date": "11/20"
+      }
+    },
+    {
+      "name": "JBL Synthesis S400 Stereo and S650 5 channel power amplifier",
+      "price": "$600",
+      "attributes": {
+        "location": "santa clara",
+        "date": "11/5"
+      }
+    },
+    {
+      "name": "Atomic Apocalypse 15” HIGH SPL subwoofer and Amplifier",
+      "price": "$600",
+      "attributes": {
+        "location": "san jose west",
+        "date": "11/13"
+      }
+    },
+    {
+      "name": "Tube integrated amplifier (US made)",
+      "price": "$630",
+      "attributes": {
+        "location": "san jose south",
+        "date": "11/22"
+      }
+    },
+    {
+      "name": "Hitachi MOSFET class A/B stereo power amplifier (Working)",
+      "price": "$630",
+      "attributes": {
+        "location": "san jose south",
+        "date": "11/22"
+      }
+    },
+    {
+      "name": "LSA VT-70 integrated amplifier",
+      "price": "$650",
+      "attributes": {
+        "location": "Los Altos",
+        "date": "11/6"
+      }
+    },
+    {
+      "name": "Rotel RMB 1565 5 channel power amplifier",
+      "price": "$650",
+      "attributes": {
+        "location": "san jose west",
+        "date": "11/13"
+      }
+    },
+    {
+      "name": "Sansui B-2101 Power amplifier",
+      "price": "$650",
+      "attributes": {
+        "location": "san jose east",
+        "date": "11/18"
+      }
+    },
+    {
+      "name": "Jolida Audio Integrated Stereo Tube Amplifier",
+      "price": "$700",
+      "attributes": {
+        "location": "san jose west",
+        "date": "11/2"
+      }
+    },
+    {
+      "name": "ADCOM GFA-555II (MKII) High Current Power Amplifier",
+      "price": "$750",
+      "attributes": {
+        "location": "san jose south",
+        "date": "11/24"
+      }
+    },
+    {
+      "name": "Primare Brand Audiophile-Quality Two-Channel Integrated Amplifier",
+      "price": "$800",
+      "attributes": {
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Harman Kardon Citation 7.1 Amplifier (negotiable)",
+      "price": "$880",
+      "attributes": {
+        "location": "los gatos",
+        "date": "11/18"
+      }
+    },
+    {
+      "name": "Orchard Audio Starkrimson Duo - Dual mono balanced power amplifier",
+      "price": "$950",
+      "attributes": {
+        "location": "san jose west",
+        "date": "11/13"
+      }
+    },
+    {
+      "name": "Primare Brand Audiophile-Quality Five-Channel Integrated Amplifier",
+      "price": "$1,000",
+      "attributes": {
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Audiophile-Quality Sony ES Brand 5-Channel 600-Watt Power Amplifier",
+      "price": "$1,000",
+      "attributes": {
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "NAD S170 Surround Sound Preamp & S250 Multi-Channel Amplifier",
+      "price": "$2,600",
+      "attributes": {
+        "location": "los altos",
+        "date": "11/16"
+      }
+    },
+    {
+      "name": "Fender Bullet 150 2-Channel 15-Watt 1x8\" Guitar Amp Amplifier",
+      "price": "$10",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose north",
+        "date": "11/24",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "TOA Mixer Amplifier BG-2120",
+      "price": "$25",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose north",
+        "date": "11/24",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Bose Stereo Amplifier Lifestyle SA3",
+      "price": "$40",
+      "attributes": {
+        "condition": "Used",
+        "location": "San Jose",
+        "date": "11/6",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Fosi Audio K5 Pro Gaming DAC and Headphone Amplifier",
+      "price": "$40",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose east",
+        "date": "11/21",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Winegard Brand Powered TV Signal Amplifier with FM Trap",
+      "price": "$40",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose downtown",
+        "date": "11/21",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Fosi Audio BT20A TPA3116 Bluetooth Mini Power Amplifier",
+      "price": "$50",
+      "attributes": {
+        "condition": "Used",
+        "location": "San Jose",
+        "date": "11/24",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "MERCEDES BENZ W210 E320 E430 E55 BOSE AMPLIFIER AMP OEM (1998_2002)",
+      "price": "$50",
+      "attributes": {
+        "condition": "Used",
+        "location": "sunnyvale",
+        "date": "10/29",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Sony STR-D1011",
+      "price": "$50",
+      "attributes": {
+        "condition": "Used",
+        "location": "willow glen / cambrian",
+        "date": "11/13",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "SONOS ZonePlayer ZP100 Digital Stereo Music System Amplifier",
+      "price": "$50",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/21",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Sherwood S 402 CP Integrated Stereo Amplifier As-Is *",
+      "price": "$60",
+      "attributes": {
+        "condition": "Used",
+        "location": "Watsonville",
+        "date": "11/25",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Schiit Magni 3 Headphone Amplifier Preamp",
+      "price": "$65",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/22",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "ONKYO TX-SV313PRO Audio Video Control Tuner Amplifier w/Phono Input",
+      "price": "$70",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/22",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Onkyo TX-902 Quartz Synthesized Tuner 2 Channels Amplifier R1",
+      "price": "$70",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/24",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "TEKTRONIX P6046 and Amplifier",
+      "price": "$75",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose east",
+        "date": "11/25",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Questyle M15i Headphone Amplifier Portable DAC",
+      "price": "$80",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose east",
+        "date": "11/21",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "Sony Brand Two-Channel Stereo Receiver w/ 200 Watt Built-In Amplifier",
+      "price": "$80",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose downtown",
+        "date": "11/21",
+        "shipping": "N/A"
+      }
+    },
+    {
+      "name": "ONKYO Integra A-SV810PRO AV Surround Integrated Amplifier R1",
+      "price": "$85",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Pragmatic High-performance Mono-block audio amplifier MBA120-CCPRN-AT",
+      "price": "$90",
+      "attributes": {
+        "condition": "Used",
+        "location": "santa clara",
+        "date": "11/24"
+      }
+    },
+    {
+      "name": "Pragmatic High-performance Mono-block audio amplifier MBA-120",
+      "price": "$90",
+      "attributes": {
+        "condition": "Used",
+        "location": "santa clara",
+        "date": "11/24"
+      }
+    },
+    {
+      "name": "KeyDigital Brand Audio-Video Matrix Switch & Distribution Amplifier",
+      "price": "$100",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Niles Audio Brand 6-Zone, 6-Input Audio Receiver w/ 12-Channel Amp",
+      "price": "$100",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "YAMAHA AV Receiver RX-V795A Stereo Amplifier for Record Player DVD CD TV",
+      "price": "$100",
+      "attributes": {
+        "condition": "Used",
+        "location": "Santa Cruz",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Pyle Pro P2001AT 2000W Hybrid Pre-Amplifier with AM/FM Tuner/Karaoke",
+      "price": "$100",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/22"
+      }
+    },
+    {
+      "name": "Sony Brand Home Theater Audio Receiver with 700 Watt Power Amplifier",
+      "price": "$140",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose downtown",
+        "date": "11/21"
+      }
+    },
+    {
+      "name": "Rotel RB-951 MKII 2 Channel Power Amplifier Stereo/Mono Bridged",
+      "price": "$150",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/24"
+      }
+    },
+    {
+      "name": "Vintage PIONEER SA-940 Stereo Integrated Amplifier 70 WPC 8Ohms. JAPAN",
+      "price": "$150",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/23"
+      }
+    },
+    {
+      "name": "Harman Kardon Citation Twenty Four (24) Power Amplifier",
+      "price": "$168",
+      "attributes": {
+        "condition": "Used",
+        "location": "cupertino",
+        "date": "11/22"
+      }
+    },
+    {
+      "name": "Marantz Amplifier / Receiver / CD Player",
+      "price": "$170",
+      "attributes": {
+        "condition": "Used",
+        "location": "san jose south",
+        "date": "11/22"
+      }
+    },
+    {
+      "name": "Superphon SA120 amp",
+      "price": "$200",
+      "attributes": {
+        "condition": "Used",
+        "location": "San Jose",
+        "date": "11/25"
+      }
+    },
+    {
+      "name": "KENWOOD KR-6600 STEREO AMPLIFIER TUNER Vintage Sound System Amp READ",
+      "price": "$200",
+      "attributes": {
+        "condition": "Used",
+        "location": "Watsonville",
+        "date": "11/25"
+      }
+    }
+  ]
+}
