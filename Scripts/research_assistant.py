@@ -74,7 +74,7 @@ def setup_logging(source_path: Path) -> logging.Logger:
     # Use hash of full path to ensure uniqueness across runs
     logger_name = f"research_{hashlib.md5(str(source_path).encode()).hexdigest()[:8]}"
     logger = logging.getLogger(logger_name)
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG)  # Changed to DEBUG to capture dedup details
     
     # File Handler
     fh = logging.FileHandler(log_dir / f"{source_path.stem}.log", encoding='utf-8')
@@ -82,7 +82,8 @@ def setup_logging(source_path: Path) -> logging.Logger:
     
     # Stream Handler (Minimal output to console to play nice with tqdm)
     sh = logging.StreamHandler()
-    sh.setFormatter(logging.Formatter('LOG: %(message)s'))
+    sh.setLevel(logging.INFO)  # Only INFO and above to console
+    sh.setFormatter(logging.Formatter('%(levelname)s: %(message)s'))
     
     if logger.hasHandlers():
         logger.handlers.clear()
@@ -253,13 +254,9 @@ def validate_item(item: Dict[str, Any], page_type: str, listing_mode: str) -> Tu
     evidence = item.get("price_evidence", "")
     
     if price_info["value"] > 0 and evidence:
-        # Extract purely digits from both strings to handle "$299.99" vs "29999" mismatch
-        price_digits = re.sub(r'[^\d]', '', str(price_info["value"]))
-        # Just check if the core significant digits appear in evidence
+        # Extract core price digits for matching
+        core_price = str(int(price_info["value"]))  # 299.99 -> "299"
         evidence_digits = re.sub(r'[^\d]', '', evidence)
-        
-        # If price is 299.0, digits is 2990. Evidence might be 299. Match simpler.
-        core_price = str(int(price_info["value"])) # 299
         
         if core_price not in evidence_digits:
              warnings.append("Price digits not found in evidence quote")
@@ -315,33 +312,39 @@ def normalize_attributes(item: Dict[str, Any]) -> Dict[str, Any]:
     item["attributes"] = clean_attrs
     return item
 
-def item_fingerprint(it: Dict[str, Any], page_type: str = "TYPE_A") -> str:
-    attrs = it.get("attributes", {})
+# -----------------------------
+# IMPROVED DEDUPLICATION
+# -----------------------------
+def create_item_signature(item: Dict[str, Any], mode: str = "strict") -> str:
+    """
+    Create item signature for deduplication.
     
-    # 1. Prefer Explicit IDs
+    mode='strict': Only exact duplicates (same name, price, seller, location)
+    mode='loose': Similar items (used for single listing dedup)
+    """
+    attrs = item.get("attributes", {})
+    
+    # Always prefer explicit IDs
     for key in ["listing_id", "url", "sku", "item_number"]:
         if val := attrs.get(key):
-            return sha1_text(f"{key}:{val}")
-
-    # 2. Fallback
-    name = normalize_name(it.get("name", ""))
-    price_info = extract_price_info(it.get("price", ""))
-    price_bucket = bucket_price(price_info["value"])
-    seller = normalize_name(str(attrs.get("seller", "")))
-    p_type = normalize_name(str(attrs.get("price_type", "")))
-
-    base = f"{name}|{price_bucket}|{seller}|{p_type}"
-
-    if "TYPE_A" in page_type:
-        loc = normalize_name(str(attrs.get("location", "")))
-        cond = normalize_name(str(attrs.get("condition", "")))
-        date_raw = normalize_name(str(attrs.get("date_raw", "")))
-        base += f"|{loc}|{cond}|{date_raw}"
-    else:
-        evidence_hash = sha1_text(it.get("price_evidence", ""))[:8]
-        base += f"|{evidence_hash}"
+            return sha1_text(f"id:{key}:{val}")
+    
+    if mode == "strict":
+        # Exact match - no normalization
+        name = (item.get("name") or "").strip().lower()
+        price = (item.get("price") or "").strip()
+        seller = (attrs.get("seller") or "").strip().lower()
+        location = (attrs.get("location") or "").strip().lower()
+        condition = (attrs.get("condition") or "").strip().lower()
         
-    return sha1_text(base)
+        # All fields must match for dedup
+        composite = f"{name}|{price}|{seller}|{location}|{condition}"
+        
+    else:  # mode == "loose"
+        # Just use normalized name (for single listing related items)
+        composite = normalize_name(item.get("name", ""))
+    
+    return sha1_text(composite)
 
 # -----------------------------
 # PDF ENGINE
@@ -516,6 +519,7 @@ def get_extraction_schema(page_type: str, strategy: Dict[str, Any], context_meta
                 "instructions": [
                     f"Use markers: {json.dumps(row_markers)}",
                     "Extract: Price, Condition, Availability, SKU.",
+                    "CRITICAL: Extract SKU/Model Number for EVERY item.",
                     "PRICING SEMANTICS: Mark price_type as 'retail_price'.",
                     "IGNORE 'Dates' (irrelevant in catalogs).",
                     "Do not extract 'Related Items'."
@@ -525,7 +529,7 @@ def get_extraction_schema(page_type: str, strategy: Dict[str, Any], context_meta
                         "price_type": "retail_price | sale_price",
                         "condition": "new | open_box | used",
                         "availability": "in_stock | backorder | out_of_stock",
-                        "sku": "string",
+                        "sku": "string (REQUIRED)",
                         "notes": "string",
                         "url": "optional_string"
                     })]
@@ -541,6 +545,7 @@ def get_extraction_schema(page_type: str, strategy: Dict[str, Any], context_meta
                     "Extract: Location, Shipping, Condition.",
                     "CRITICAL: Detect 'price_type'. Is this an 'asking_price' (Active) or 'sold_price' (Completed)?",
                     "EVIDENCE RULE: If price_type == 'sold_price', price_evidence MUST include a sold cue (e.g. 'Sold', 'Winning bid', 'Ended').",
+                    "CRITICAL: Extract listing_id or url if visible.",
                     date_req,
                     "Ignore 'Sponsored' items."
                 ],
@@ -553,7 +558,7 @@ def get_extraction_schema(page_type: str, strategy: Dict[str, Any], context_meta
                         "shipping": "string",
                         "seller": "string",
                         "listing_status": "sold | active | ended",
-                        "listing_id": "optional_string",
+                        "listing_id": "optional_string (EXTRACT IF VISIBLE)",
                         "url": "optional_string"
                     })]
                 }
@@ -725,7 +730,7 @@ def filter_and_tag_items(items: List[Dict[str, Any]], context: Dict[str, Any], l
                 it["attributes"]["date_inferred"] = inferred
         
         # Validation checks
-        it, warnings = validate_item(it, page_type, listing_mode) # Pass listing_mode explicitly
+        it, warnings = validate_item(it, page_type, listing_mode)
         if warnings:
             it["attributes"]["data_warnings"] = warnings
             
@@ -807,7 +812,9 @@ def summarize_doc(doc_meta: Dict[str, Any], items: List[Dict[str, Any]], logger:
 
     if not items: return ["No data extracted."]
 
+    # Stratified sampling with size guard
     sorted_items = sorted(items, key=lambda x: extract_price_info(x.get("price", ""))["value"])
+    
     if len(sorted_items) > 35:
         sample = sorted_items[:5] + sorted_items[-5:] + sorted_items[10:35]
     else:
@@ -910,6 +917,7 @@ def render_markdown(doc_meta: Dict[str, Any], items: List[Dict[str, Any]], summa
             if warns := attrs.pop("data_warnings", []): details.append(f"⚠️ {len(warns)} Warns")
             
             if loc := attrs.pop("location", None): details.append(f"📍 {loc}")
+            if sku := attrs.pop("sku", None): details.append(f"🆔 {sku}")
             
             lines.append(f"| {name} | {price_display} | {mid_col} | {status} | {'<br>'.join(details)} |")
         
@@ -929,6 +937,11 @@ def render_markdown(doc_meta: Dict[str, Any], items: List[Dict[str, Any]], summa
             lines.append(f"**Price:** {price} ({p_type})")
             if lc := attrs.get("landed_cost"):
                  lines.append(f"**Landed Cost:** ${lc:,.2f}")
+            
+            # Confidence warning for single listings
+            if it.get("confidence") == "low":
+                lines.append("> ⚠️ **Confidence:** LOW - Verify manually")
+            
             lines.append("---")
             
             if sku := attrs.get("sku"): lines.append(f"- **SKU:** `{sku}`")
@@ -980,7 +993,8 @@ class ResearchAssistant:
 
     def process(self):
         self.logger.info(f"🚀 Processing: {self.source_path.name}")
-        if HAS_TQDM: print(f"🚀 Processing: {self.source_path.name}")
+        if HAS_TQDM: 
+            print(f"🚀 Processing: {self.source_path.name}")
         
         try:
             if not self.source_path.suffix.lower() == ".pdf":
@@ -1005,6 +1019,7 @@ class ResearchAssistant:
             
             if "TYPE_B" in page_type:
                  pages_to_scan = pages_data[:4]
+                 self.logger.debug("Optimization: Scanning first 4 pages for Single Listing.")
             
             with ThreadPoolExecutor(max_workers=MAX_WORKERS) as exe:
                 futures = {
@@ -1033,33 +1048,73 @@ class ResearchAssistant:
                     except Exception as e:
                         self.logger.error(f"Page failed: {e}")
 
-            # Dedupe
-            unique = []
-            seen = set()
-            for it in all_items:
-                fp = item_fingerprint(it, page_type)
-                if fp not in seen:
-                    seen.add(fp)
-                    unique.append(it)
-            self.logger.info(f"🔍 Dedupe: {len(all_items)} -> {len(unique)}")
+            # ==========================================
+            # 3. MODE-AWARE DEDUPLICATION
+            # ==========================================
+            listing_mode = triage.get("listing_mode")
+            
+            if listing_mode == "retail_catalog":
+                # Retail: No dedup needed (each product should be unique)
+                self.logger.info("🔍 Skipping dedup (retail catalog mode)")
+                unique = all_items
+                
+            elif "TYPE_B" in page_type or "TYPE_C" in page_type:
+                # Single listing: Light dedup (remove related items that leaked)
+                unique = []
+                seen_names = set()
+                
+                for it in all_items:
+                    name_norm = normalize_name(it.get("name", ""))
+                    if name_norm and name_norm not in seen_names:
+                        seen_names.add(name_norm)
+                        unique.append(it)
+                    elif not name_norm:
+                        unique.append(it)  # Keep items without names
+                
+                removed = len(all_items) - len(unique)
+                self.logger.info(f"🔍 Dedupe (single listing): {len(all_items)} -> {len(unique)} (removed {removed} related items)")
+                
+            else:
+                # Marketplace feed: STRICT dedup (only exact duplicates)
+                unique = []
+                seen_signatures = {}
+                
+                for it in all_items:
+                    sig = create_item_signature(it, mode="strict")
+                    
+                    if sig not in seen_signatures:
+                        seen_signatures[sig] = it.get("name", "Unknown")
+                        unique.append(it)
+                    else:
+                        # Log what was deduplicated
+                        self.logger.debug(f"Dedup: '{it.get('name')}' matches '{seen_signatures[sig]}'")
+                
+                removed = len(all_items) - len(unique)
+                self.logger.info(f"🔍 Dedupe (marketplace): {len(all_items)} -> {len(unique)} (removed {removed} exact duplicates)")
 
-            # 3. Filter & Validation
+            # 4. Filter & Validation
             self.logger.info("🧹 Filtering & Normalizing...")
             clean_items = filter_and_tag_items(unique, triage, self.logger)
 
-            # 4. Summary
+            # 5. Summary
             self.logger.info("📝 Summarizing...")
             summary = summarize_doc(triage, clean_items, self.logger)
 
-            # 5. Quality Metrics
+            # 6. Quality Metrics
             quality_metrics = {
                 "total_items": len(clean_items),
                 "items_with_dates": sum(1 for it in clean_items if it.get("attributes", {}).get("date_iso")),
                 "low_confidence_items": sum(1 for it in clean_items if it.get("confidence") == "low"),
                 "items_with_warnings": sum(1 for it in clean_items if it.get("attributes", {}).get("data_warnings")),
+                "dedup_stats": {
+                    "raw_extracted": len(all_items),
+                    "after_dedup": len(unique),
+                    "after_filter": len(clean_items),
+                    "dedup_mode": "none" if listing_mode == "retail_catalog" else ("loose" if "TYPE_B" in page_type or "TYPE_C" in page_type else "strict")
+                }
             }
 
-            # Save
+            # 7. Save
             ensure_dir(self.base_archive)
             base_name = f"{now_stamp()}_{safe_filename(triage.get('description'))}"
             
@@ -1074,9 +1129,12 @@ class ResearchAssistant:
             if (self.base_archive / f"{base_name}_data.json").exists():
                 os.remove(self.source_path)
                 self.logger.info("✅ Done.")
+                if HAS_TQDM:
+                    print("✅ Done.")
 
         except Exception as e:
             self.logger.critical(f"💥 Fatal Error: {e}")
+            self.logger.debug(traceback.format_exc())
             ensure_dir(self.errors_dir)
             shutil.move(self.source_path, self.errors_dir / self.source_path.name)
             write_text(self.errors_dir / f"{self.source_path.name}_error.txt", traceback.format_exc())
