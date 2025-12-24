@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "page_type": "TYPE_C",
+    "primary_entity": "Digital to Analog Converter with Volume and Bass Control",
+    "description": "digital_to_analog_converter_with_volume_and_bass_control",
+    "strategy": {
+      "section_anchors": [
+        "Key Features",
+        "Specifications",
+        "Product Details"
+      ],
+      "row_markers": [
+        "Price",
+        "In Stock",
+        "Add to Cart",
+        "MSRP"
+      ],
+      "noise_text_examples": [
+        "We use cookies",
+        "Save $9.50 (23%)",
+        "Frequently Bought Together"
+      ]
+    },
+    "source_name": "Digital to Analog Converter with Volume and Bass Control.pdf"
+  },
+  "summary": [
+    "The Digital to Analog Converter is available at varying prices, from $31.49 to $180, indicating a potential difference in features, build quality, or additional bundled accessories.",
+    "All listings indicate that the product is in stock, with SKU 180-1150 across all entries, ensuring availability for immediate procurement.",
+    "Some versions of the product are listed as 'parts only,' suggesting that certain listings might require additional components or lack essential packaging.",
+    "Specifications such as sample rates up to 192 kHz and 24-bit are consistent throughout the listings, but power requirements and dimensions vary, implying possible differences in design or application.",
+    "Potential buyers should verify the condition of the product (e.g., 'parts only' vs. complete package) and check for any additional costs not immediately apparent in the pricing, such as shipping or necessary accessories."
+  ],
+  "items": [
+    {
+      "name": "Digital to Analog Converter with Volume and Bass Control",
+      "price": "$31.49",
+      "attributes": {
+        "sku": "180-1150",
+        "availability": "in_stock",
+        "specs": {
+          "Power": "AC power adapter included",
+          "Sample Rate": "up to 192 kHz / 24-bit"
+        },
+        "is_parts_only": true
+      },
+      "price_evidence": "This Product: Digital to Analog Converter with Volume and Bass Control $31.49"
+    },
+    {
+      "name": "Digital to Analog Converter with Volume and Bass Control",
+      "price": "$143.99",
+      "attributes": {
+        "sku": "180-1150",
+        "availability": "in_stock",
+        "specs": {
+          "Power": "0.5W max",
+          "Dimensions": "2.83\" W x 3\" D x 0.75\" H",
+          "Weight": "0.5 lbs"
+        },
+        "is_accessory": true
+      },
+      "price_evidence": "\"Price: $143.99\""
+    },
+    {
+      "name": "Digital to Analog Converter with Volume and Bass Control",
+      "price": "$31.49",
+      "attributes": {
+        "sku": "180-1150",
+        "availability": "in_stock",
+        "specs": {
+          "Supports sample rates": "up to 192 kHz and 24-bit",
+          "Connections": "RCA and 3.5 mm connectors",
+          "Features": "Volume and bass controls, Ultra-low jitter",
+          "Use case": "Home and professional audio applications"
+        },
+        "is_parts_only": true
+      },
+      "price_evidence": "Your Price: $31.49 MSRP: $40.99"
+    },
+    {
+      "name": "Digital to Analog Converter with Volume and Bass Control",
+      "price": "$180.00",
+      "attributes": {
+        "sku": "180-1150",
+        "availability": "in_stock",
+        "specs": {
+          "Power": "DC 5V",
+          "Dimensions": "100mm x 70mm x 25mm",
+          "Weight": "0.5 kg"
+        },
+        "is_accessory": true
+      },
+      "price_evidence": "$180.00"
+    }
+  ]
+}

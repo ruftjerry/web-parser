@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "page_type": "TYPE_B",
+    "primary_entity": "Marantz MM-7025 Stereo Power Amplifier",
+    "description": "marantz_mm7025_stereo_power_amplifier_craigslist_listing",
+    "strategy": {
+      "section_anchors": [
+        "Contact Information",
+        "For sale by owner",
+        "Condition"
+      ],
+      "row_markers": [
+        "$750",
+        "watsonville",
+        "Posted 4 months ago"
+      ],
+      "noise_text_examples": [
+        "favorite",
+        "hide",
+        "QR Code"
+      ]
+    },
+    "source_name": "Marantz MM-7025 Stereo Power Amplifier - electronics - by owner - sale - craigslist.pdf"
+  },
+  "summary": [
+    "Error generating summary: Error code: 400 - {'error': {'message': \"'messages' must contain the word 'json' in some form, to use 'response_format' of type 'json_object'.\", 'type': 'invalid_request_error', 'param': 'messages', 'code': None}}"
+  ],
+  "items": [
+    {
+      "name": "Marantz MM-7025 Stereo Power Amplifier",
+      "price": "$750",
+      "attributes": {
+        "condition": "Excellent",
+        "condition_notes": "look almost new and works perfectly",
+        "shipping": "N/A",
+        "seller": "owner",
+        "location": "watsonville",
+        "date_raw": "2025-08-13 20:20",
+        "status": "active",
+        "listing_id": "N/A"
+      },
+      "price_evidence": "\"$750\""
+    }
+  ]
+}

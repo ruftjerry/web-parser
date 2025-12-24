@@ -1,0 +1,712 @@
+{
+  "meta": {
+    "page_type": "TYPE_A",
+    "listing_mode": "retail_catalog",
+    "source_authority": "retailer_third_party",
+    "market_context": "active_opportunities",
+    "primary_entity": "Desktop Computers",
+    "document_year": null,
+    "description": "desktop_computers_micro_center",
+    "strategy": {
+      "section_anchors": [],
+      "poison_sections": [],
+      "row_markers": [
+        "SKU",
+        "Compare",
+        "ADD TO CART",
+        "In Stock"
+      ],
+      "noise_text_examples": [
+        "Sponsored",
+        "Ads",
+        "Related Items"
+      ]
+    },
+    "source_name": "Desktop Computers  Micro Center.pdf"
+  },
+  "quality": {
+    "total_items": 48,
+    "items_with_dates": 0,
+    "low_confidence_items": 2,
+    "items_with_warnings": 0
+  },
+  "summary": [
+    "Price Range: The desktop computer listings present a price range from $199.99 to $499.99, showing a diverse offering with various specifications to cater to different consumer needs.",
+    "Condition Insights: A significant portion of the listings are refurbished units, highlighting the retailer's emphasis on offering cost-effective solutions. The variance in price between new and refurbished models provides potential savings for budget-conscious buyers.",
+    "Out of Stock Alerts: Several high-demand items, such as the Dell OptiPlex series, are currently out of stock, indicating potential popular demand or supply chain limitations.",
+    "Promotions and Discounts: Products like the Minisforum UM760 and Dell Slim ECS1250 are available at sale prices, potentially increasing their attractiveness compared to competitors at similar price points.",
+    "High Confidence in Pricing: Most listed prices are supported by high-confidence evidence, ensuring transparent and reliable pricing for consumers.",
+    "Market Positioning: The mix of Intel and AMD processors with varying specifications highlights the retailer's strategy to cater to a wide range of performance needs, from basic desktop usage to more advanced computing tasks."
+  ],
+  "items": [
+    {
+      "name": "HP ProDesk 600 G4 Desktop Computer",
+      "price": "$199.99",
+      "confidence": "high",
+      "price_evidence": "$199.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "916981",
+        "notes": "Intel Core i5 8th Gen 8400T 1.7GHz Processor; 16GB RAM; 256GB Solid State Drive; Intel UHD Graphics 630",
+        "url": "optional_string"
+      }
+    },
+    {
+      "name": "All-in-One Desktop Computer",
+      "price": "$219.99",
+      "confidence": "high",
+      "price_evidence": "$219.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "755181",
+        "notes": "23.8\" Display; Intel Core i5 6th Gen 6500 3.2GHz Processor; 16GB RAM; 256GB Solid State Drive.",
+        "url": null
+      }
+    },
+    {
+      "name": "Minisforum UN100L MFF Mini PC",
+      "price": "$224.99",
+      "confidence": "high",
+      "price_evidence": "$249.99 $224.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "916999",
+        "notes": "Intel N100 0.7GHz Processor; 16GB LPDDR5 Onboard RAM; 512GB Solid State Drive; Intel UHD Graphics.",
+        "url": null
+      }
+    },
+    {
+      "name": "HP ProDesk 600 G4 SFF Desktop Computer",
+      "price": "$229.99",
+      "confidence": "high",
+      "price_evidence": "$229.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "800730",
+        "notes": "Intel Core i5 8th Gen 8500 3.0GHz Processor; 32GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630.",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 3070 SFF Desktop Computer",
+      "price": "$229.99",
+      "confidence": "medium",
+      "price_evidence": "$229.99 ADD TO LIST",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "out_of_stock",
+        "sku": "903369",
+        "notes": "Intel Core i5 9th Gen 9500 3.0GHz Processor; 16GB RAM; 256GB Solid State Drive; Intel UHD Graphics 630.",
+        "url": null
+      }
+    },
+    {
+      "name": "HP Elitedesk 800 G6 MFF Desktop Computer (Refurbished)",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349 99 SKU: 918268 Compare",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "918268",
+        "notes": "",
+        "url": "optional"
+      }
+    },
+    {
+      "name": "Dell OptiPlex 7080 MFF Desktop Computer (Refurbished)",
+      "price": "$359.99",
+      "confidence": "high",
+      "price_evidence": "$359.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "958371",
+        "notes": "In Store Only",
+        "url": null
+      }
+    },
+    {
+      "name": "HP EliteDesk 800 G5 Desktop Computer (Refurbished)",
+      "price": "$329.99",
+      "confidence": "high",
+      "price_evidence": "$329.99 ADD TO LIST",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "out_of_stock",
+        "sku": "899591",
+        "notes": "Sold out",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 5070 SFF Desktop Computer (Refurbished)",
+      "price": "$329.99",
+      "confidence": "high",
+      "price_evidence": "$329 99 SKU: 885723",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "out_of_stock",
+        "sku": "885723",
+        "notes": "Sold out",
+        "url": null
+      }
+    },
+    {
+      "name": "HP Elitedesk 800 G6 MFF Desktop Computer (Refurbished)",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349 99 SKU: 918268",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "918268",
+        "notes": null,
+        "url": null
+      }
+    },
+    {
+      "name": "GEEKOM A5 Pro Mini PC",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349 99 ♥ ♥ ♥",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": null,
+        "notes": null,
+        "url": null
+      }
+    },
+    {
+      "name": "Lenovo ThinkCentre M70Q Desktop Computer (Refurbished)",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349.99 SKU: 917039",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "917039",
+        "notes": null,
+        "url": null
+      }
+    },
+    {
+      "name": "HP ProDesk 600 G5 Mini Desktop Computer (Refurbished)",
+      "price": "$329.99",
+      "confidence": "high",
+      "price_evidence": "$329.99 ADD TO LIST",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "out_of_stock",
+        "sku": "655787",
+        "notes": null,
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 3070 SFF Desktop Computer",
+      "price": "$299.99",
+      "confidence": "high",
+      "price_evidence": "$299.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "921379",
+        "notes": "Intel Core i5 9th Gen 9500 3.0GHz Processor; 32GB RAM; 1TB Solid State",
+        "url": ""
+      }
+    },
+    {
+      "name": "HP ProDesk 400 G6 Desktop Computer",
+      "price": "$299.99",
+      "confidence": "high",
+      "price_evidence": "$299.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "903377",
+        "notes": "Intel Core i5 9th Gen 9500 3.0GHz Processor; 32GB RAM; 1TB Solid State",
+        "url": ""
+      }
+    },
+    {
+      "name": "Lenovo ThinkCentre M80q Desktop Computer",
+      "price": "$299.99",
+      "confidence": "high",
+      "price_evidence": "$299.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "885699",
+        "notes": "Intel Core i5 10th Gen 10500T 2.3GHz Processor; 16GB RAM; 256GB Solid State Drive; Intel UHD Graphics 630",
+        "url": ""
+      }
+    },
+    {
+      "name": "Dell OptiPlex 7080 MFF Desktop Computer",
+      "price": "$299.99",
+      "confidence": "high",
+      "price_evidence": "$299.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "885707",
+        "notes": "Intel Core i5 10th Gen 10500T 2.3GHz Processor; 32GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": ""
+      }
+    },
+    {
+      "name": "Refer to other manufacturers for detailed specifications",
+      "price": "$299.99",
+      "confidence": "low",
+      "price_evidence": "$299.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "unknown",
+        "notes": "Multiple brands available with similar specifications",
+        "url": ""
+      }
+    },
+    {
+      "name": "HP ProDesk 600 G5 Mini Desktop Computer",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "960690",
+        "notes": "Intel Core i5 9th Gen 9500T 2.2GHz Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "HP OmniDesk Slim S03-0049 Desktop Computer",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "941302",
+        "notes": "Intel Core i3 13th Gen 13100 3.4GHz Processor; 8GB DDR5-4800 RAM; 512GB Solid State Drive; Intel UHD Graphics",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 7070 Desktop Computer",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "899344",
+        "notes": "Intel Core i5 9th Gen 9500T 2.2GHz Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 3070 MFF Desktop Computer",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "912832",
+        "notes": "Intel Core i5 9th Gen 9500T 2.2GHz Processor; 32GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 3070 Desktop Computer",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "787556",
+        "notes": "Intel Core i5 9th Gen 9400 2.9GHz Processor; 32GB RAM; 1TB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 3080 Desktop Computer",
+      "price": "$379.99",
+      "confidence": "high",
+      "price_evidence": "$379.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "941260",
+        "notes": "Intel Core i5 10th Gen 10400T 2.0GHz Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 3080 SFF Desktop Computer (Refurbished)",
+      "price": "$379.99",
+      "confidence": "high",
+      "price_evidence": "$379.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "941310",
+        "notes": ""
+      }
+    },
+    {
+      "name": "HP ProDesk 600 G6 SFF Desktop Computer (Refurbished)",
+      "price": "$379.99",
+      "confidence": "high",
+      "price_evidence": "$379.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "916957",
+        "notes": ""
+      }
+    },
+    {
+      "name": "Dell OptiPlex 7060 SFF Desktop Computer (Refurbished)",
+      "price": "$379.99",
+      "confidence": "high",
+      "price_evidence": "$379.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "921395",
+        "notes": ""
+      }
+    },
+    {
+      "name": "Dell OptiPlex 3070 Desktop Computer (Refurbished)",
+      "price": "$379.99",
+      "confidence": "high",
+      "price_evidence": "$379.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "917021",
+        "notes": "Refurbished; Intel Core i7 9th Gen 9700 3.0GHz Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "GMKtec NucBox M3 Desktop Computer",
+      "price": "$389.99",
+      "confidence": "high",
+      "price_evidence": "$429.99 $389.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "868653",
+        "notes": "Intel Core i5 12th Gen 12450H 1.5GHz Processor; 16GB DDR4-3200 RAM; 1TB Solid State Drive; Intel UHD Graphics",
+        "url": null
+      }
+    },
+    {
+      "name": "HP EliteDesk 800 G6 MFF Desktop Computer (Refurbished)",
+      "price": "$399.99",
+      "confidence": "high",
+      "price_evidence": "$399.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "921403",
+        "notes": "Intel Core i5 10th Gen 10500T 2.3GHz Processor; 32GB RAM; 1TB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Lenovo ThinkCentre M70Q Desktop Computer (Refurbished)",
+      "price": "$399.99",
+      "confidence": "high",
+      "price_evidence": "$399.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "921411",
+        "notes": "Intel Core i5 10500T 2.3GHz Processor; 32GB RAM; 1TB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 7080 MFF Desktop Computer (Refurbished)",
+      "price": "$399.99",
+      "confidence": "high",
+      "price_evidence": "$399.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "832782",
+        "notes": "Intel Core i5 Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 7090 Desktop Computer (Refurbished)",
+      "price": "$429.99",
+      "confidence": "high",
+      "price_evidence": "$429.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "906206",
+        "notes": "Intel Core i5 11th Gen 11500T 1.5GHz Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 750",
+        "url": null
+      }
+    },
+    {
+      "name": "STGAubron GNMC0008-UT Gaming PC (Refurbished)",
+      "price": "$429.99",
+      "confidence": "high",
+      "price_evidence": "$429.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "809467",
+        "notes": "Intel Xeon E5-2637 v3 3.5GHz Processor; NVIDIA GeForce GTX 1660 Super; 16GB RAM; 1TB Solid State Drive",
+        "url": null
+      }
+    },
+    {
+      "name": "Minisforum UM760 Slim MFF Mini PC",
+      "price": "$399.99",
+      "confidence": "high",
+      "price_evidence": "$449.99 $399.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "794602",
+        "notes": "AMD Ryzen 5 7640HS 4.3GHz Processor; 16GB DDR5-4800 RAM; 1TB Solid State Drive; AMD Radeon 760M Graphics",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell Slim ECS1250 Desktop Computer",
+      "price": "$399.99",
+      "confidence": "high",
+      "price_evidence": "$699.99 $399.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "837252",
+        "notes": "Intel Core i3 14th Gen 14100 3.5GHz Processor; 8GB DDR5-4800 RAM; 512GB Solid State Drive; Intel UHD Graphics 730",
+        "url": null
+      }
+    },
+    {
+      "name": "HP ProDesk 600 G6 SFF Desktop Computer (Refurbished)",
+      "price": "$399.99",
+      "confidence": "high",
+      "price_evidence": "$399.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "941294",
+        "notes": "Intel Core i5 10th Gen 10500 3.1GHz Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "HP 24-cr0010 23.8\" All-in-One Desktop Computer",
+      "price": "$449.96",
+      "confidence": "high",
+      "price_evidence": "$549.97 $449.96 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "903666",
+        "notes": "23.8\" FHD IPS Three-Sided Micro- Edge Anti-Glare Display; AMD Athlon Silver 7120U 2.4GHz Processor; 8GB LPDDR5-5500 Onboard RAM; 256GB Solid State Drive",
+        "url": null
+      }
+    },
+    {
+      "name": "Apple Mac mini MU9D3LL/A (Late 2024) Desktop Computer",
+      "price": "$449.99",
+      "confidence": "high",
+      "price_evidence": "$599.99 $449.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "776963",
+        "notes": "Apple M4 10-Core CPU; 16GB Unified Memory; 256GB Solid State Drive; 10-Core GPU/16-Core Neural Engine",
+        "url": null
+      }
+    },
+    {
+      "name": "HP EliteDesk 800 G6 Mini Desktop Computer (Refurbished)",
+      "price": "$449.99",
+      "confidence": "high",
+      "price_evidence": "$449.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "used",
+        "availability": "in_stock",
+        "sku": "873216",
+        "notes": "Intel Core i5 10th Gen 10500 3.1GHz Processor; 32GB RAM; 1TB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "HP ProDesk 600 G6 Desktop Computer",
+      "price": "$479.99",
+      "confidence": "high",
+      "price_evidence": "$479.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "903385",
+        "notes": "Intel Core i7 10th Gen 10700 2.9GHz Processor; 32GB RAM; 1TB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "Dell OptiPlex 7080 Desktop Computer",
+      "price": "$479.99",
+      "confidence": "low",
+      "price_evidence": "$479.99 ADD TO LIST",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "out_of_stock",
+        "sku": "921387",
+        "notes": "Intel Core i7 10th Gen 10700 2.9GHz Processor; 32GB RAM; 1TB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "HP OmniDesk Slim S03-0041 Desktop Computer",
+      "price": "$499.99",
+      "confidence": "high",
+      "price_evidence": "$499.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "871186",
+        "notes": "Intel Core i5 14th Gen 14400 1.8GHz Processor; 16GB DDR5-4800 RAM; 512GB Solid State Drive; Intel UHD Graphics 730",
+        "url": null
+      }
+    },
+    {
+      "name": "HP EliteDesk 800 G6 Desktop Computer",
+      "price": "$499.99",
+      "confidence": "high",
+      "price_evidence": "$499.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "916973",
+        "notes": "Intel Core i7 10700T 2.0GHz Processor; 16GB RAM; 512GB Solid State Drive; Intel UHD Graphics 630",
+        "url": null
+      }
+    },
+    {
+      "name": "HP Victus 15L TG02-0055t Gaming PC",
+      "price": "$499.99",
+      "confidence": "high",
+      "price_evidence": "$499.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "refurbished",
+        "availability": "in_stock",
+        "sku": "922419",
+        "notes": "Intel Core i5 12th Gen 12400F 2.5GHz Processor; 16GB DDR4-3200 RAM; 512GB Solid State Drive; Intel Arc A380 Graphics 6GB GDDR6",
+        "url": null
+      }
+    },
+    {
+      "name": "Intel Core i5 14th Gen 14400 Processor PC",
+      "price": "$499.99",
+      "confidence": "high",
+      "price_evidence": "$499.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "817551",
+        "notes": "Intel Core i5 14th Gen 14400 1.8GHz Processor; 16GB DDR5 RAM; 500GB Solid State Drive; Intel UHD Graphics 770",
+        "url": null
+      }
+    },
+    {
+      "name": "Acer Aspire TC-1775-UR11 Desktop Computer",
+      "price": "$499.99",
+      "confidence": "high",
+      "price_evidence": "$499.99 ADD TO CART",
+      "attributes": {
+        "price_type": "sale_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "865634",
+        "notes": "Intel Core i5 14th Gen 14400 1.8GHz Processor; 8GB DDR5-4800 RAM; 512GB Solid State Drive; Intel UHD Graphics 730",
+        "url": null
+      }
+    },
+    {
+      "name": "ASUS V500 Mini Tower V500MV-MS503 Desktop Computer",
+      "price": "$499.99",
+      "confidence": "high",
+      "price_evidence": "$499.99 ADD TO CART",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "912790",
+        "notes": "Intel Core i5 13th Gen 13420H 1.5GHz Processor; 8GB DDR5 RAM; 512GB Solid State Drive; Intel UHD Graphics",
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,1128 @@
+{
+  "meta": {
+    "doc_type": "product_list",
+    "domain": "computer",
+    "description": "ssd_product_listing",
+    "primary_entity": "SSD (Solid State Drives)",
+    "search_anchors": [
+      "SSD",
+      "Solid State Drive",
+      "PC Parts",
+      "Storage",
+      "Drives"
+    ],
+    "extraction_mode": "list (many items)"
+  },
+  "summary": [
+    "PCIe Gen 4 x4 NVMe interface is predominant among the SSDs listed, with varying NAND types like TLC, QLC, and MLC indicating different performance and endurance characteristics.",
+    "Samsung 990 PRO and WD Black SN850X series offer high capacities, with the Samsung 990 PRO 4TB priced at $419.99, indicating a competitive option for large capacity PCIe Gen 4 NVMe SSDs.",
+    "The WD Black SN850X 8TB is the highest listed in capacity at $799.99, showcasing the premium range of SSD options for significant storage needs.",
+    "M.2 Internal form factor is common across the list, though there are also SATA III 2.5\" drives available, like the Samsung 870 EVO and Inland Platinum series, suitable for older systems or additional internal storage.",
+    "Newer PCIe Gen 5 models like the Samsung 9100 PRO and WD Black SN8100 are available, priced noticeably higher, indicating advancements in speed and technology, making them potential choices for cutting-edge performance requirements."
+  ],
+  "items": [
+    {
+      "name": "Samsung 990 PRO 2TB",
+      "price": "$229.99",
+      "attributes": {
+        "nand type": "Samsung V NAND 3-bit MLC",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 Internal",
+        "stock status": "25+ IN STOCK",
+        "rating": "4.9"
+      }
+    },
+    {
+      "name": "Crucial P310 1TB",
+      "price": "$106.99",
+      "attributes": {
+        "nand type": "Micron QLC NAND",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 Internal",
+        "stock status": "25+ IN STOCK",
+        "rating": "4.5"
+      }
+    },
+    {
+      "name": "Samsung 990 PRO 4TB",
+      "price": "$419.99",
+      "attributes": {
+        "nand type": "Samsung V NAND TLC",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 Internal",
+        "stock status": "25+ IN STOCK",
+        "rating": "4.9"
+      }
+    },
+    {
+      "name": "Samsung 9100 PRO 4TB",
+      "price": "$469.99",
+      "attributes": {
+        "nand type": "Samsung V NAND TLC (V8)",
+        "interface": "PCIe Gen 5 x4 NVMe",
+        "form factor": "M.2 Internal",
+        "stock status": "25+ IN STOCK",
+        "rating": "4.9"
+      }
+    },
+    {
+      "name": "SK Hynix Platinum P41 2TB",
+      "price": "$219.99",
+      "attributes": {
+        "nand type": "176L 3D TLC NAND Flash",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 Internal",
+        "stock status": "25+ IN STOCK",
+        "rating": "4.8"
+      }
+    },
+    {
+      "name": "WD Black SN850X 8TB",
+      "price": "$799.99",
+      "attributes": {
+        "nand type": "3D TLC NAND Flash",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 2280 Internal",
+        "stock status": "7 IN STOCK",
+        "rating": "5.0"
+      }
+    },
+    {
+      "name": "WD Black SN850X 1TB",
+      "price": "$134.99",
+      "attributes": {
+        "nand type": "112L BiCS5 TLC",
+        "interface": "PCIe Gen 4 x4 NVMe M.2",
+        "condition": "In Stock",
+        "rating": "4.2"
+      }
+    },
+    {
+      "name": "Inland QN450 2TB",
+      "price": "$189.99",
+      "attributes": {
+        "nand type": "3D QLC",
+        "interface": "PCIe Gen 4 x4 NVMe M.2 2280",
+        "condition": "In Stock",
+        "rating": "4.7"
+      }
+    },
+    {
+      "name": "Inland QN450 1TB",
+      "price": "$99.99",
+      "attributes": {
+        "nand type": "3D QLC",
+        "interface": "PCIe Gen 4 x4 NVMe M.2 2280",
+        "condition": "In Stock",
+        "rating": "4.7"
+      }
+    },
+    {
+      "name": "WD Black SN8100 2TB",
+      "price": "$259.99",
+      "attributes": {
+        "nand type": "3D TLC",
+        "interface": "PCIe Gen 5 x4 NVMe M.2",
+        "condition": "In Stock",
+        "rating": "5.0"
+      }
+    },
+    {
+      "name": "Inland Platinum 8TB",
+      "price": "$499.99",
+      "attributes": {
+        "nand type": "3D QLC",
+        "interface": "SATA III 6Gb/s 2.5\"",
+        "condition": "In Stock",
+        "rating": "Not provided"
+      }
+    },
+    {
+      "name": "Crucial P510 2TB",
+      "price": "$209.99",
+      "attributes": {
+        "nand type": "G9 TLC",
+        "interface": "PCIe Gen 5 x4 NVMe M.2 2280",
+        "condition": "In Stock",
+        "rating": "Not provided"
+      }
+    },
+    {
+      "name": "WD Black SN7100 1TB",
+      "price": "$119.99",
+      "attributes": {
+        "nand type": "3D TLC",
+        "interface": "PCIe Gen 4 x4 NVMe M.2",
+        "condition": "In Stock",
+        "rating": "5.0"
+      }
+    },
+    {
+      "name": "Sandisk Plus 1TB",
+      "price": "$99.99",
+      "attributes": {
+        "interface": "PCIe Gen 3 x4 NVMe M.2",
+        "condition": "In Stock",
+        "rating": "4.9"
+      }
+    },
+    {
+      "name": "WD Black SN8100 4TB",
+      "price": "$479.99",
+      "attributes": {
+        "nand type": "3D TLC",
+        "interface": "PCIe Gen 5 x4 NVMe M.2",
+        "condition": "In Stock",
+        "rating": "4.4"
+      }
+    },
+    {
+      "name": "Samsung 870 EVO 1TB SSD",
+      "price": "$124.99",
+      "attributes": {
+        "type": "3-bit MLC V-NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\" Internal Solid State Drive",
+        "stock": "9 IN STOCK",
+        "rating": "4.8"
+      }
+    },
+    {
+      "name": "Inland Platinum 4TB SSD",
+      "price": "$279.99",
+      "attributes": {
+        "type": "3D QLC NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\" Internal Solid State Drive",
+        "stock": "8 IN STOCK",
+        "rating": "4.7"
+      }
+    },
+    {
+      "name": "Inland Platinum 256GB SSD",
+      "price": "$36.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\" Internal Solid State Drive",
+        "stock": "25+ IN STOCK",
+        "rating": "4.5"
+      }
+    },
+    {
+      "name": "WD BLACK SN850X 2TB",
+      "price": "$239.99",
+      "attributes": {
+        "type": "112-Layer BiCS5 TLC NAND",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 Internal SSD",
+        "stock": "25+ IN STOCK",
+        "rating": "4.3"
+      }
+    },
+    {
+      "name": "WD Black SN770M 1TB",
+      "price": "$109.99",
+      "attributes": {
+        "type": "3D TLC NAND Flash",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 2230 Internal SSD",
+        "stock": "2 IN STOCK",
+        "rating": "4.2"
+      }
+    },
+    {
+      "name": "WD Black SN7100 4TB",
+      "price": "$389.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 Internal SSD",
+        "stock": "9 IN STOCK",
+        "rating": "5.0"
+      }
+    },
+    {
+      "name": "WD Blue SA510 2TB SSD",
+      "price": "$184.99",
+      "attributes": {
+        "type": "TLC NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\" Internal Solid State Drive",
+        "stock": "16 IN STOCK",
+        "rating": "4.4"
+      }
+    },
+    {
+      "name": "Crucial BX500 1TB SSD",
+      "price": "$100.99",
+      "attributes": {
+        "type": "3D NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\" Internal Solid State Drive",
+        "stock": "18 IN STOCK",
+        "rating": "4.9"
+      }
+    },
+    {
+      "name": "WD SN850X 2TB with Heatsink",
+      "price": "$249.99",
+      "attributes": {
+        "type": "112L BiCS5 TLC NAND Flash",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 Internal SSD",
+        "stock": "5 IN STOCK",
+        "rating": "5.0"
+      }
+    },
+    {
+      "name": "WD Black SN7100 2TB SSD",
+      "price": "$209.99",
+      "attributes": {
+        "type": "3D TLC NAND Flash",
+        "interface": "PCIe Gen 4 x4 NVMe M.2",
+        "form_factor": "M.2 2280",
+        "stock": "25+ IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.9",
+        "original_price": "$289.99"
+      }
+    },
+    {
+      "name": "Inland Performance Plus 2TB SSD",
+      "price": "$209.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "PCIe Gen 4 x4 NVMe M.2",
+        "form_factor": "M.2 2280",
+        "stock": "25 IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.7",
+        "original_price": "$399.99"
+      }
+    },
+    {
+      "name": "Inland Platinum 1TB SSD",
+      "price": "$89.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "SATA III 6Gb/s",
+        "form_factor": "2.5\"",
+        "stock": "25+ IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.8",
+        "original_price": "$199.99"
+      }
+    },
+    {
+      "name": "WD Black SN850X 4TB SSD",
+      "price": "$419.99",
+      "attributes": {
+        "type": "112L BiCS5 TLC NAND Flash",
+        "interface": "PCIe Gen 4 x4 NVMe M.2",
+        "form_factor": "M.2 2280",
+        "stock": "25+ IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.8",
+        "original_price": "$680.99"
+      }
+    },
+    {
+      "name": "Inland TN320 1TB SSD",
+      "price": "$95.99",
+      "attributes": {
+        "type": "3D NAND TLC",
+        "interface": "PCIe Gen 3.0x4 M.2",
+        "form_factor": "M.2 2280",
+        "stock": "16 IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.7",
+        "original_price": "$159.99"
+      }
+    },
+    {
+      "name": "Inland TN320 512GB SSD",
+      "price": "$59.99",
+      "attributes": {
+        "type": "3D NAND TLC",
+        "interface": "PCIe Gen 3.0x4 M.2",
+        "form_factor": "M.2 2280",
+        "stock": "19 IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.6",
+        "original_price": "$99.99"
+      }
+    },
+    {
+      "name": "Inland Platinum 2TB SSD",
+      "price": "$149.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "SATA III 6Gb/s",
+        "form_factor": "2.5\"",
+        "stock": "8 IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.7",
+        "original_price": "$299.99"
+      }
+    },
+    {
+      "name": "Samsung 870 EVO 2TB SSD",
+      "price": "$224.99",
+      "attributes": {
+        "type": "3-bit MLC V-NAND",
+        "interface": "SATA III 6Gb/s",
+        "form_factor": "2.5\"",
+        "stock": "7 IN STOCK",
+        "condition": "In Store Only",
+        "rating": "4.8",
+        "original_price": "$249.99"
+      }
+    },
+    {
+      "name": "Inland Platinum 512GB SSD",
+      "price": "$49.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "SATA III 6Gb/s",
+        "form_factor": "2.5\"",
+        "stock": "22 IN STOCK",
+        "condition": "In Store Only",
+        "rating": "5.0",
+        "original_price": "$89.99"
+      }
+    },
+    {
+      "name": "WD Blue SA510 1TB SSD",
+      "price": "$104.99",
+      "attributes": {
+        "type": "3D NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\"",
+        "stock": "25+ IN STOCK",
+        "rating": "4.5",
+        "sku": "758797"
+      }
+    },
+    {
+      "name": "WD Black SN850X 8TB SSD",
+      "price": "$829.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2 2280",
+        "stock": "7 IN STOCK",
+        "rating": "5.0",
+        "sku": "749861"
+      }
+    },
+    {
+      "name": "WD Black SN8100 1TB SSD",
+      "price": "$179.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "PCIe Gen 5 x4 NVMe",
+        "form factor": "M.2",
+        "stock": "3 IN STOCK",
+        "sku": "871756"
+      }
+    },
+    {
+      "name": "Inland QN460 2TB SSD",
+      "price": "$179.99",
+      "attributes": {
+        "type": "3D QLC NAND",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2",
+        "stock": "1 IN STOCK",
+        "rating": "5.0",
+        "sku": "828228"
+      }
+    },
+    {
+      "name": "Crucial BX500 2TB SSD",
+      "price": "$190.99",
+      "attributes": {
+        "type": "3D NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\"",
+        "stock": "25+ IN STOCK",
+        "rating": "4.8",
+        "sku": "028621"
+      }
+    },
+    {
+      "name": "Samsung 870 EVO 500GB SSD",
+      "price": "$74.99",
+      "attributes": {
+        "type": "3-bit MLC V-NAND",
+        "interface": "SATA III 6Gb/s",
+        "form factor": "2.5\"",
+        "stock": "4 IN STOCK",
+        "rating": "4.8",
+        "sku": "216960"
+      }
+    },
+    {
+      "name": "TeamGroup T-FORCE G50 2TB SSD",
+      "price": "$225.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2",
+        "stock": "4 IN STOCK",
+        "sku": "929448"
+      }
+    },
+    {
+      "name": "Sandisk Plus 500GB SSD",
+      "price": "$59.99",
+      "attributes": {
+        "type": "N/A",
+        "interface": "PCIe Gen 3 x4 NVMe",
+        "form factor": "M.2",
+        "stock": "1 IN STOCK",
+        "rating": "4.4",
+        "sku": "644112"
+      }
+    },
+    {
+      "name": "Crucial P310 4TB SSD",
+      "price": "$344.99",
+      "attributes": {
+        "type": "3D NAND Flash",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "form factor": "M.2",
+        "stock": "1 IN STOCK",
+        "rating": "4.5",
+        "sku": "854273"
+      }
+    },
+    {
+      "name": "Inland Performance Plus 8TB 3D TLC NAND PCIe Gen 4 x4 NVMe M.2 Internal SSD",
+      "price": "$769.99",
+      "attributes": {
+        "sku": "432716",
+        "stock": "6 IN STOCK",
+        "quick view": "In Store Only",
+        "rating": "4.4",
+        "original price": "$1,999.99"
+      }
+    },
+    {
+      "name": "Crucial BX500 4TB Micron 3D NAND Flash SATA 3.0 6.0Gb/s 2.5\" Internal SSD",
+      "price": "$351.99",
+      "attributes": {
+        "sku": "698936",
+        "stock": "4 IN STOCK",
+        "quick view": "In Store Only",
+        "rating": "3.7",
+        "original price": "$399.99"
+      }
+    },
+    {
+      "name": "Crucial T500 2TB TLC NAND PCIe Gen 4 x4 NVMe M.2 Internal SSD w/ Heatsink",
+      "price": "$244.99",
+      "attributes": {
+        "sku": "642157",
+        "stock": "3 IN STOCK",
+        "quick view": "In Store Only",
+        "rating": "4.7",
+        "original price": "$349.99"
+      }
+    },
+    {
+      "name": "Inland Performance Plus 4TB 3D TLC NAND PCIe Gen 4 x4 NVMe M.2 Internal SSD",
+      "price": "$379.99",
+      "attributes": {
+        "sku": "386813",
+        "stock": "1 IN STOCK",
+        "quick view": "In Store Only",
+        "rating": "4.3",
+        "original price": "$799.99"
+      }
+    },
+    {
+      "name": "Crucial T710 1TB TLC NAND PCIe Gen 5 x4 NVMe M.2 Internal SSD",
+      "price": "$169.99",
+      "attributes": {
+        "sku": "893776",
+        "stock": "3 IN STOCK",
+        "quick view": "In Store Only",
+        "original price": "$249.99"
+      }
+    },
+    {
+      "name": "TeamGroup T-FORCE G50 1TB 3D TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 Internal SSD",
+      "price": "$145.99",
+      "attributes": {
+        "sku": "929422",
+        "stock": "15 IN STOCK",
+        "quick view": "In Store Only"
+      }
+    },
+    {
+      "name": "Samsung T7 Portable SSD 2TB USB 3.2 Gen 2 External Solid State Drive",
+      "price": "$187.99",
+      "attributes": {
+        "sku": "493551",
+        "stock": "5 IN STOCK",
+        "quick view": "In Store Only",
+        "read speed": "Up to 1050MB/s",
+        "color": "Gray",
+        "model": "MU-PC2T0T/AM",
+        "rating": "4.8",
+        "original price": "$189.99"
+      }
+    },
+    {
+      "name": "Crucial X9 1TB Portable SSD USB 3.2 Gen 2 Type C Solid State Drive",
+      "price": "$101.99",
+      "attributes": {
+        "sku": "633479",
+        "stock": "9 IN STOCK",
+        "quick view": "In Store Only",
+        "rating": "4.7",
+        "original price": "$139.99"
+      }
+    },
+    {
+      "name": "WD Black SN850X 1TB 112L TLC NAND Flash PCIe Gen 4 x4 NVMe M.2 Internal SSD with Heatsink",
+      "price": "$149.99",
+      "attributes": {
+        "sku": "753061",
+        "stock": "1 IN STOCK",
+        "quick view": "In Store Only",
+        "rating": "5.0",
+        "original price": "$216.99"
+      }
+    },
+    {
+      "name": "SK Hynix Platinum P51 1TB",
+      "price": "$199.99",
+      "attributes": {
+        "type": "Internal SSD",
+        "nand": "3D TLC",
+        "interface": "PCIe Gen 5 x4",
+        "form factor": "M.2",
+        "stock": "2 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "Lexar NM790 4TB",
+      "price": "$709.99",
+      "attributes": {
+        "type": "Internal SSD",
+        "nand": "3D TLC",
+        "interface": "PCIe Gen 4 x4",
+        "form factor": "M.2",
+        "stock": "6 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "Sandisk Extreme 500GB",
+      "price": "$74.99",
+      "attributes": {
+        "type": "Internal SSD",
+        "interface": "PCIe Gen 4 x4",
+        "form factor": "M.2",
+        "stock": "2 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "Samsung T7 Portable SSD 1TB",
+      "price": "$109.99",
+      "attributes": {
+        "type": "External Solid State Drive",
+        "read speed": "Up to 1050MB/s",
+        "interface": "USB 3.2 Gen 2",
+        "stock": "3 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "Sandisk Extreme 1TB",
+      "price": "$119.99",
+      "attributes": {
+        "type": "Internal SSD",
+        "interface": "PCIe Gen 4 x4",
+        "form factor": "M.2",
+        "stock": "2 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "PNY CS2342 1TB",
+      "price": "$119.99",
+      "attributes": {
+        "type": "Internal SSD",
+        "nand": "3D NAND",
+        "interface": "PCIe Gen 4 x4",
+        "form factor": "M.2 2230",
+        "stock": "2 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "WD Black SN850X 4TB",
+      "price": "$439.99",
+      "attributes": {
+        "type": "Internal SSD",
+        "nand": "3D TLC",
+        "interface": "PCIe Gen 4 x4",
+        "form factor": "M.2 2280",
+        "stock": "2 IN STOCK",
+        "rating": "Quick View In Store Only",
+        "heatsink": "Yes"
+      }
+    },
+    {
+      "name": "Sandisk Extreme Portable 2TB SSD",
+      "price": "$199.99",
+      "attributes": {
+        "type": "External Solid State Drive",
+        "interface": "USB 3.2 Gen 2 Type C",
+        "stock": "18 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "Crucial P510 1TB SSD",
+      "price": "$139.99",
+      "attributes": {
+        "type": "Internal SSD",
+        "nand": "G9 TLC",
+        "interface": "PCIe Gen 5 x4",
+        "form factor": "M.2 2280",
+        "heatsink": "Yes",
+        "stock": "1 IN STOCK",
+        "rating": "Quick View In Store Only"
+      }
+    },
+    {
+      "name": "Crucial BX500 240GB SSD",
+      "price": "$40.99",
+      "attributes": {
+        "type": "Internal",
+        "form factor": "2.5\"",
+        "interface": "SATA III 6Gb/s",
+        "nand type": "Micron 3D NAND",
+        "rating": "4.9",
+        "stock": "4 IN STOCK",
+        "sku": "822163"
+      }
+    },
+    {
+      "name": "Sandisk Extreme Portable 1TB SSD",
+      "price": "$139.99",
+      "attributes": {
+        "type": "External",
+        "interface": "USB 3.2 Gen 2 Type C",
+        "rating": "4.3",
+        "stock": "22 IN STOCK",
+        "sku": "473041"
+      }
+    },
+    {
+      "name": "PNY CS900 1TB SSD",
+      "price": "$104.99",
+      "attributes": {
+        "type": "Internal",
+        "form factor": "2.5\"",
+        "interface": "SATA III 6Gb/s",
+        "nand type": "TLC NAND",
+        "stock": "11 IN STOCK",
+        "sku": "936393"
+      }
+    },
+    {
+      "name": "Crucial T705 1TB SSD",
+      "price": "$159.99",
+      "attributes": {
+        "type": "Internal",
+        "form factor": "M.2",
+        "interface": "PCIe Gen 5 x4 NVMe",
+        "nand type": "Micron 232L TLC NAND",
+        "stock": "1 IN STOCK",
+        "sku": "671560"
+      }
+    },
+    {
+      "name": "Samsung 2TB T9 Portable SSD",
+      "price": "$234.99",
+      "attributes": {
+        "type": "External",
+        "interface": "USB 3.2 Gen 2x2",
+        "color": "Black",
+        "rating": "4.8",
+        "stock": "4 IN STOCK",
+        "sku": "642546"
+      }
+    },
+    {
+      "name": "Samsung T7 Shield 4TB External SSD",
+      "price": "$384.99",
+      "attributes": {
+        "type": "External",
+        "interface": "USB 3.2 Gen 2",
+        "color": "Black",
+        "rating": "4.8",
+        "stock": "17 IN STOCK",
+        "sku": "561688"
+      }
+    },
+    {
+      "name": "PNY CS900 500GB SSD",
+      "price": "$59.99",
+      "attributes": {
+        "type": "Internal",
+        "form factor": "2.5\"",
+        "interface": "SATA III 6Gb/s",
+        "nand type": "TLC NAND",
+        "stock": "14 IN STOCK",
+        "sku": "936385"
+      }
+    },
+    {
+      "name": "Crucial T500 2TB SSD",
+      "price": "$244.99",
+      "attributes": {
+        "type": "Internal",
+        "form factor": "M.2",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "nand type": "TLC NAND",
+        "rating": "4.8",
+        "stock": "5 IN STOCK",
+        "sku": "642173"
+      }
+    },
+    {
+      "name": "Lexar NM790 1TB SSD",
+      "price": "$189.99",
+      "attributes": {
+        "type": "Internal",
+        "form factor": "M.2",
+        "interface": "PCIe Gen 4 x4 NVMe",
+        "nand type": "3D TLC NAND Flash",
+        "rating": "4.9",
+        "stock": "9 IN STOCK",
+        "sku": "752683"
+      }
+    },
+    {
+      "name": "Samsung T7 Shield 2TB External SSD USB 3.2 Gen 2",
+      "price": "$234.99",
+      "attributes": {
+        "color": "Black",
+        "stock": "2 IN STOCK",
+        "sku": "663831",
+        "condition": "New",
+        "ratings": "4.8"
+      }
+    },
+    {
+      "name": "Sandisk Extreme Portable SSD 2TB USB 3.2 Gen 2",
+      "price": "$209.99",
+      "attributes": {
+        "color": "Sky Blue",
+        "stock": "2 IN STOCK",
+        "sku": "644047",
+        "condition": "New",
+        "ratings": "4.3"
+      }
+    },
+    {
+      "name": "Sandisk Extreme 4TB Portable SSD USB 3.2 Gen 2",
+      "price": "$339.99",
+      "attributes": {
+        "stock": "2 IN STOCK",
+        "sku": "N/A",
+        "condition": "New",
+        "ratings": "4.1"
+      }
+    },
+    {
+      "name": "Crucial X10 6TB SSD",
+      "price": "$564.99",
+      "attributes": {
+        "type": "USB 3.2 (Gen 2x2 Type-C)",
+        "form factor": "Portable",
+        "color": "Blue",
+        "stock": "4 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Crucial T500 500GB SSD",
+      "price": "$104.99",
+      "attributes": {
+        "type": "PCIe Gen 4 x4 NVMe M.2",
+        "nand": "TLC",
+        "stock": "2 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Inland Professional 256GB SSD",
+      "price": "$32.99",
+      "attributes": {
+        "type": "SATA 3.0",
+        "form factor": "2.5 Inch 7mm",
+        "nand": "3D TLC",
+        "stock": "8 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Lexar NQ780 4TB SSD",
+      "price": "$694.99",
+      "attributes": {
+        "type": "PCIe Gen 4 x4 NVMe M.2",
+        "nand": "3D",
+        "stock": "3 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Crucial X9 2TB Portable SSD",
+      "price": "$184.99",
+      "attributes": {
+        "type": "USB 3.2 Gen 2 Type C",
+        "form factor": "Portable",
+        "color": "Black",
+        "stock": "2 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Lexar NM1090 2TB SSD",
+      "price": "$419.99",
+      "attributes": {
+        "type": "PCIe Gen 5 x4 NVMe M.2 2280",
+        "nand": "3D TLC",
+        "stock": "2 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Crucial T710 1TB SSD",
+      "price": "$169.99",
+      "attributes": {
+        "type": "PCIe Gen 5 x4 NVMe M.2 2280",
+        "nand": "3D TLC",
+        "special feature": "with Heatsink",
+        "stock": "2 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "PNY XLR8 CS3140 1TB SSD",
+      "price": "$129.99",
+      "attributes": {
+        "type": "PCIe Gen 4 x4 NVMe M.2 2280",
+        "nand": "3D",
+        "stock": "5 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Sandisk 1TB Portable SSD",
+      "price": "$109.99",
+      "attributes": {
+        "type": "USB 3.2 Gen 2 Type A",
+        "form factor": "External",
+        "stock": "4 IN STOCK",
+        "condition": "In Store Only"
+      }
+    },
+    {
+      "name": "Inland Professional 512GB SSD",
+      "price": "$46.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "SATA 3.0",
+        "read_speed": "6 GBps",
+        "form_factor": "2.5 Inch",
+        "height": "7mm",
+        "stock": "3 IN STOCK",
+        "notes": "In Store Only",
+        "rating": "4.8"
+      }
+    },
+    {
+      "name": "PNY XLR8 EPIC-X RGB CS3150 2TB SSD",
+      "price": "$284.99",
+      "attributes": {
+        "type": "3D NAND Flash",
+        "interface": "PCIe Gen 5 x4",
+        "form_factor": "M.2 2280",
+        "stock": "1 IN STOCK",
+        "notes": "In Store Only"
+      }
+    },
+    {
+      "name": "Samsung 4TB T9 Portable SSD",
+      "price": "$419.99",
+      "attributes": {
+        "type": "Solid State Drive",
+        "interface": "USB 3.2 Gen 2x2",
+        "color": "Black",
+        "stock": "2 IN STOCK",
+        "notes": "In Store Only",
+        "rating": "4.8"
+      }
+    },
+    {
+      "name": "Sandisk 2TB Portable SSD",
+      "price": "$169.99",
+      "attributes": {
+        "type": "Solid State Drive",
+        "interface": "USB 3.2 Gen 2 Type A",
+        "stock": "2 IN STOCK",
+        "notes": "In Store Only",
+        "rating": "4.2"
+      }
+    },
+    {
+      "name": "Lexar NM1090 1TB SSD",
+      "price": "$239.99",
+      "attributes": {
+        "type": "3D TLC NAND",
+        "interface": "PCIe Gen 5 x4",
+        "form_factor": "M.2 2280",
+        "stock": "3 IN STOCK",
+        "notes": "In Store Only"
+      }
+    },
+    {
+      "name": "Samsung T5 EVO 8TB SSD",
+      "price": "$629.99",
+      "attributes": {
+        "interface": "USB 3.2 Gen 1",
+        "connector": "USB Type C",
+        "type": "Portable Solid State Drive",
+        "stock": "3 IN STOCK",
+        "notes": "In Store Only",
+        "rating": "4.8"
+      }
+    },
+    {
+      "name": "Seagate 520N 1TB SSD",
+      "price": "$109.99",
+      "attributes": {
+        "type": "3D TLC NAND Flash",
+        "interface": "PCIe Gen 4 x4",
+        "form_factor": "M.2 2230",
+        "stock": "2 IN STOCK",
+        "notes": "In Store Only"
+      }
+    },
+    {
+      "name": "Samsung T7 4TB Portable SSD",
+      "price": "$344.99",
+      "attributes": {
+        "type": "Solid State Drive",
+        "interface": "USB 3.2 Gen 2",
+        "color": "Gray",
+        "stock": "1 IN STOCK",
+        "notes": "In Store Only",
+        "rating": "4.8"
+      }
+    },
+    {
+      "name": "Inland TN514 2TB SSD",
+      "price": "$274.99",
+      "attributes": {
+        "interface": "PCIe Gen 5 x4",
+        "form_factor": "M.2",
+        "stock": "3 IN STOCK",
+        "notes": "In Store Only"
+      }
+    },
+    {
+      "name": "Sandisk Extreme PRO 2TB SSD",
+      "price": "$279.99",
+      "attributes": {
+        "type": "USB 3.2 Gen 2x2",
+        "form factor": "External",
+        "stock": "4 IN STOCK",
+        "rating": "4.3",
+        "sku": "478602"
+      }
+    },
+    {
+      "name": "Crucial X9 4TB Portable SSD",
+      "price": "$334.99",
+      "attributes": {
+        "type": "USB 3.2 Gen 2",
+        "form factor": "External",
+        "color": "Black",
+        "stock": "3 IN STOCK",
+        "rating": "4.5",
+        "sku": "633461"
+      }
+    },
+    {
+      "name": "WD Black SN850P 1TB SSD",
+      "price": "$159.99",
+      "attributes": {
+        "interface": "PCIe Gen 4 x4",
+        "form factor": "M.2",
+        "nand type": "3D NAND",
+        "compatibility": "Playstation 5 Compatible",
+        "stock": "2 IN STOCK",
+        "rating": "4.4",
+        "sku": "643981"
+      }
+    },
+    {
+      "name": "Samsung T7 Shield 1TB External SSD",
+      "price": "$144.99",
+      "attributes": {
+        "type": "USB 3.2 Gen 2",
+        "form factor": "External",
+        "color": "Black",
+        "stock": "25+ IN STOCK",
+        "rating": "4.8",
+        "sku": "489872"
+      }
+    },
+    {
+      "name": "Corsair 4TB SSD EX400U",
+      "price": "$414.99",
+      "attributes": {
+        "type": "USB4",
+        "form factor": "External",
+        "stock": "2 IN STOCK",
+        "sku": "915215"
+      }
+    },
+    {
+      "name": "Sandisk Extreme 4TB Portable SSD",
+      "price": "$349.99",
+      "attributes": {
+        "type": "USB 3.2 Gen 2",
+        "form factor": "External",
+        "color": "Monterey",
+        "stock": "2 IN STOCK",
+        "rating": "4.3",
+        "sku": "758946"
+      }
+    },
+    {
+      "name": "Samsung T7 Shield 2TB External SSD",
+      "price": "$234.99",
+      "attributes": {
+        "type": "USB 3.2 Gen 2",
+        "form factor": "External",
+        "color": "Black",
+        "stock": "2 IN STOCK",
+        "rating": "4.8",
+        "sku": "497990"
+      }
+    }
+  ]
+}

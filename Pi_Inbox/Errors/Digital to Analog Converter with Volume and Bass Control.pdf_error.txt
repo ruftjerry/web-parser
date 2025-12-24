@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/Scripts/research_assistant.py", line 991, in process
+    if not pages_data: raise ValueError("Empty PDF.")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Empty PDF.

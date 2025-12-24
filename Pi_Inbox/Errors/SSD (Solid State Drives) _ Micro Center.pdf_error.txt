@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/Scripts/research_assistant.py", line 990, in process
+    pages_data = pdf_page_texts(self.source_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/Scripts/research_assistant.py", line 353, in pdf_page_texts
+    doc = fitz.open(str(pdf_path))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/pymupdf/__init__.py", line 3010, in __init__
+    raise EmptyFileError(f'Cannot open empty file: {filename=}.')
+pymupdf.EmptyFileError: Cannot open empty file: filename='/home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/SSD (Solid State Drives) _ Micro Center.pdf'.

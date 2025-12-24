@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "doc_type": "product_list",
+    "domain": "audio",
+    "description": "rotel_rb_980bx_audio_amplifiers_list",
+    "primary_entity": "Rotel RB 980BX",
+    "search_anchors": [
+      "rotel rb 980bx",
+      "audio amplifier",
+      "hi-fi equipment",
+      "used audio gear",
+      "amplifiers & preamps"
+    ],
+    "extraction_mode": "list"
+  },
+  "summary": [
+    "Total Items Found: 6",
+    "Price Range: $269.00 - $469.79",
+    "Average Price: $351.76"
+  ],
+  "items": [
+    {
+      "name": "Rotel RB-980BX Power Amplifier",
+      "price": "$469.79",
+      "attributes": {
+        "condition": "Pre-Owned",
+        "shipping_estimate": "+$141.25",
+        "location": "United Kingdom",
+        "notes": "Best offer accepted"
+      }
+    },
+    {
+      "name": "Rotel RB-980BX Stereo Power Amplifier",
+      "price": "$319.00 or Best Offer",
+      "attributes": {
+        "ac power": "120 Watts Per Channel At 8 Ohms",
+        "condition": "Pre-Owned",
+        "shipping": "+$59.94",
+        "location": "United States",
+        "seller rating": "100% positive (133)",
+        "sku": "157408318309"
+      }
+    },
+    {
+      "name": "Rotel RB-980BX Stereo Power Amplifier",
+      "price": "$295.00 or Best Offer",
+      "attributes": {
+        "power": "120w Per Channel",
+        "condition": "Pre-Owned",
+        "shipping": "+$30.00 in 2-3 days",
+        "location": "United States",
+        "seller rating": "100% positive (729)",
+        "sku": "286827914987"
+      }
+    },
+    {
+      "name": "Rotel RB-980BX Power Amplifier (Black)",
+      "price": "$469.79",
+      "attributes": {
+        "condition": "Pre-Owned",
+        "shipping": "+$141.25 shipping estimate",
+        "location": "United Kingdom",
+        "seller_feedback": "98.3% positive (519)",
+        "sku": "177359166623"
+      }
+    },
+    {
+      "name": "Rotel RB-980BX Stereo POWER AMP Amplifier 120W per Channel Tested - See Video",
+      "price": "$288.00",
+      "attributes": {
+        "condition": "Pre-Owned",
+        "shipping": "+$19.25 delivery in 2-4 days",
+        "location": "United States",
+        "seller_feedback": "99.7% positive (27.4K)",
+        "sku": "127512025767",
+        "additional_notes": "Tested - See Video"
+      }
+    },
+    {
+      "name": "Solid Rotel RB-980BX Stereo POWER AMP Amplifier",
+      "price": "$269.00",
+      "attributes": {
+        "condition": "Pre-Owned",
+        "shipping": "+$29.99 delivery in 2-4 days",
+        "location": "United States",
+        "seller_feedback": "100% positive (1.6K)",
+        "sku": "136771416485"
+      }
+    }
+  ]
+}

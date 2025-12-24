@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "page_type": "TYPE_A",
+    "listing_mode": "retail_catalog",
+    "source_authority": "retailer_third_party",
+    "market_context": "active_opportunities",
+    "primary_entity": "SSD (Solid State Drives)",
+    "document_year": null,
+    "description": "ssd_solid_state_drives_micro_center",
+    "strategy": {
+      "section_anchors": [],
+      "poison_sections": [],
+      "row_markers": [
+        "SKU:",
+        "Compare",
+        "IN STOCK",
+        "QUICK VIEW",
+        "ADD TO CART"
+      ],
+      "noise_text_examples": [
+        "What can we help you find?",
+        "Hello, Sign in",
+        "Top Deals",
+        "PC Parts",
+        "Related Items",
+        "Customers also viewed"
+      ]
+    },
+    "source_name": "SSD (Solid State Drives) _ Micro Center.pdf"
+  },
+  "quality": {
+    "total_items": 12,
+    "items_with_dates": 0,
+    "low_confidence_items": 0,
+    "items_with_warnings": 1
+  },
+  "summary": [
+    "The SSD market has a wide price range from $29.99 to $564.99, indicating various product tiers from budget to premium offerings. The lowest price is observed for the Seagate 520N 1TB NVMe SSD, suggesting it is positioned as a budget-friendly option.",
+    "Samsung's offerings are prevalent across different segments, with products like the Samsung T7 4TB Portable SSD priced at $109.99, showing competitiveness in portable storage solutions, while the Samsung 990 PRO 2TB is positioned at $229.99, likely for performance-focused use cases.",
+    "New external and portable SSDs dominate the market listings, reflecting an industry trend towards increased demand for portable storage solutions. Products like the Crucial X9 and X10 demonstrate higher capacities available at premium prices ($334.99 and $564.99 respectively).",
+    "Almost all products are listed as 'In Stock', indicating a healthy inventory level across the retailer's offering, with no immediate supply constraints visible. The availability of high-capacity drives, like the Crucial X10 6TB SSD, suggests readiness for consumer demand in professional or enthusiast markets.",
+    "The data shows that most listed SSDs are NVMe or portable types, aligning with industry trends for faster data transfer speeds and convenience.",
+    "Overall, price points reflect the storage capacity and brand reputation, with well-known brands like Samsung and WD offering a range of options catering to both affordable and high-performance needs."
+  ],
+  "items": [
+    {
+      "name": "Samsung 990 PRO 2TB",
+      "price": "$229.99",
+      "confidence": "high",
+      "price_evidence": "$229.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "516120",
+        "notes": "Samsung V NAND 3-bit MLC PCIe Gen 4 x4 NVMe M.2 Internal SSD",
+        "url": "optional_string"
+      }
+    },
+    {
+      "name": "Samsung 970 EVO Plus SSD 1TB",
+      "price": "$139.99",
+      "confidence": "high",
+      "price_evidence": "$ 0 $ 1400",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "MZ-V7S1T0B/AM",
+        "notes": "Best for gaming and general use",
+        "url": "optional_link",
+        "data_warnings": [
+          "Price digits not found in evidence quote"
+        ]
+      }
+    },
+    {
+      "name": "Crucial X10 6TB SSD USB 3.2 (Gen 2x2 Type-C) Portable Solid State Drive - Blue",
+      "price": "$564.99",
+      "confidence": "high",
+      "price_evidence": "$564.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "868729",
+        "notes": "4 IN STOCK",
+        "url": "optional"
+      }
+    },
+    {
+      "name": "Seagate 520N 1TB NVMe SSD",
+      "price": "$29.99",
+      "confidence": "high",
+      "price_evidence": "$29.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "751487",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "Samsung T7 4TB Portable SSD",
+      "price": "$109.99",
+      "confidence": "high",
+      "price_evidence": "$109.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "690677",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "Inland TN514 2TB NVMe SSD",
+      "price": "$344.99",
+      "confidence": "high",
+      "price_evidence": "$344.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "916320",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "Sandisk Extreme PRO 2TB SSD",
+      "price": "$279.99",
+      "confidence": "high",
+      "price_evidence": "$279.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "478602",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "Crucial X9 4TB Portable SSD",
+      "price": "$334.99",
+      "confidence": "high",
+      "price_evidence": "$334.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "633461",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "WD Black SN850P 1TB NVMe SSD",
+      "price": "$159.99",
+      "confidence": "high",
+      "price_evidence": "$159.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "643981",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "Samsung T7 Shield 1TB External SSD",
+      "price": "$144.99",
+      "confidence": "high",
+      "price_evidence": "$144.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "489872",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "Corsair 4TB SSD EX400U",
+      "price": "$414.99",
+      "confidence": "high",
+      "price_evidence": "$414.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "915215",
+        "notes": "In Stock",
+        "url": null
+      }
+    },
+    {
+      "name": "Sandisk Extreme 4TB Portable SSD",
+      "price": "$349.99",
+      "confidence": "high",
+      "price_evidence": "$349.99",
+      "attributes": {
+        "price_type": "retail_price",
+        "condition": "new",
+        "availability": "in_stock",
+        "sku": "644047",
+        "notes": "In Stock",
+        "url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "doc_type": "product_list",
+    "domain": "computer",
+    "description": "best_selling_internal_ssds",
+    "primary_entity": "internal solid state drives",
+    "search_anchors": [
+      "Samsung 990 PRO",
+      "WD_BLACK SN850X",
+      "WD_Black SN7100",
+      "internal SSD",
+      "PCIe NVMe"
+    ],
+    "extraction_mode": "list"
+  },
+  "summary": [
+    "Total Items Found: 30",
+    "Price Range: $22.97 - $466.17",
+    "Average Price: $151.98"
+  ],
+  "items": [
+    {
+      "name": "Samsung 990 PRO SSD 2TB",
+      "price": "$229.99",
+      "attributes": {
+        "type": "NVMe M.2 PCIe Gen4",
+        "form_factor": "M.2 2280",
+        "sequential_read_speeds": "Up to 7,450 MB/s"
+      }
+    },
+    {
+      "name": "WD_BLACK SN850X 2TB",
+      "price": "$249.85",
+      "attributes": {
+        "type": "NVMe SSD with Heatsink",
+        "form_factor": "M.2 2280",
+        "read_speeds": "Up to 7,300 MB/s",
+        "write_speeds": "Up to 6,300 MB/s"
+      }
+    },
+    {
+      "name": "WD_Black SN7100 2TB",
+      "price": "$201.49",
+      "attributes": {
+        "type": "NVMe SSD",
+        "generation": "Gen4 PCIe",
+        "form_factor": "M.2 2280",
+        "read_speed": "Up to 7,250 MB/s",
+        "write_speed": "Up to 6,900 MB/s",
+        "nand_type": "Next Gen TLC 3D"
+      }
+    },
+    {
+      "name": "Samsung 990 EVO Plus SSD 2TB",
+      "price": "$164.34",
+      "attributes": {
+        "type": "PCIe Gen 4x4, Gen 5x2",
+        "form_factor": "M.2 2280",
+        "speeds": "Up to 7,250 MB/s",
+        "use_case": "Upgrade Storage for PC/Laptops"
+      }
+    },
+    {
+      "name": "Crucial P310 2TB SSD",
+      "price": "$191.99",
+      "attributes": {
+        "interface": "PCIe Gen4 NVMe M.2 2280",
+        "speed": "Up to 7,100MB/s",
+        "compatibility": "Laptop, Desktop (PC), & Handheld Gaming Consoles"
+      }
+    },
+    {
+      "name": "Samsung 870 EVO SATA III SSD 1TB",
+      "price": "$116.99",
+      "attributes": {
+        "type": "2.5” Internal Solid State Drive",
+        "compatibility": "Upgrade PC or Laptop Memory and Storage"
+      }
+    },
+    {
+      "name": "Crucial P510 PCIe Gen5 NVMe 1TB SSD",
+      "price": "$139.99",
+      "attributes": {
+        "speed": "Up to 11,000MB/s",
+        "type": "TLC NAND",
+        "compatibility": "Laptop & Desktop (PC) for Gamers & Creatives"
+      }
+    },
+    {
+      "name": "WD_BLACK 2TB SN850P NVMe M.2 SSD",
+      "price": "$279.99",
+      "attributes": {
+        "usage": "Officially Licensed Storage Expansion for PS5 Consoles",
+        "speed": "Up to 7,300MB/s",
+        "features": "Includes heatsink"
+      }
+    },
+    {
+      "name": "Samsung SSD 9100 PRO 4TB",
+      "price": "$466.17",
+      "attributes": {
+        "interface": "PCIe 5.0x4 M.2 2280",
+        "speed": "Sequential Read Speeds Up to 14,800MB/s",
+        "use case": "Best for AI Computing, Gaming, and Heavy Tasks"
+      }
+    },
+    {
+      "name": "PNY CS900 250GB 3D NAND",
+      "price": "From $54.24",
+      "attributes": {
+        "type": "2.5\" SATA III Internal Solid State Drive",
+        "model": "SSD7CS900-250-RB"
+      }
+    },
+    {
+      "name": "Silicon Power 1TB - NVMe M.2 PCIe Gen3x4 2280 SSD (SP001TBP34A60M28)",
+      "price": "$139.97",
+      "attributes": {}
+    },
+    {
+      "name": "Kingston NV3 1TB M.2 2280 NVMe SSD | PCIe 4.0 Gen 4x4 | Up to 6000 MB/s | SNV3S/1000G",
+      "price": "$136.00",
+      "attributes": {}
+    },
+    {
+      "name": "SIX NVME M.2 SSD PCIe 4.0-1TB m.2 2280 ssd",
+      "price": "$112.99",
+      "attributes": {
+        "read speed": "Up to 7350MB/s",
+        "use case": "Gaming PS5 Memory Storage Expansion with Heatsink"
+      }
+    },
+    {
+      "name": "KingSpec 128GB 2.5 SSD SATA III Internal",
+      "price": "$22.97",
+      "attributes": {
+        "read speed": "550MB/s",
+        "write speed": "520MB/s",
+        "nand type": "3D NAND Flash",
+        "use case": "For Laptop & Desktop PC Upgrade"
+      }
+    },
+    {
+      "name": "fanxiang S101 1TB SSD SATA SSD",
+      "price": "$127.59",
+      "attributes": {
+        "form factor": "2.5\"",
+        "sata version": "SATA III 6Gb/s",
+        "max read speed": "Up to 550MB/s",
+        "nand type": "3D NAND TLC",
+        "use case": "Upgrade Laptop PC"
+      }
+    },
+    {
+      "name": "Crucial P310 1TB M.2 2230 SSD",
+      "price": "$129.99",
+      "attributes": {
+        "interface": "PCIe Gen4 NVMe",
+        "max read speed": "Up to 7,100MB/s",
+        "use case": "Ideal for Steam Deck, ASUS ROG Ally"
+      }
+    },
+    {
+      "name": "WD_Black SN8100 2TB NVMe SSD",
+      "price": "$259.99",
+      "attributes": {
+        "interface": "PCIe 5.0x4",
+        "form factor": "M.2 2280",
+        "read speed": "Up to 14,900MB/s",
+        "write speed": "Up to 11,000MB/s"
+      }
+    },
+    {
+      "name": "Crucial T710 PCIe Gen5 NVMe 1TB SSD",
+      "price": "$169.99",
+      "attributes": {
+        "compatible with": "Mac, Windows"
+      }
+    },
+    {
+      "name": "KingSpec SSD 256GB",
+      "price": "$39.99",
+      "attributes": {
+        "type": "M.2 NVMe Gen3x4",
+        "form factor": "2280",
+        "read speed": "Up to 2400MB/s",
+        "flash": "3D NAND",
+        "compatibility": "Compatible with various devices"
+      }
+    },
+    {
+      "name": "Crucial BX500 1TB 3D NAND SATA 2.5-Inch Internal SSD",
+      "price": "$99.99",
+      "attributes": {
+        "model number": "CT1000BX500SSD1",
+        "read speed": "Up to 540MB/s"
+      }
+    },
+    {
+      "name": "Western Digital 1TB WD Blue SA510 SATA Internal Solid State Drive SSD",
+      "price": "$119.99",
+      "attributes": {
+        "interface": "SATA III 6 Gb/s",
+        "form factor": "2.5\"/7mm",
+        "read speed": "Up to 560 MB/s",
+        "model number": "WDS100T3B0A"
+      }
+    },
+    {
+      "name": "WD Blue SN5100 2TB NVMe SSD",
+      "price": "$201.49",
+      "attributes": {
+        "form factor": "M.2 2280",
+        "interface": "PCIe Gen 4.0",
+        "read speed": "Up to 7,100MB/s",
+        "use case": "Upgrade Storage"
+      }
+    },
+    {
+      "name": "Samsung 980 PRO SSD 2TB PCIe NVMe Gen 4 Gaming M.2 Internal Solid State Drive",
+      "price": "$229.99",
+      "attributes": {
+        "model": "MZ-…",
+        "type": "Internal Solid State Drive",
+        "location": "2TB",
+        "interface": "PCIe NVMe Gen 4",
+        "form factor": "M.2"
+      }
+    },
+    {
+      "name": "KingSpec NX Series 1TB Gen3x4 NVMe M.2 SSD",
+      "price": "from $91.99",
+      "attributes": {
+        "type": "Internal Solid State Drive",
+        "location": "1TB",
+        "interface": "Gen3x4 NVMe",
+        "read speed": "Up to 3500MB/s",
+        "form factor": "M2 2280",
+        "applications": "for Desktop"
+      }
+    },
+    {
+      "name": "TEAMGROUP T-FORCE VULCAN Z 1TB SSD",
+      "price": "$93.25",
+      "attributes": {
+        "type": "SLC Cache 3D NAND TLC",
+        "form factor": "2.5 Inch",
+        "interface": "SATA III",
+        "read/write speed": "Up to unknown speed, not specified"
+      }
+    },
+    {
+      "name": "Crucial P3 Plus PCIe Gen4 NVMe 1TB SSD",
+      "price": "$59.99",
+      "attributes": {
+        "speed": "Up to 5,000MB/s",
+        "compatibility": "Laptop & Desktop (PC)",
+        "type": "Solid State Drive"
+      }
+    },
+    {
+      "name": "Silicon Power 256GB A55 SSD",
+      "price": "$32.97",
+      "attributes": {
+        "type": "3D NAND",
+        "performance boost": "SLC Cache",
+        "form factor": "2.5 Inch",
+        "interface": "SATA III"
+      }
+    },
+    {
+      "name": "Fanxiang 1TB NVMe SSD",
+      "price": "$138.03",
+      "attributes": {
+        "type": "PCIe Gen4 M.2",
+        "speed": "Up to 4800 MB/s",
+        "features": "3D NAND SLC Cache"
+      }
+    },
+    {
+      "name": "WD_BLACK 2TB SN770 NVMe Internal Gaming SSD",
+      "price": "$118.25",
+      "attributes": {
+        "type": "Solid State Drive",
+        "interface": "Gen4 PCIe",
+        "form factor": "M.2 2280",
+        "speed": "Up to 5,150 MB/s"
+      }
+    },
+    {
+      "name": "Silicon Power 1TB UD90 NVMe 4.0 Gen4 PCIe M.2 SSD",
+      "price": "$138.97",
+      "attributes": {
+        "read speed": "Up to 5,000 MB/s",
+        "write speed": "Up to 4,800 MB/s",
+        "model": "SP01KGBP44UD9005"
+      }
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "page_type": "TYPE_A",
+    "primary_entity": "Bryston BP-26",
+    "description": "bryston_bp_26",
+    "strategy": {
+      "section_anchors": [
+        "Related: bryston bp25",
+        "Arrives in 2-4 days",
+        "Free Shipping"
+      ],
+      "row_markers": [
+        "$",
+        "Item:",
+        "Sold",
+        "+",
+        "delivery",
+        "Located in"
+      ],
+      "noise_text_examples": [
+        "Sponsored",
+        "Sell one like this",
+        "Similar active items",
+        "Category",
+        "Feedback"
+      ]
+    },
+    "source_name": "Bryston BP-26.pdf"
+  },
+  "summary": [
+    "The BRYSTON BP26 Stereo Balanced Preamplifier listings show a wide price range, with fully assembled units priced around $355 and DIY kits or components ranging from $9.99 to $461.59.",
+    "Most listings are categorized as brand new and originate from China, with varying shipping costs up to $130, indicating a robust market for both complete products and DIY components or kits.",
+    "There is a significant market presence for BRYSTON BP26 related accessories and components, including bare boards and chassis, with prices as low as $9.99 for basic components.",
+    "The active listing for a Parasound HCA 2003 / Adcom GFA 555 with a 'Parts Only' condition is priced at $569.00, highlighting a premium for working or repairable parts in the audio gear market.",
+    "Overall, the availability of BRYSTON BP26 items appears consistent, primarily from sellers with high positive ratings, suggesting reliability and trust in the market for these products."
+  ],
+  "items": [
+    {
+      "name": "BRYSTON BP26 Stereo Balanced Preamplifier",
+      "price": "$355.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Mar 3, 2022",
+        "location": "Located in China",
+        "shipping": "+$130.00 delivery",
+        "seller": "pinshuche",
+        "status": "sold",
+        "listing_id": "optional_string",
+        "url": "optional_string",
+        "date_iso": "2022-03-03"
+      },
+      "price_evidence": "\"$355.00\""
+    },
+    {
+      "name": "NVMe SSD HAT Board",
+      "price": "$22.86",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Dec-19 11:14",
+        "location": "United States",
+        "shipping": "Not specified",
+        "seller": "Not specified",
+        "status": "active",
+        "listing_id": "Not specified",
+        "url": "Not specified"
+      },
+      "price_evidence": "\"$22.86\""
+    },
+    {
+      "name": "HiFi BRYSTON BP26 Stereo Balanced Preamplifier Home Audio Preamp",
+      "price": "$355.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Mar 3, 2022",
+        "location": "Located in China",
+        "shipping": "+$130.00 delivery",
+        "seller": "pinshuche 99.5% positive (5.3K)",
+        "status": "sold",
+        "listing_id": "163785230768",
+        "date_iso": "2022-03-03"
+      },
+      "price_evidence": "\"$355.00\""
+    },
+    {
+      "name": "HiFi BRYSTON BP26 Fully Balanced Preamplifier Kit Relay Audio Preamp Board",
+      "price": "$70.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Dec 4, 2024",
+        "location": "Located in China",
+        "shipping": "+$10.00 delivery",
+        "seller": "pinshuche 99.5% positive (5.3K)",
+        "status": "sold",
+        "listing_id": "166886014719",
+        "date_iso": "2024-12-04"
+      },
+      "price_evidence": "\"$70.00\""
+    },
+    {
+      "name": "Reference Bryston BP26 Fully Balanced Preamplifier Board PCB RCA+BAL In Output",
+      "price": "$9.99",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Aug 14, 2023",
+        "location": "Located in China",
+        "shipping": "+$10.00 delivery",
+        "seller": "pinshuche 99.5% positive (5.3K)",
+        "status": "sold",
+        "listing_id": "165643553643",
+        "date_iso": "2023-08-14",
+        "is_accessory": true
+      },
+      "price_evidence": "\"$9.99\""
+    },
+    {
+      "name": "HiFi 1PC BRYSTON BP26 Fully Balanced Preamplifier Bare Board Preamp PCB",
+      "price": "$15.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Jul 6, 2025",
+        "location": "Located in China",
+        "shipping": "+$10.00 delivery",
+        "seller": "pinshuche 99.5% positive (5.3K)",
+        "status": "sold",
+        "listing_id": "165414119263",
+        "date_iso": "2025-07-06",
+        "is_accessory": true
+      },
+      "price_evidence": "\"$15.00\""
+    },
+    {
+      "name": "Full Aluminum Preamplifier Chassis 430x72x308MM For BRYSTON BP26 Balanced Preamp",
+      "price": "$118.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Oct 29, 2024",
+        "location": "Located in China",
+        "shipping": "+$80.00 delivery",
+        "seller": "snjh1820 98.7% positive (2.[)",
+        "status": "sold",
+        "listing_id": "Not Provided",
+        "date_iso": "2024-10-29",
+        "is_accessory": true
+      },
+      "price_evidence": "\"$118.00\""
+    },
+    {
+      "name": "Full Aluminum Preamplifier Chassis 430x72x308MM For BRYSTON BP26 Balanced Preamp",
+      "price": "$118.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Oct 29, 2024",
+        "location": "Located in China",
+        "shipping": "+$80.00 delivery",
+        "seller": "snjh1820 98.7% positive (2.4K)",
+        "status": "sold",
+        "listing_id": "354636766239",
+        "date_iso": "2024-10-29",
+        "is_accessory": true
+      },
+      "price_evidence": "\"$118.00\""
+    },
+    {
+      "name": "HiFi Fully Balanced Preamplifier Board Base On BRYSTON BP26 Circuit Audio Preamp",
+      "price": "$40.00 to $130.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Nov 24, 2025",
+        "location": "Located in China",
+        "shipping": "+$7.00 delivery",
+        "seller": "snjh1820 98.7% positive (2.4K)",
+        "status": "sold",
+        "listing_id": "354421447919",
+        "date_iso": "2025-11-24",
+        "is_accessory": true
+      },
+      "price_evidence": "\"$40.00 to $130.00\""
+    },
+    {
+      "name": "HiFi BRYSTON BP26 Fully Balanced Preamplifier Bare Board Preamp PCB",
+      "price": "$15.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Mar 4, 2025",
+        "location": "Located in China",
+        "shipping": "+$7.00 delivery",
+        "seller": "snjh1820 98.7% positive (2.4K)",
+        "status": "sold",
+        "listing_id": "353987623151",
+        "date_iso": "2025-03-04",
+        "is_accessory": true
+      },
+      "price_evidence": "\"$15.00\""
+    },
+    {
+      "name": "HiFi Diy BRYSTON BP26 Stereo Balanced Preamplifier Audio Preamp+4 Ways Input",
+      "price": "$461.59",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Nov 29, 2024",
+        "location": "Located in China",
+        "shipping": "+$9.92 delivery",
+        "seller": "snjh1820 98.7% positive (2.4K)",
+        "status": "sold",
+        "listing_id": "353577275368",
+        "date_iso": "2024-11-29"
+      },
+      "price_evidence": "\"$461.59\""
+    },
+    {
+      "name": "HiFi BRYSTON BP26 Stereo Balanced Preamplifier With 4 Ways Audio Input",
+      "price": "$355.00",
+      "attributes": {
+        "condition": "Brand New",
+        "date_raw": "Sold Aug 23, 2024",
+        "location": "Located in China",
+        "shipping": "+$110.00 delivery",
+        "seller": "snjh1820 98.7% positive (2.4K)",
+        "status": "sold",
+        "listing_id": "353148169184",
+        "date_iso": "2024-08-23"
+      },
+      "price_evidence": "\"$355.00\""
+    },
+    {
+      "name": "Parasound HCA 2003 / Adcom GFA 555 & Parts Only",
+      "price": "$569.00",
+      "attributes": {
+        "condition": "Parts Only",
+        "date_raw": "N/A",
+        "location": "N/A",
+        "shipping": "N/A",
+        "seller": "N/A",
+        "status": "active",
+        "listing_id": "N/A",
+        "url": "optional_string",
+        "is_parts_only": true
+      },
+      "price_evidence": "$569.00"
+    }
+  ]
+}

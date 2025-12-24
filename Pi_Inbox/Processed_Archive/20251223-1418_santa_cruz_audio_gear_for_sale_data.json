@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "doc_type": "product_list",
+    "domain": "audio",
+    "description": "santa_cruz_audio_gear_for_sale",
+    "primary_entity": "DAC and audio equipment",
+    "search_anchors": [
+      "DAC",
+      "amplifier",
+      "audio",
+      "stereo",
+      "CD player"
+    ],
+    "extraction_mode": "list"
+  },
+  "summary": [
+    "Total Items Found: 24",
+    "Price Range: $20.00 - $6900.00",
+    "Average Price: $1384.58"
+  ],
+  "items": [
+    {
+      "name": "Marantz SA-8005 CD/SACD Player - DAC",
+      "price": "$1,050",
+      "attributes": {
+        "location": "watsonville",
+        "date": "12/22"
+      }
+    },
+    {
+      "name": "Marantz SA-8005 CD/SACD Player - DAC",
+      "price": "$1,100",
+      "attributes": {
+        "location": "watsonville",
+        "date": "12/22"
+      }
+    },
+    {
+      "name": "BURR-BROWN PCM56P-K JAPAN DAC IC DIP-16",
+      "price": "$20",
+      "attributes": {
+        "location": "willow glen / cambrian",
+        "date": "12/22"
+      }
+    },
+    {
+      "name": "Monolith Desktop Balanced Headphone Amplifier and ESS SAB DAC with THX",
+      "price": "$175",
+      "attributes": {
+        "location": "campbell",
+        "date": "12/21"
+      }
+    },
+    {
+      "name": "Sound BlasterX G6 Hi-Res 130dB 32bit/384kHz Gaming DAC External USB",
+      "price": "$80",
+      "attributes": {
+        "location": "San Jose",
+        "date": "12/22"
+      }
+    },
+    {
+      "name": "ONKYO A-9050 STEREO INTEGRATED AMPLIFIER WITH BUILT-IN DAC",
+      "price": "$300",
+      "attributes": {
+        "location": "san jose south",
+        "date": "12/22"
+      }
+    },
+    {
+      "name": "Mission dAC5 DAC",
+      "price": "$110",
+      "attributes": {
+        "location": "san jose south",
+        "date": "12/21"
+      }
+    },
+    {
+      "name": "Cambridge Audio DAC",
+      "price": "$250",
+      "attributes": {
+        "location": "san jose south",
+        "date": "12/21"
+      }
+    },
+    {
+      "name": "PARASOUND 200 PRE digital preamp & dac",
+      "price": "$500",
+      "attributes": {
+        "location": "san jose south",
+        "date": "12/21"
+      }
+    },
+    {
+      "name": "RME ADI-2 DAC FS DAC",
+      "price": "$900",
+      "attributes": {
+        "location": "cupertino",
+        "date": "11/25"
+      }
+    },
+    {
+      "name": "Denafrips ARES II DAC",
+      "price": "$600",
+      "attributes": {
+        "location": "cupertino",
+        "date": "11/25"
+      }
+    },
+    {
+      "name": "Schiit Modi 3+ DAC",
+      "price": "$90",
+      "attributes": {
+        "location": "cupertino",
+        "date": "12/22"
+      }
+    },
+    {
+      "name": "SMSL AO300 DAC, Amplifier Great Condition",
+      "price": "$140",
+      "attributes": {
+        "location": "santa clara",
+        "date_posted": "12/8"
+      }
+    },
+    {
+      "name": "LH Labs Vi DAC Solid State Version Digital to Analog Converter",
+      "price": "$4,000",
+      "attributes": {
+        "location": "Mountain View",
+        "date_posted": "12/22"
+      }
+    },
+    {
+      "name": "McIntosh MDA1000 DAC",
+      "price": "$2,500",
+      "attributes": {
+        "location": "mountain view",
+        "date_posted": "12/11"
+      }
+    },
+    {
+      "name": "FiiO BTR5 Portable Hi-Fi Bluetooth DAC/Amplifier",
+      "price": "$60",
+      "attributes": {
+        "location": "mountain view",
+        "date_posted": "12/7"
+      }
+    },
+    {
+      "name": "PS Audio Stellar Strata Integrated Amplifier with DAC",
+      "price": "$1,700",
+      "attributes": {
+        "location": "Salinas",
+        "date_posted": "12/21"
+      }
+    },
+    {
+      "name": "Lumin X1 Streamer/DAC Silver",
+      "price": "$6,700",
+      "attributes": {
+        "location": "Palo Alto",
+        "date_posted": "12/10"
+      }
+    },
+    {
+      "name": "BLACK MSB Analog DAC w/ Power Base - FULLY LOADED DSD + ROON READY!",
+      "price": "$6,900",
+      "attributes": {
+        "location": "menlo park",
+        "date_posted": "12/20"
+      }
+    },
+    {
+      "name": "Mark Levinson No 30.5 DAC",
+      "price": "$5,200",
+      "attributes": {
+        "location": "San Carlos",
+        "date_posted": "12/23"
+      }
+    },
+    {
+      "name": "Xiang Sheng DC-05A DAC with Dual Burr-Brown PCM1794 decoders",
+      "price": "$270",
+      "attributes": {
+        "location": "burlingame",
+        "date_posted": "12/21"
+      }
+    },
+    {
+      "name": "SMSL D300 High Resolution USB DAC like new condition",
+      "price": "$275",
+      "attributes": {
+        "location": "hayward / castro valley",
+        "date_posted": "12/15"
+      }
+    },
+    {
+      "name": "S.M.S.L M8A 2nd XMOS ES9028Q2M 32Bit/768KHz DSD512 USB DAC",
+      "price": "$185",
+      "attributes": {
+        "location": "dublin / pleasanton / livermore",
+        "date_posted": "12/22"
+      }
+    },
+    {
+      "name": "Aune X8 DAC",
+      "price": "$125",
+      "attributes": {
+        "location": "Livermore",
+        "date_posted": "12/17"
+      }
+    }
+  ]
+}
