@@ -1,0 +1,109 @@
+================================================================================
+EXTRACTION DEBUG REPORT
+================================================================================
+
+File: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+Processed: 2025-12-25 12:10:47
+Cache Hit: NO - Full Analysis
+Fingerprint: 58d3697a6c9df197
+
+================================================================================
+CONTEXT ANALYSIS
+================================================================================
+
+Domain: Online Marketplace for Used Audio Equipment
+Page Type: Search Results - Sold
+Critical Fields: product_title, price, condition, date_sold, seller_username, seller_feedback_percentage, seller_feedback_count, shipping_cost, item_location, listing_id, image_url, product_url, buying_format
+Guidelines: This is a multi-item search results page for sold items. Extract individual product data from `li.s-card` elements found within the main results container `ul.srp-results.srp-list`. Avoid `li.s-card` elements that are marked as 'Sponsored' or are part of 'Related Searches', 'Pick up where you left off', or 'Recently viewed items' carousels. 
+
+For each product container (`li.s-card`):
+- **product_title**: `div.s-card__title span.su-styled-text.primary.default`
+- **price**: `span.s-card__price` (extract text, e.g., '$29.99')
+- **condition**: `div.s-card__subtitle span.su-styled-text.secondary.default`
+- **date_sold**: `div.s-card__caption span.su-styled-text.positive.default` (extract text starting with 'Sold')
+- **seller_username**: The first `span.su-styled-text.primary.large` within `div.su-card-container__attributes__secondary`.
+- **seller_feedback_percentage & seller_feedback_count**: The second `span.su-styled-text.primary.large` within `div.su-card-container__attributes__secondary` (e.g., '98.2% positive (55)'). Parse percentage and count separately.
+- **shipping_cost**: `div.s-card__attribute-row span.su-styled-text.secondary.large` (look for text containing 'delivery' or 'shipping').
+- **item_location**: `div.s-card__attribute-row span.su-styled-text.secondary.large` (look for text containing 'Located in').
+- **listing_id**: The `data-listingid` attribute of the `li.s-card` element, or the text after 'Item: ' from `div.su-card-container__attributes__secondary span.su-styled-text.secondary.large`.
+- **image_url**: The `src` attribute of `img.s-card__image`.
+- **product_url**: The `href` attribute of `a.s-card__link.image-treatment` or the `href` of the main title link `a.s-card__link` within `div.su-card-container__header`.
+- **buying_format**: `div.s-card__attribute-row span.su-styled-text.secondary.large` (look for text like 'Buy It Now' or 'bids').
+
+================================================================================
+EXTRACTION STRATEGIES
+================================================================================
+
+Field: product_title
+  Method: css
+  Selector: div.s-card__title span.su-styled-text.primary.default
+  Result: ✓ Shop on eBay
+
+Field: price
+  Method: css
+  Selector: span.s-card__price
+  Result: ✓ $20.00
+
+Field: condition
+  Method: css
+  Selector: div.s-card__subtitle span.su-styled-text.secondary.default
+  Result: ✓ Brand New
+
+Field: date_sold
+  Method: css
+  Selector: div.s-card__caption span.su-styled-text.positive.default
+  Result: ✓ Sold Dec 22, 2025
+
+Field: seller_username
+  Method: css
+  Selector: div.su-card-container__attributes__secondary span.su-styled-text.primary.large:first-of-type
+  Result: ✓ music_manuals
+
+Field: seller_feedback_percentage
+  Method: css
+  Selector: div.su-card-container__attributes__secondary span.su-styled-text.primary.large:nth-of-type(2)
+  Result: ✓ 98.2% positive (55)
+
+Field: seller_feedback_count
+  Method: css
+  Selector: div.su-card-container__attributes__secondary span.su-styled-text.primary.large:nth-of-type(2)
+  Result: ✓ 98.2% positive (55)
+
+Field: shipping_cost
+  Method: css
+  Selector: div.s-card__attribute-row span.su-styled-text.secondary.large:contains('delivery'), div.s-card__attribute-row span.su-styled-text.secondary.large:contains('shipping')
+  Result: ✓ +$4.84 delivery
+
+Field: item_location
+  Method: css
+  Selector: div.s-card__attribute-row span.su-styled-text.secondary.large:contains('Located in')
+  Result: ✓ Located in United States
+
+Field: listing_id
+  Method: css
+  Selector: li.s-card[data-listingid]::attr(data-listingid), div.su-card-container__attributes__secondary span.su-styled-text.secondary.large:contains('Item: ')
+  Result: ⚠️ EXTRACTION ERROR
+
+Field: image_url
+  Method: css
+  Selector: img.s-card__image::attr(src)
+  Result: ⚠️ EXTRACTION ERROR
+
+Field: product_url
+  Method: css
+  Selector: a.s-card__link.image-treatment::attr(href), a.s-card__link::attr(href)
+  Result: ⚠️ EXTRACTION ERROR
+
+Field: buying_format
+  Method: css
+  Selector: div.s-card__attribute-row span.su-styled-text.secondary.large:contains('Buy It Now'), div.s-card__attribute-row span.su-styled-text.secondary.large:contains('bids')
+  Result: ✓ Buy It Now
+
+================================================================================
+VERIFICATION
+================================================================================
+
+Completeness Score: 70
+Summary: A 'Brand New' item sold for $20.00 on Dec 22, 2025, by seller 'music_manuals' with a 98.2% positive feedback rating. The item was located in the United States and sold with a 'Buy It Now' format.
+Analysis: The extracted data is incomplete, missing crucial fields like listing ID, image URL, and product URL, which are essential for verifying the listing and providing a complete user experience. The seller's feedback information is duplicated, indicating a parsing error. The extraction of 'Shop on eBay' as the product title suggests a potential issue with the extraction logic or source data quality.
+Missing Fields: listing_id, image_url, product_url

@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "timestamp": "20251225-1210",
+    "original_file": "1B - Marketplace Sold - 2025-12-24_06：23：40.html",
+    "domain": "Online Marketplace for Used Audio Equipment",
+    "page_type": "Search Results - Sold",
+    "cache_hit": false,
+    "fingerprint": "58d3697a6c9df197",
+    "completeness_score": 70
+  },
+  "context": {
+    "domain": "Online Marketplace for Used Audio Equipment",
+    "page_type": "Search Results - Sold",
+    "critical_fields": [
+      "product_title",
+      "price",
+      "condition",
+      "date_sold",
+      "seller_username",
+      "seller_feedback_percentage",
+      "seller_feedback_count",
+      "shipping_cost",
+      "item_location",
+      "listing_id",
+      "image_url",
+      "product_url",
+      "buying_format"
+    ],
+    "extraction_guidelines": "This is a multi-item search results page for sold items. Extract individual product data from `li.s-card` elements found within the main results container `ul.srp-results.srp-list`. Avoid `li.s-card` elements that are marked as 'Sponsored' or are part of 'Related Searches', 'Pick up where you left off', or 'Recently viewed items' carousels. \n\nFor each product container (`li.s-card`):\n- **product_title**: `div.s-card__title span.su-styled-text.primary.default`\n- **price**: `span.s-card__price` (extract text, e.g., '$29.99')\n- **condition**: `div.s-card__subtitle span.su-styled-text.secondary.default`\n- **date_sold**: `div.s-card__caption span.su-styled-text.positive.default` (extract text starting with 'Sold')\n- **seller_username**: The first `span.su-styled-text.primary.large` within `div.su-card-container__attributes__secondary`.\n- **seller_feedback_percentage & seller_feedback_count**: The second `span.su-styled-text.primary.large` within `div.su-card-container__attributes__secondary` (e.g., '98.2% positive (55)'). Parse percentage and count separately.\n- **shipping_cost**: `div.s-card__attribute-row span.su-styled-text.secondary.large` (look for text containing 'delivery' or 'shipping').\n- **item_location**: `div.s-card__attribute-row span.su-styled-text.secondary.large` (look for text containing 'Located in').\n- **listing_id**: The `data-listingid` attribute of the `li.s-card` element, or the text after 'Item: ' from `div.su-card-container__attributes__secondary span.su-styled-text.secondary.large`.\n- **image_url**: The `src` attribute of `img.s-card__image`.\n- **product_url**: The `href` attribute of `a.s-card__link.image-treatment` or the `href` of the main title link `a.s-card__link` within `div.su-card-container__header`.\n- **buying_format**: `div.s-card__attribute-row span.su-styled-text.secondary.large` (look for text like 'Buy It Now' or 'bids')."
+  },
+  "extraction_plan": {
+    "strategies": {
+      "product_title": {
+        "method": "css",
+        "selector": "div.s-card__title span.su-styled-text.primary.default"
+      },
+      "price": {
+        "method": "css",
+        "selector": "span.s-card__price"
+      },
+      "condition": {
+        "method": "css",
+        "selector": "div.s-card__subtitle span.su-styled-text.secondary.default"
+      },
+      "date_sold": {
+        "method": "css",
+        "selector": "div.s-card__caption span.su-styled-text.positive.default"
+      },
+      "seller_username": {
+        "method": "css",
+        "selector": "div.su-card-container__attributes__secondary span.su-styled-text.primary.large:first-of-type"
+      },
+      "seller_feedback_percentage": {
+        "method": "css",
+        "selector": "div.su-card-container__attributes__secondary span.su-styled-text.primary.large:nth-of-type(2)"
+      },
+      "seller_feedback_count": {
+        "method": "css",
+        "selector": "div.su-card-container__attributes__secondary span.su-styled-text.primary.large:nth-of-type(2)"
+      },
+      "shipping_cost": {
+        "method": "css",
+        "selector": "div.s-card__attribute-row span.su-styled-text.secondary.large:contains('delivery'), div.s-card__attribute-row span.su-styled-text.secondary.large:contains('shipping')"
+      },
+      "item_location": {
+        "method": "css",
+        "selector": "div.s-card__attribute-row span.su-styled-text.secondary.large:contains('Located in')"
+      },
+      "listing_id": {
+        "method": "css",
+        "selector": "li.s-card[data-listingid]::attr(data-listingid), div.su-card-container__attributes__secondary span.su-styled-text.secondary.large:contains('Item: ')"
+      },
+      "image_url": {
+        "method": "css",
+        "selector": "img.s-card__image::attr(src)"
+      },
+      "product_url": {
+        "method": "css",
+        "selector": "a.s-card__link.image-treatment::attr(href), a.s-card__link::attr(href)"
+      },
+      "buying_format": {
+        "method": "css",
+        "selector": "div.s-card__attribute-row span.su-styled-text.secondary.large:contains('Buy It Now'), div.s-card__attribute-row span.su-styled-text.secondary.large:contains('bids')"
+      }
+    }
+  },
+  "extracted_data": {
+    "product_title": "Shop on eBay",
+    "price": "$20.00",
+    "condition": "Brand New",
+    "date_sold": "Sold Dec 22, 2025",
+    "seller_username": "music_manuals",
+    "seller_feedback_percentage": "98.2% positive (55)",
+    "seller_feedback_count": "98.2% positive (55)",
+    "shipping_cost": "+$4.84 delivery",
+    "item_location": "Located in United States",
+    "listing_id": "Error",
+    "image_url": "Error",
+    "product_url": "Error",
+    "buying_format": "Buy It Now"
+  },
+  "review": {
+    "summary": "A 'Brand New' item sold for $20.00 on Dec 22, 2025, by seller 'music_manuals' with a 98.2% positive feedback rating. The item was located in the United States and sold with a 'Buy It Now' format.",
+    "completeness_score": 70,
+    "missing_critical_fields": [
+      "listing_id",
+      "image_url",
+      "product_url"
+    ],
+    "analysis": "The extracted data is incomplete, missing crucial fields like listing ID, image URL, and product URL, which are essential for verifying the listing and providing a complete user experience. The seller's feedback information is duplicated, indicating a parsing error. The extraction of 'Shop on eBay' as the product title suggests a potential issue with the extraction logic or source data quality."
+  }
+}

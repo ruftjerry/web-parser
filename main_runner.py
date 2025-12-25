@@ -1,196 +1,246 @@
+"""
+main_runner.py - Smart Web Data Extraction Pipeline
+Simple, AI-powered extraction with self-validation
+
+Architecture:
+1. Clean HTML (Python)
+2. Form Hypothesis (GPT-4o on sample)
+3. Extract Data (Gemini on full HTML)
+4. Validate & Report (GPT-4o)
+"""
+
 import time
-import os
-import shutil
 from pathlib import Path
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 import config
 import html_brief
-import planner
-import extractor
-import verifier
+import analyzer
+import gemini_extractor
+import validator_reporter
 import reporter
-import fingerprint
 from utils_logging import log_event
 
-class ResearchPipelineHandler(FileSystemEventHandler):
+class HTMLFileHandler(FileSystemEventHandler):
+    """Watches for new HTML files in the queue directory."""
+    
+    def __init__(self):
+        self.processing = set()
+    
     def on_created(self, event):
-        if event.is_directory: 
+        if event.is_directory:
             return
         
-        filename = event.src_path
+        file_path = Path(event.src_path)
         
-        # Ignore system files
-        if os.path.basename(filename).startswith("._") or ".DS_Store" in filename: 
+        # Skip macOS metadata files
+        if file_path.name.startswith('._'):
+            log_event(f"   ⏭️  Skipping macOS metadata file: {file_path.name}")
             return
         
-        # Only process HTML files
-        if not filename.endswith(".html"): 
-            return
-
-        log_event(f"📥 New file detected: {filename}")
-        self.process_file_safely(Path(filename))
-
-    def process_file_safely(self, file_path: Path):
-        """Process a single HTML file through the extraction pipeline."""
-        
-        # --- 1. Network Stabilization ---
-        # Wait for file to finish copying/downloading
-        historical_size = -1
-        while True:
-            try:
-                current_size = file_path.stat().st_size
-                if current_size == historical_size and current_size > 0: 
-                    break
-                historical_size = current_size
-                time.sleep(config.NETWORK_STABILIZATION_TIME)
-            except FileNotFoundError:
+        if file_path.suffix.lower() in ['.html', '.htm']:
+            # Check if already processing
+            if file_path in self.processing:
                 return
-
-        # --- 2. Execution Pipeline ---
-        try:
-            log_event("=" * 80)
-            log_event(f"🚀 Processing: {file_path.name}")
-            log_event("=" * 80)
             
-            # Read raw HTML
-            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                raw_html = f.read()
-
-            # STEP A: Create HTML Brief (Python - Free)
-            log_event("\n📋 STEP A: Creating HTML Brief...")
-            brief = html_brief.create_brief(raw_html)
+            # Check if file actually exists (watchdog can trigger on moved files)
+            if not file_path.exists():
+                return
             
-            # STEP B: Generate Fingerprint & Check Cache
-            log_event("\n🔍 STEP B: Checking Fingerprint Cache...")
-            fp = fingerprint.cache.generate_fingerprint(brief, raw_html)
-            cached = fingerprint.cache.get_cached_plan(fp)
+            log_event(f"\n📥 New file detected: {file_path.name}")
             
-            if cached:
-                # CACHE HIT - Use existing plan
-                log_event("✅ Using cached extraction plan")
-                context_guidelines = cached["context"]
-                plan = cached["plan"]
-                cost_saved = "$0.10"  # Saved Context + Planning costs
-                cache_hit = True
-            else:
-                # CACHE MISS - Full analysis required
-                log_event("⚠️  Cache miss - performing full analysis")
+            # Wait for file to finish copying over network
+            # Check file size until it stabilizes
+            log_event(f"   ⏳ Waiting for file transfer to complete...")
+            last_size = 0
+            stable_count = 0
+            max_wait = 30  # Maximum 30 seconds
+            wait_count = 0
+            
+            while wait_count < max_wait:
+                time.sleep(1)
+                wait_count += 1
                 
-                # STEP C: Context Analysis (GPT-4o - ~$0.03-0.05)
-                log_event("\n🧠 STEP C: Context Analysis...")
-                context_guidelines = planner.analyze_context(brief)
+                if not file_path.exists():
+                    return
                 
-                # STEP D: Technical Planning (GPT-4o-mini - ~$0.003)
-                log_event("\n🔧 STEP D: Technical Planning...")
-                plan = planner.create_technical_plan(brief, context_guidelines)
+                current_size = file_path.stat().st_size
                 
-                # Save to cache for future use
-                fingerprint.cache.save_plan(fp, context_guidelines, plan)
-                cache_hit = False
+                if current_size == last_size:
+                    stable_count += 1
+                    if stable_count >= 3:  # Size stable for 3 seconds
+                        log_event(f"   ✅ Transfer complete: {current_size / 1024:.1f} KB")
+                        break
+                else:
+                    stable_count = 0
+                    last_size = current_size
+                    log_event(f"   📊 Receiving: {current_size / 1024:.1f} KB...")
             
-            # STEP E: Extraction (Python - Free)
-            log_event("\n⚙️  STEP E: Executing Extraction...")
-            raw_data = extractor.execute_extraction(raw_html, brief, plan)
-            log_event(f"   Extracted {len(raw_data)} fields")
+            # Double-check file still exists and has content
+            if not file_path.exists():
+                return
             
-            # STEP F: Verification & Summary (GPT-4o - ~$0.03-0.05)
-            log_event("\n✅ STEP F: Verification & Summary...")
-            final_review = verifier.verify_and_summarize(raw_data, context_guidelines)
+            if file_path.stat().st_size < 1000:
+                log_event(f"   ⚠️  File too small after transfer - may be incomplete", "warning")
+                return
             
-            # Update cache statistics
-            completeness = final_review.get("completeness_score", 0)
-            if isinstance(completeness, str):
-                # Handle "90/100" format
-                completeness = int(completeness.split('/')[0]) if '/' in completeness else int(completeness)
-            
-            fingerprint.cache.update_stats(fp, completeness)
-            
-            # STEP G: Generate Report
-            log_event("\n📊 STEP G: Generating Report...")
-            report_info = {
-                "cache_hit": cache_hit,
-                "fingerprint": fp,
-                "completeness": completeness
-            }
-            reporter.generate_report(
-                file_path.name, 
-                raw_data, 
-                plan, 
-                final_review, 
-                context_guidelines,
-                report_info
-            )
-            
-            # STEP H: Archive
-            archive_path = config.ARCHIVE_DIR / file_path.name
-            shutil.move(str(file_path), str(archive_path))
-            
-            # Final summary
-            log_event("\n" + "=" * 80)
-            if cache_hit:
-                log_event(f"✅ SUCCESS (Cache Hit) - Archived: {file_path.name}")
-            else:
-                log_event(f"✅ SUCCESS (Full Analysis) - Archived: {file_path.name}")
-            log_event("=" * 80 + "\n")
-
-        except Exception as e:
-            log_event(f"\n❌ CRITICAL ERROR: {e}", "error")
-            import traceback
-            log_event(traceback.format_exc(), "error")
-            
-            # Move to error directory
+            self.processing.add(file_path)
             try:
-                error_path = config.ERROR_DIR / file_path.name
-                shutil.move(str(file_path), str(error_path))
-                log_event(f"Moved to error directory: {error_path}")
-            except:
-                pass
+                process_file_safely(file_path)
+            finally:
+                self.processing.discard(file_path)
 
-def start_watching():
-    """Start the file watcher to monitor the queue directory."""
-    
-    # Ensure directories exist
-    config.QUEUE_DIR.mkdir(parents=True, exist_ok=True)
-    config.ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
-    config.ERROR_DIR.mkdir(parents=True, exist_ok=True)
-    config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    
-    # Display startup info
+
+def process_file_safely(file_path: Path):
+    """
+    Process a file with comprehensive error handling.
+    """
+    try:
+        # Check if file exists and has content
+        if not file_path.exists():
+            log_event(f"⚠️  File does not exist: {file_path}", "warning")
+            return
+        
+        file_size = file_path.stat().st_size
+        if file_size < 1000:  # Less than 1KB is suspiciously small
+            log_event(f"⚠️  File is too small ({file_size} bytes) - may be corrupted", "warning")
+            log_event(f"   Skipping: {file_path.name}", "warning")
+            # Move to errors
+            error_path = config.ERROR_DIR / file_path.name
+            file_path.rename(error_path)
+            return
+        
+        log_event("=" * 80)
+        log_event(f"🚀 Processing: {file_path.name}")
+        log_event(f"   File size: {file_size / 1024:.1f} KB")
+        log_event("=" * 80)
+        
+        # === STEP 1: READ AND CLEAN HTML ===
+        log_event("\n📋 Step 1: Reading and Cleaning HTML...")
+        
+        # READ THE ACTUAL FILE CONTENT (FIX: was passing file path as string)
+        try:
+            html_content = file_path.read_text(encoding='utf-8')
+            log_event(f"   ✅ Read {len(html_content):,} characters from file")
+        except UnicodeDecodeError:
+            # Try with different encoding if UTF-8 fails
+            log_event(f"   ⚠️  UTF-8 decode failed, trying latin-1...", "warning")
+            html_content = file_path.read_text(encoding='latin-1')
+            log_event(f"   ✅ Read {len(html_content):,} characters with latin-1 encoding")
+        
+        # Now clean the HTML content
+        brief = html_brief.create_brief(html_content)
+        
+        # === STEP 2A: FORM HYPOTHESIS ===
+        log_event("\n🔍 Step 2A: Forming Hypothesis...")
+        # Send first 50KB to GPT-4o for quick classification
+        html_sample = brief.get('full_clean_html', '')[:50000]
+        hypothesis = analyzer.analyze_page(html_sample)
+        
+        # === STEP 2B: EXTRACT DATA ===
+        log_event("\n⚡ Step 2B: Extracting Data...")
+        # Send full HTML to Gemini for extraction
+        full_html = brief.get('full_clean_html', '')
+        extracted_data = gemini_extractor.extract_data(full_html, hypothesis)
+        
+        # === STEP 3: VALIDATE & REPORT ===
+        log_event("\n✅ Step 3: Validating & Creating Report...")
+        validation_result = validator_reporter.validate_and_report(
+            hypothesis,
+            extracted_data,
+            file_path.name
+        )
+        
+        # === STEP 4: GENERATE OUTPUT FILES ===
+        log_event("\n📊 Step 4: Generating Output Files...")
+        md_path, json_path, debug_path = reporter.generate_reports(
+            hypothesis,
+            extracted_data,
+            validation_result,
+            file_path.name
+        )
+        
+        # === FINAL STATUS ===
+        status = validation_result.get('status', 'unknown')
+        
+        # Check if file still exists before trying to move it
+        if not file_path.exists():
+            log_event(f"\n⚠️  File already moved or deleted: {file_path.name}", "warning")
+            return
+        
+        if status == 'success':
+            # Move to archive
+            archive_path = config.ARCHIVE_DIR / file_path.name
+            file_path.rename(archive_path)
+            log_event("\n" + "=" * 80)
+            log_event(f"✅ SUCCESS - Archived: {file_path.name}")
+            log_event("=" * 80)
+        
+        elif status == 'extraction_incomplete':
+            # Move to archive but flag as incomplete
+            archive_path = config.ARCHIVE_DIR / file_path.name
+            file_path.rename(archive_path)
+            log_event("\n" + "=" * 80)
+            log_event(f"⚠️  INCOMPLETE - Check report: {file_path.name}")
+            log_event("=" * 80)
+        
+        else:
+            # Move to error directory
+            error_path = config.ERROR_DIR / file_path.name
+            file_path.rename(error_path)
+            log_event("\n" + "=" * 80)
+            log_event(f"❌ FAILED - Moved to errors: {file_path.name}")
+            log_event("=" * 80)
+        
+    except Exception as e:
+        log_event(f"\n❌ CRITICAL ERROR: {e}", "error")
+        
+        import traceback
+        traceback_str = traceback.format_exc()
+        log_event(f"Traceback:\n{traceback_str}", "error")
+        
+        # Move to error directory
+        try:
+            if file_path.exists():
+                error_path = config.ERROR_DIR / file_path.name
+                file_path.rename(error_path)
+                log_event(f"Moved to error directory: {error_path}", "error")
+        except Exception as move_error:
+            log_event(f"Failed to move file: {move_error}", "error")
+
+
+def main():
+    """
+    Main entry point - start file watcher.
+    """
     log_event("\n" + "=" * 80)
     log_event("🚀 SMART EXTRACTION PIPELINE - STARTED")
     log_event("=" * 80)
     log_event(f"📂 Monitoring: {config.QUEUE_DIR}")
-    log_event(f"💾 Cache file: {config.CACHE_FILE}")
-    log_event(f"🧠 Analysis Model: {config.MODEL_SMART}")
-    log_event(f"✅ Verify Model: {config.MODEL_VERIFY}")
-    log_event(f"⚡ Planning Model: {config.MODEL_FAST}")
+    log_event(f"\n🔧 API Configuration:")
+    log_event(f"   Hypothesis: {config.MODEL_VERIFY} (OpenAI GPT-4o)")
+    log_event(f"   Extraction: {config.MODEL_CONTEXT} (Google Gemini)")
+    log_event(f"   Validation: {config.MODEL_VERIFY} (OpenAI GPT-4o)")
+    log_event(f"\n⏳ Waiting for HTML files...")
+    log_event("=" * 80)
     
-    # Show cache stats
-    stats = fingerprint.cache.get_stats()
-    log_event(f"\n📊 Cache Statistics:")
-    log_event(f"   Cached Plans: {stats['total_cached_plans']}")
-    log_event(f"   Total Uses: {stats['total_cache_hits']}")
-    log_event(f"   Avg Success: {stats['average_success_rate']:.1%}")
-    
-    log_event("\n⏳ Waiting for HTML files...")
-    log_event("=" * 80 + "\n")
-    
-    # Start watching
-    event_handler = ResearchPipelineHandler()
+    # Setup watchdog
+    event_handler = HTMLFileHandler()
     observer = Observer()
     observer.schedule(event_handler, str(config.QUEUE_DIR), recursive=False)
     observer.start()
     
     try:
-        while True: 
+        while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        log_event("\n🛑 Shutting down...")
+        log_event("\n🛑 Shutting down gracefully...")
         observer.stop()
     
     observer.join()
+    log_event("👋 Pipeline stopped.")
+
 
 if __name__ == "__main__":
-    start_watching()
+    main()

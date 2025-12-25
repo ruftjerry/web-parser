@@ -1,196 +1,237 @@
+"""
+reporter.py - Generates output files from validation results
+"""
+
 import json
-from datetime import datetime
 from pathlib import Path
+from datetime import datetime
 from config import OUTPUT_DIR
 from utils_logging import log_event
 
-def generate_report(filename: str, extracted_data: dict, plan: dict, review: dict, context: dict, report_info: dict = None):
+def generate_reports(
+    hypothesis: dict,
+    extracted_data: dict,
+    validation_result: dict,
+    original_filename: str
+) -> tuple:
     """
-    Generate comprehensive reports with cost tracking and cache statistics.
+    Generate Markdown, JSON, and DEBUG output files.
     
-    Outputs:
-    1. Markdown report (human-readable)
-    2. JSON data file (machine-readable)
-    3. Debug file (troubleshooting)
+    Returns:
+        tuple: (md_path, json_path, debug_path)
     """
+    log_event("📊 Step 4: Generating Reports...")
     
-    # Ensure output directory exists
-    if not OUTPUT_DIR.exists():
-        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-    # Generate timestamp for unique filenames
+    # Create timestamp-based filename
     timestamp = datetime.now().strftime("%Y%m%d-%H%M")
-    original_stem = Path(filename).stem
-    safe_name = f"{timestamp}_{original_stem}"
+    base_name = Path(original_filename).stem
+    safe_name = base_name.replace(" ", "_").replace(":", "-")
     
-    output_md_path = OUTPUT_DIR / f"{safe_name}.md"
-    output_json_path = OUTPUT_DIR / f"{safe_name}.json"
-    debug_path = OUTPUT_DIR / f"{safe_name}_DEBUG.txt"
+    status = validation_result.get('status', 'unknown')
     
-    # Extract report info
-    cache_hit = report_info.get("cache_hit", False) if report_info else False
-    fingerprint = report_info.get("fingerprint", "N/A") if report_info else "N/A"
-    completeness = report_info.get("completeness", 0) if report_info else 0
+    # Determine file suffix based on status
+    if status == 'success':
+        suffix = ""
+    elif status == 'extraction_incomplete':
+        suffix = "_INCOMPLETE"
+    else:
+        suffix = "_FAILED"
     
-    # --- 1. SAVE FULL JSON DATA ---
-    full_record = {
+    md_filename = f"{timestamp}_{safe_name}{suffix}.md"
+    json_filename = f"{timestamp}_{safe_name}{suffix}.json"
+    debug_filename = f"{timestamp}_{safe_name}_DEBUG.json"
+    
+    md_path = OUTPUT_DIR / md_filename
+    json_path = OUTPUT_DIR / json_filename
+    debug_path = OUTPUT_DIR / debug_filename
+    
+    # Generate Markdown report
+    md_content = generate_markdown(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+    md_path.write_text(md_content, encoding='utf-8')
+    
+    # Generate JSON output
+    json_content = generate_json_output(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+    json_path.write_text(json.dumps(json_content, indent=2, ensure_ascii=False), encoding='utf-8')
+    
+    # Generate DEBUG file (full diagnostic info)
+    debug_content = {
+        "timestamp": timestamp,
+        "original_file": original_filename,
+        "hypothesis": hypothesis,
+        "extracted_data": extracted_data,
+        "validation_result": validation_result
+    }
+    debug_path.write_text(json.dumps(debug_content, indent=2, ensure_ascii=False), encoding='utf-8')
+    
+    log_event(f"   📄 Generated reports:")
+    log_event(f"      - {md_filename}")
+    log_event(f"      - {json_filename}")
+    log_event(f"      - {debug_filename}")
+    
+    return (md_path, json_path, debug_path)
+
+
+def generate_markdown(hypothesis: dict, extracted_data: dict, validation_result: dict, 
+                     original_filename: str, timestamp: str) -> str:
+    """Generate a beautiful Markdown report."""
+    
+    status = validation_result.get('status', 'unknown')
+    
+    if status == 'success':
+        return generate_success_markdown(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+    else:
+        return generate_failure_markdown(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+
+
+def generate_success_markdown(hypothesis: dict, extracted_data: dict, validation_result: dict,
+                              original_filename: str, timestamp: str) -> str:
+    """Generate Markdown for successful extraction."""
+    
+    report = validation_result.get('report', {})
+    validation = validation_result.get('validation', {})
+    
+    summary = report.get('summary', 'Data extracted successfully.')
+    insights = report.get('insights', '')
+    stats = report.get('statistics', {})
+    recommendation = report.get('recommendation', '')
+    
+    total_items = stats.get('total_items', 'Unknown')
+    key_metrics = stats.get('key_metrics', '')
+    
+    md = f"""# 📊 Extraction Report: {original_filename}
+**Processed:** {timestamp}
+
+## ✅ Status: SUCCESS
+
+### 🔍 Page Analysis
+**Type:** {hypothesis.get('page_type', 'Unknown')}  
+**Source:** {hypothesis.get('source', 'Unknown')}  
+**Category:** {hypothesis.get('category', 'Unknown')}  
+**Items Found:** {total_items}
+
+### 💡 Executive Summary
+{summary}
+
+"""
+
+    if insights:
+        md += f"""### 🎯 Key Insights
+{insights}
+
+"""
+
+    if key_metrics:
+        md += f"""### 📈 Statistics
+{key_metrics}
+
+"""
+
+    if recommendation:
+        md += f"""### 💭 Recommendation
+{recommendation}
+
+"""
+
+    # Add validation details
+    data_quality = validation.get('data_quality', 'Unknown')
+    expected_fields = validation.get('expected_fields_found', [])
+    missing_fields = validation.get('missing_fields', [])
+    
+    md += f"""### ✅ Validation
+**Data Quality:** {data_quality}  
+**Fields Extracted:** {', '.join(expected_fields) if expected_fields else 'See JSON file'}
+
+"""
+
+    if missing_fields:
+        md += f"""**Missing Fields:** {', '.join(missing_fields)}
+
+"""
+
+    md += f"""---
+*Full data: `{timestamp}_{Path(original_filename).stem}.json`*  
+*Debug info: `{timestamp}_{Path(original_filename).stem}_DEBUG.json`*
+"""
+
+    return md
+
+
+def generate_failure_markdown(hypothesis: dict, extracted_data: dict, validation_result: dict,
+                              original_filename: str, timestamp: str) -> str:
+    """Generate Markdown for failed/incomplete extraction."""
+    
+    validation = validation_result.get('validation', {})
+    user_message = validation_result.get('user_message', 'Extraction failed.')
+    partial_report = validation_result.get('partial_report', {})
+    
+    problem = validation.get('problem', 'Unknown issue')
+    expected = validation.get('expected_items', 'Unknown')
+    actual = validation.get('actual_items', 'Unknown')
+    
+    md = f"""# ⚠️ Extraction Report: {original_filename}
+**Processed:** {timestamp}
+
+## ❌ Status: EXTRACTION ISSUE
+
+### 🔍 Page Analysis (Hypothesis)
+**Type:** {hypothesis.get('page_type', 'Unknown')}  
+**Source:** {hypothesis.get('source', 'Unknown')}  
+**Category:** {hypothesis.get('category', 'Unknown')}  
+**Expected Items:** {expected}
+
+### ⚠️ What Went Wrong
+{user_message}
+
+**Problem:** {problem}  
+**Expected:** {expected} items  
+**Actually Got:** {actual} items
+
+"""
+
+    if partial_report.get('summary'):
+        md += f"""### 📦 Partial Results
+{partial_report['summary']}
+
+"""
+
+    md += f"""### 🔧 Next Steps
+1. Review the DEBUG file to see what was extracted
+2. Check if the HTML file is complete and well-formed
+3. Try re-processing the file
+4. If issue persists, this page type may need special handling
+
+---
+*Partial data: `{timestamp}_{Path(original_filename).stem}_FAILED.json`*  
+*Debug info: `{timestamp}_{Path(original_filename).stem}_DEBUG.json`*
+"""
+
+    return md
+
+
+def generate_json_output(hypothesis: dict, extracted_data: dict, validation_result: dict,
+                        original_filename: str, timestamp: str) -> dict:
+    """Generate structured JSON output."""
+    
+    status = validation_result.get('status', 'unknown')
+    
+    output = {
         "meta": {
             "timestamp": timestamp,
-            "original_file": filename,
-            "domain": context.get("domain", "Unknown"),
-            "page_type": context.get("page_type", "Unknown"),
-            "cache_hit": cache_hit,
-            "fingerprint": fingerprint,
-            "completeness_score": completeness
+            "original_file": original_filename,
+            "status": status,
+            "page_type": hypothesis.get('page_type', 'Unknown'),
+            "source": hypothesis.get('source', 'Unknown'),
+            "category": hypothesis.get('category', 'Unknown')
         },
-        "context": context,
-        "extraction_plan": plan,
+        "hypothesis": hypothesis,
         "extracted_data": extracted_data,
-        "review": review
+        "validation": validation_result.get('validation', {})
     }
     
-    with open(output_json_path, "w", encoding="utf-8") as f:
-        json.dump(full_record, f, indent=2, ensure_ascii=False)
-    
-    # --- 2. SAVE DEBUG FILE ---
-    with open(debug_path, "w", encoding="utf-8") as f:
-        f.write("=" * 80 + "\n")
-        f.write("EXTRACTION DEBUG REPORT\n")
-        f.write("=" * 80 + "\n\n")
-        
-        f.write(f"File: {filename}\n")
-        f.write(f"Processed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"Cache Hit: {'YES ✓' if cache_hit else 'NO - Full Analysis'}\n")
-        f.write(f"Fingerprint: {fingerprint}\n\n")
-        
-        f.write("=" * 80 + "\n")
-        f.write("CONTEXT ANALYSIS\n")
-        f.write("=" * 80 + "\n\n")
-        f.write(f"Domain: {context.get('domain', 'Unknown')}\n")
-        f.write(f"Page Type: {context.get('page_type', 'Unknown')}\n")
-        f.write(f"Critical Fields: {', '.join(context.get('critical_fields', []))}\n")
-        f.write(f"Guidelines: {context.get('extraction_guidelines', 'None')}\n\n")
-        
-        f.write("=" * 80 + "\n")
-        f.write("EXTRACTION STRATEGIES\n")
-        f.write("=" * 80 + "\n\n")
-        
-        strategies = plan.get("strategies", {})
-        for field, strategy in strategies.items():
-            f.write(f"Field: {field}\n")
-            f.write(f"  Method: {strategy.get('method', 'unknown')}\n")
-            f.write(f"  Selector: {strategy.get('selector', 'none')}\n")
-            
-            result = extracted_data.get(field, "NOT IN RESULTS")
-            if result is None:
-                f.write(f"  Result: ❌ NOT FOUND\n")
-            elif result == "Error":
-                f.write(f"  Result: ⚠️ EXTRACTION ERROR\n")
-            else:
-                # Truncate long results
-                result_str = str(result)
-                if len(result_str) > 100:
-                    result_str = result_str[:97] + "..."
-                f.write(f"  Result: ✓ {result_str}\n")
-            f.write("\n")
-        
-        f.write("=" * 80 + "\n")
-        f.write("VERIFICATION\n")
-        f.write("=" * 80 + "\n\n")
-        f.write(f"Completeness Score: {review.get('completeness_score', 'N/A')}\n")
-        f.write(f"Summary: {review.get('summary', 'No summary')}\n")
-        if review.get("analysis"):
-            f.write(f"Analysis: {review.get('analysis')}\n")
-        if review.get("missing_critical_fields"):
-            f.write(f"Missing Fields: {', '.join(review['missing_critical_fields'])}\n")
-    
-    # --- 3. GENERATE MARKDOWN REPORT ---
-    md = []
-    
-    # Header
-    md.append(f"# 🔍 Extraction Report: {original_stem}")
-    md.append(f"**Processed:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    md.append("")
-    
-    # Cost/Cache Info
-    if cache_hit:
-        md.append("## 💰 Processing Info")
-        md.append("**Status:** ✅ Cache Hit (Saved ~$0.10)")
-        md.append(f"**Fingerprint:** `{fingerprint}`")
+    if status == 'success':
+        output["report"] = validation_result.get('report', {})
     else:
-        md.append("## 💰 Processing Info")
-        md.append("**Status:** 🆕 Full Analysis (New page structure)")
-        md.append(f"**Fingerprint:** `{fingerprint}` *(saved for future use)*")
-    md.append("")
+        output["issue"] = validation_result.get('user_message', 'Extraction failed')
+        output["partial_report"] = validation_result.get('partial_report', {})
     
-    # Context
-    md.append("## 📋 Page Context")
-    md.append(f"**Domain:** {context.get('domain', 'Unknown')}")
-    md.append(f"**Page Type:** {context.get('page_type', 'Unknown')}")
-    md.append(f"**Completeness:** {review.get('completeness_score', 'N/A')}")
-    md.append("")
-    
-    # Executive Summary
-    md.append("## 📊 Executive Summary")
-    md.append(f"> {review.get('summary', 'No summary available.')}")
-    md.append("")
-    
-    if review.get("analysis"):
-        md.append(f"**Analysis:** {review.get('analysis')}")
-        md.append("")
-    
-    # Extracted Data Table
-    md.append("## 📦 Extracted Data")
-    md.append("")
-    md.append("| Field | Value | Method | Selector |")
-    md.append("|:------|:------|:-------|:---------|")
-    
-    strategies = plan.get("strategies", {})
-    
-    for key, value in extracted_data.items():
-        # Get extraction method info
-        strategy_info = strategies.get(key, {})
-        method = strategy_info.get("method", "-")
-        selector = strategy_info.get("selector", "-")
-        
-        # Format value for table
-        clean_val = str(value).replace("\n", " ").replace("|", "/")
-        
-        if clean_val == "None":
-            clean_val = "❌ Not Found"
-        elif clean_val == "Error":
-            clean_val = "⚠️ Error"
-        
-        # Truncate long values
-        if len(clean_val) > 100:
-            clean_val = clean_val[:97] + "..."
-        
-        # Truncate long selectors
-        clean_selector = str(selector)
-        if len(clean_selector) > 50:
-            clean_selector = clean_selector[:47] + "..."
-        
-        md.append(f"| **{key}** | {clean_val} | `{method}` | `{clean_selector}` |")
-    
-    md.append("")
-    
-    # Missing fields warning
-    if review.get("missing_critical_fields"):
-        md.append("## ⚠️ Missing Critical Data")
-        md.append("")
-        for field in review["missing_critical_fields"]:
-            md.append(f"* {field}")
-        md.append("")
-    
-    # Footer with links
-    md.append("---")
-    md.append(f"*Full data: `{safe_name}.json` | Debug: `{safe_name}_DEBUG.txt`*")
-    
-    # Write markdown file
-    with open(output_md_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(md))
-    
-    log_event(f"📄 Reports generated:")
-    log_event(f"   - {output_md_path.name}")
-    log_event(f"   - {output_json_path.name}")
-    log_event(f"   - {debug_path.name}")
+    return output

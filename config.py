@@ -16,29 +16,37 @@ OUTPUT_DIR = INBOX_DIR / "Output"
 
 LOG_FILE = BASE_DIR / "research_pipeline.log"
 CSV_LOG_FILE = BASE_DIR / "token_usage_log.csv"
-CACHE_FILE = BASE_DIR / "fingerprint_cache.json"
 
 # --- API Keys ---
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLEAISTUDIO_API_KEY")
+
 if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY not found in .env file")
+if not GOOGLE_API_KEY:
+    raise ValueError("GOOGLEAISTUDIO_API_KEY not found in .env file")
 
-# --- Model Strategies ---
-# Using gpt-4o-mini for context analysis to stay within rate limits
-# Your account: gpt-4o = 30K TPM, gpt-4o-mini = 200K TPM
-# Large HTML files (100KB+) exceed gpt-4o limits but fit in gpt-4o-mini
-MODEL_SMART = "gpt-4o-mini"      # Context Analysis (needs high token limit)
-MODEL_VERIFY = "gpt-4o"          # Verification (small payload, wants quality)
-MODEL_FAST = "gpt-4o-mini"       # Technical Planning
+# --- Model Strategies (DUAL API APPROACH) ---
+# GPT-4o: Hypothesis generation and validation/reporting
+# Gemini 2.5 Flash: Data extraction (1M token window, handles big HTML)
+
+MODEL_VERIFY = "gpt-4o"                 # OpenAI - for hypothesis & validation
+MODEL_CONTEXT = "gemini-2.5-flash"      # Google - for data extraction
 
 PRICING = {
+    # OpenAI pricing (per 1M tokens)
     "gpt-4o": {"input": 2.50, "output": 10.00},
-    "gpt-4o-mini": {"input": 0.15, "output": 0.60}
+    "gpt-4o-mini": {"input": 0.15, "output": 0.60},
+    
+    # Google Gemini pricing (per 1M tokens)
+    # Source: https://ai.google.dev/pricing
+    "gemini-1.5-flash": {"input": 0.075, "output": 0.30},
+    "gemini-1.5-pro": {"input": 1.25, "output": 5.00},
+    "gemini-2.5-flash": {"input": 0.075, "output": 0.30},  # Same as 1.5 Flash
+    "gemini-2.5-pro": {"input": 1.25, "output": 5.00},     # Same as 1.5 Pro
+    "gemini-2.0-flash": {"input": 0.075, "output": 0.30},  # Same pricing
+    "gemini-flash-latest": {"input": 0.075, "output": 0.30}  # Points to latest Flash
 }
-
-# --- Fingerprint Cache Settings ---
-CACHE_MIN_SUCCESS_RATE = 0.85  # Only use cached plans with >85% success rate
-CACHE_STALENESS_DAYS = 30      # Re-analyze if plan hasn't been used in 30 days
 
 # --- System Settings ---
 NETWORK_STABILIZATION_TIME = 2.0

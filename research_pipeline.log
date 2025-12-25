@@ -601,3 +601,775 @@ openai.RateLimitError: Error code: 429 - {'error': {'message': 'Request too larg
 2025-12-25 10:53:34 - INFO - 📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
 2025-12-25 10:58:46 - INFO - 
 🛑 Shutting down...
+2025-12-25 11:08:07 - INFO - No existing cache found - will create new one
+2025-12-25 11:08:07 - INFO - 
+================================================================================
+2025-12-25 11:08:07 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-25 11:08:07 - INFO - ================================================================================
+2025-12-25 11:08:07 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 11:08:07 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 11:08:07 - INFO - 🧠 Analysis Model: gpt-4o-mini
+2025-12-25 11:08:07 - INFO - ✅ Verify Model: gpt-4o
+2025-12-25 11:08:07 - INFO - ⚡ Planning Model: gpt-4o-mini
+2025-12-25 11:08:07 - INFO - 
+📊 Cache Statistics:
+2025-12-25 11:08:07 - INFO -    Cached Plans: 0
+2025-12-25 11:08:07 - INFO -    Total Uses: 0
+2025-12-25 11:08:07 - INFO -    Avg Success: 0.0%
+2025-12-25 11:08:07 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 11:08:07 - INFO - ================================================================================
+
+2025-12-25 11:08:18 - INFO - 📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 11:08:18 - INFO - New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 11:08:24 - INFO - ================================================================================
+2025-12-25 11:08:24 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 11:08:24 - INFO - ================================================================================
+2025-12-25 11:08:24 - INFO - --- Processing 1B - Marketplace Sold - 2025-12-24_06：23：40.html ---
+2025-12-25 11:08:24 - INFO - Generating HTML Brief...
+2025-12-25 11:08:24 - INFO - 
+📋 STEP A: Creating HTML Brief...
+2025-12-25 11:08:24 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 11:08:25 - INFO - Found 0 JSON-LD blobs
+2025-12-25 11:08:25 - INFO - Removed 726 non-content tags
+2025-12-25 11:08:25 - INFO - Removed 54 Base64 images
+2025-12-25 11:08:25 - INFO - Brief truncated at 500000 chars.
+2025-12-25 11:08:25 - INFO - Brief generated. JSON-LD blobs found: 0
+2025-12-25 11:08:25 - INFO - Step 1: Analyzing Context (gpt-4o-mini)...
+2025-12-25 11:08:25 - INFO - Brief complete: 2887.1KB → 503.7KB (82.6% reduction)
+2025-12-25 11:08:25 - INFO - Estimated tokens: ~128,934
+2025-12-25 11:08:25 - INFO - 
+🔍 STEP B: Checking Fingerprint Cache...
+2025-12-25 11:08:25 - INFO - Generated fingerprint: 58d3697a6c9df197 (container:s-card|price:True|title:True)
+2025-12-25 11:08:25 - INFO - ⚠ Cache MISS - new page structure
+2025-12-25 11:08:25 - INFO - ⚠️  Cache miss - performing full analysis
+2025-12-25 11:08:25 - INFO - 
+🧠 STEP C: Context Analysis...
+2025-12-25 11:08:25 - INFO - 🧠 Step 1: Context Analysis (gpt-4o-mini)...
+2025-12-25 11:08:26 - ERROR - ❌ Context Analysis failed: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 213231 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-12-25 11:08:26 - ERROR - 
+❌ CRITICAL ERROR: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 213231 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-12-25 11:08:26 - ERROR - Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/main_runner.py", line 83, in process_file_safely
+    context_guidelines = planner.analyze_context(brief)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/planner.py", line 173, in analyze_context
+    response = client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/.local/lib/python3.11/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/.local/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/pi5/.local/lib/python3.11/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/.local/lib/python3.11/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 213231 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+
+2025-12-25 11:08:26 - INFO - Moved to error directory: /home/pi5/projects/web-parser/Pi_Inbox/Errors/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 11:08:26 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-25 11:08:26 - ERROR - Context Analysis failed: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 207834 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-12-25 11:08:26 - ERROR - CRITICAL ERROR: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 207834 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-12-25 11:08:26 - ERROR - Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/Scripts/main_runner.py", line 49, in process_file_safely
+  File "/home/pi5/projects/web-parser/Scripts/planner.py", line 140, in analyze_context
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 207834 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+
+2025-12-25 11:33:07 - INFO - 
+🛑 Shutting down...
+2025-12-25 11:38:47 - INFO - No existing cache found - will create new one
+2025-12-25 11:38:47 - INFO - 
+================================================================================
+2025-12-25 11:38:47 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 11:38:47 - INFO - ================================================================================
+2025-12-25 11:38:47 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 11:38:47 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 11:38:47 - INFO - 
+🔧 API Configuration:
+2025-12-25 11:38:47 - INFO -    Context Analysis: gemini-1.5-flash (Google Gemini)
+2025-12-25 11:38:47 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 11:38:47 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 11:38:47 - INFO - 
+📊 Cache Statistics:
+2025-12-25 11:38:47 - INFO -    Cached Plans: 0
+2025-12-25 11:38:47 - INFO -    Total Uses: 0
+2025-12-25 11:38:47 - INFO -    Avg Success: 0.0%
+2025-12-25 11:38:47 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 11:38:47 - INFO - ================================================================================
+
+2025-12-25 11:43:19 - INFO - No existing cache found - will create new one
+2025-12-25 11:43:19 - INFO - 
+================================================================================
+2025-12-25 11:43:19 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 11:43:19 - INFO - ================================================================================
+2025-12-25 11:43:19 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 11:43:19 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 11:43:19 - INFO - 
+🔧 API Configuration:
+2025-12-25 11:43:19 - INFO -    Context Analysis: gemini-1.5-flash (Google Gemini)
+2025-12-25 11:43:19 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 11:43:19 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 11:43:19 - INFO - 
+📊 Cache Statistics:
+2025-12-25 11:43:19 - INFO -    Cached Plans: 0
+2025-12-25 11:43:19 - INFO -    Total Uses: 0
+2025-12-25 11:43:19 - INFO -    Avg Success: 0.0%
+2025-12-25 11:43:19 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 11:43:19 - INFO - ================================================================================
+
+2025-12-25 11:46:48 - INFO - No existing cache found - will create new one
+2025-12-25 11:46:48 - INFO - 
+================================================================================
+2025-12-25 11:46:48 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 11:46:48 - INFO - ================================================================================
+2025-12-25 11:46:48 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 11:46:48 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 11:46:48 - INFO - 
+🔧 API Configuration:
+2025-12-25 11:46:48 - INFO -    Context Analysis: gemini-1.5-flash (Google Gemini)
+2025-12-25 11:46:48 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 11:46:48 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 11:46:48 - INFO - 
+📊 Cache Statistics:
+2025-12-25 11:46:48 - INFO -    Cached Plans: 0
+2025-12-25 11:46:48 - INFO -    Total Uses: 0
+2025-12-25 11:46:48 - INFO -    Avg Success: 0.0%
+2025-12-25 11:46:48 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 11:46:48 - INFO - ================================================================================
+
+2025-12-25 11:47:30 - INFO - 
+🛑 Shutting down...
+2025-12-25 11:48:20 - INFO - No existing cache found - will create new one
+2025-12-25 11:48:20 - INFO - 
+================================================================================
+2025-12-25 11:48:20 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 11:48:20 - INFO - ================================================================================
+2025-12-25 11:48:20 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 11:48:20 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 11:48:20 - INFO - 
+🔧 API Configuration:
+2025-12-25 11:48:20 - INFO -    Context Analysis: gemini-1.5-flash (Google Gemini)
+2025-12-25 11:48:20 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 11:48:20 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 11:48:20 - INFO - 
+📊 Cache Statistics:
+2025-12-25 11:48:20 - INFO -    Cached Plans: 0
+2025-12-25 11:48:20 - INFO -    Total Uses: 0
+2025-12-25 11:48:20 - INFO -    Avg Success: 0.0%
+2025-12-25 11:48:20 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 11:48:20 - INFO - ================================================================================
+
+2025-12-25 11:48:36 - INFO - 📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 11:49:16 - INFO - ================================================================================
+2025-12-25 11:49:16 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 11:49:16 - INFO - ================================================================================
+2025-12-25 11:49:16 - INFO - 
+📋 STEP A: Creating HTML Brief...
+2025-12-25 11:49:16 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 11:49:16 - INFO - Found 0 JSON-LD blobs
+2025-12-25 11:49:16 - INFO - Removed 726 non-content tags
+2025-12-25 11:49:16 - INFO - Removed 54 Base64 images
+2025-12-25 11:49:16 - INFO - Brief complete: 2887.1KB → 503.7KB (82.6% reduction)
+2025-12-25 11:49:16 - INFO - Estimated tokens: ~128,934
+2025-12-25 11:49:16 - INFO - 
+🔍 STEP B: Checking Fingerprint Cache...
+2025-12-25 11:49:16 - INFO - Generated fingerprint: 58d3697a6c9df197 (container:s-card|price:True|title:True)
+2025-12-25 11:49:16 - INFO - ⚠ Cache MISS - new page structure
+2025-12-25 11:49:16 - INFO - ⚠️  Cache miss - performing full analysis
+2025-12-25 11:49:16 - INFO - 
+🧠 STEP C: Context Analysis...
+2025-12-25 11:49:16 - INFO - 🧠 Step 1: Context Analysis (gemini-1.5-flash)...
+2025-12-25 11:49:16 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 11:49:17 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent "HTTP/1.1 404 Not Found"
+2025-12-25 11:49:17 - ERROR - ❌ Context Analysis failed: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2025-12-25 11:49:17 - ERROR - 
+❌ CRITICAL ERROR: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2025-12-25 11:49:17 - ERROR - Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/main_runner.py", line 83, in process_file_safely
+    context_guidelines = planner.analyze_context(brief)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/planner.py", line 185, in analyze_context
+    response = google_client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/google/genai/models.py", line 5203, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/google/genai/models.py", line 3985, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1388, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1224, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/google/genai/_api_client.py", line 1201, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/google/genai/errors.py", line 121, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/google/genai/errors.py", line 146, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+2025-12-25 11:49:17 - INFO - Moved to error directory: /home/pi5/projects/web-parser/Pi_Inbox/Errors/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:00:02 - INFO - No existing cache found - will create new one
+2025-12-25 12:00:02 - INFO - 
+================================================================================
+2025-12-25 12:00:02 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 12:00:02 - INFO - ================================================================================
+2025-12-25 12:00:02 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 12:00:02 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 12:00:02 - INFO - 
+🔧 API Configuration:
+2025-12-25 12:00:02 - INFO -    Context Analysis: gemini-1.5-flash (Google Gemini)
+2025-12-25 12:00:02 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 12:00:02 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 12:00:02 - INFO - 
+📊 Cache Statistics:
+2025-12-25 12:00:02 - INFO -    Cached Plans: 0
+2025-12-25 12:00:02 - INFO -    Total Uses: 0
+2025-12-25 12:00:02 - INFO -    Avg Success: 0.0%
+2025-12-25 12:00:02 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 12:00:02 - INFO - ================================================================================
+
+2025-12-25 12:00:23 - INFO - 
+🛑 Shutting down...
+2025-12-25 12:04:37 - INFO - No existing cache found - will create new one
+2025-12-25 12:04:37 - INFO - 
+================================================================================
+2025-12-25 12:04:37 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 12:04:37 - INFO - ================================================================================
+2025-12-25 12:04:37 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 12:04:37 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 12:04:37 - INFO - 
+🔧 API Configuration:
+2025-12-25 12:04:37 - INFO -    Context Analysis: gemini-2.5-flash (Google Gemini)
+2025-12-25 12:04:37 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 12:04:37 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 12:04:37 - INFO - 
+📊 Cache Statistics:
+2025-12-25 12:04:37 - INFO -    Cached Plans: 0
+2025-12-25 12:04:37 - INFO -    Total Uses: 0
+2025-12-25 12:04:37 - INFO -    Avg Success: 0.0%
+2025-12-25 12:04:37 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 12:04:37 - INFO - ================================================================================
+
+2025-12-25 12:04:50 - INFO - No existing cache found - will create new one
+2025-12-25 12:04:50 - INFO - 
+================================================================================
+2025-12-25 12:04:50 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 12:04:50 - INFO - ================================================================================
+2025-12-25 12:04:50 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 12:04:50 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 12:04:50 - INFO - 
+🔧 API Configuration:
+2025-12-25 12:04:50 - INFO -    Context Analysis: gemini-2.5-flash (Google Gemini)
+2025-12-25 12:04:50 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 12:04:50 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 12:04:50 - INFO - 
+📊 Cache Statistics:
+2025-12-25 12:04:50 - INFO -    Cached Plans: 0
+2025-12-25 12:04:50 - INFO -    Total Uses: 0
+2025-12-25 12:04:50 - INFO -    Avg Success: 0.0%
+2025-12-25 12:04:50 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 12:04:50 - INFO - ================================================================================
+
+2025-12-25 12:05:10 - INFO - 📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:05:14 - INFO - ================================================================================
+2025-12-25 12:05:14 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:05:14 - INFO - ================================================================================
+2025-12-25 12:05:14 - INFO - 
+📋 STEP A: Creating HTML Brief...
+2025-12-25 12:05:14 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 12:05:15 - INFO - Found 0 JSON-LD blobs
+2025-12-25 12:05:15 - INFO - Removed 726 non-content tags
+2025-12-25 12:05:15 - INFO - Removed 54 Base64 images
+2025-12-25 12:05:15 - INFO - Brief complete: 2887.1KB → 503.7KB (82.6% reduction)
+2025-12-25 12:05:15 - INFO - Estimated tokens: ~128,934
+2025-12-25 12:05:15 - INFO - 
+🔍 STEP B: Checking Fingerprint Cache...
+2025-12-25 12:05:15 - INFO - Generated fingerprint: 58d3697a6c9df197 (container:s-card|price:True|title:True)
+2025-12-25 12:05:15 - INFO - ⚠ Cache MISS - new page structure
+2025-12-25 12:05:15 - INFO - ⚠️  Cache miss - performing full analysis
+2025-12-25 12:05:15 - INFO - 
+🧠 STEP C: Context Analysis...
+2025-12-25 12:05:15 - INFO - 🧠 Step 1: Context Analysis (gemini-2.5-flash)...
+2025-12-25 12:05:15 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 12:05:25 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 12:05:25 - INFO -    💰 Cost: $0.0000 (233,488 in, 477 out)
+2025-12-25 12:05:25 - INFO -    Domain: Online Marketplace - Audio Equipment (Used/New)
+2025-12-25 12:05:25 - INFO -    Page Type: Search Results - Sold Listings
+2025-12-25 12:05:25 - INFO - 
+🔧 STEP D: Technical Planning...
+2025-12-25 12:05:25 - INFO - 🔧 Step 2: Technical Planning (gpt-4o-mini)...
+2025-12-25 12:05:27 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-25 12:05:27 - ERROR - ❌ Technical Planning failed: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 213623 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-12-25 12:05:27 - ERROR - 
+❌ CRITICAL ERROR: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 213623 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+2025-12-25 12:05:27 - ERROR - Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/main_runner.py", line 87, in process_file_safely
+    plan = planner.create_technical_plan(brief, context_guidelines)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/planner.py", line 232, in create_technical_plan
+    response = openai_client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/venv/lib/python3.11/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 128000 tokens. However, your messages resulted in 213623 tokens. Please reduce the length of the messages.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+
+2025-12-25 12:05:27 - INFO - Moved to error directory: /home/pi5/projects/web-parser/Pi_Inbox/Errors/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:09:57 - INFO - No existing cache found - will create new one
+2025-12-25 12:09:57 - INFO - 
+================================================================================
+2025-12-25 12:09:57 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 12:09:57 - INFO - ================================================================================
+2025-12-25 12:09:57 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 12:09:57 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 12:09:57 - INFO - 
+🔧 API Configuration:
+2025-12-25 12:09:57 - INFO -    Context Analysis: gemini-2.5-flash (Google Gemini)
+2025-12-25 12:09:57 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 12:09:57 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 12:09:57 - INFO - 
+📊 Cache Statistics:
+2025-12-25 12:09:57 - INFO -    Cached Plans: 0
+2025-12-25 12:09:57 - INFO -    Total Uses: 0
+2025-12-25 12:09:57 - INFO -    Avg Success: 0.0%
+2025-12-25 12:09:57 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 12:09:57 - INFO - ================================================================================
+
+2025-12-25 12:10:16 - INFO - 📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:10:20 - INFO - ================================================================================
+2025-12-25 12:10:20 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:10:20 - INFO - ================================================================================
+2025-12-25 12:10:20 - INFO - 
+📋 STEP A: Creating HTML Brief...
+2025-12-25 12:10:20 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 12:10:20 - INFO - Found 0 JSON-LD blobs
+2025-12-25 12:10:20 - INFO - Removed 726 non-content tags
+2025-12-25 12:10:20 - INFO - Removed 54 Base64 images
+2025-12-25 12:10:20 - INFO - Brief complete: 2887.1KB → 503.7KB (82.6% reduction)
+2025-12-25 12:10:20 - INFO - Estimated tokens: ~128,934
+2025-12-25 12:10:20 - INFO - 
+🔍 STEP B: Checking Fingerprint Cache...
+2025-12-25 12:10:20 - INFO - Generated fingerprint: 58d3697a6c9df197 (container:s-card|price:True|title:True)
+2025-12-25 12:10:20 - INFO - ⚠ Cache MISS - new page structure
+2025-12-25 12:10:20 - INFO - ⚠️  Cache miss - performing full analysis
+2025-12-25 12:10:20 - INFO - 
+🧠 STEP C: Context Analysis...
+2025-12-25 12:10:20 - INFO - 🧠 Step 1: Context Analysis (gemini-2.5-flash)...
+2025-12-25 12:10:20 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 12:10:29 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 12:10:29 - INFO -    💰 Cost: $0.0000 (233,488 in, 733 out)
+2025-12-25 12:10:29 - INFO -    Domain: Online Marketplace for Used Audio Equipment
+2025-12-25 12:10:29 - INFO -    Page Type: Search Results - Sold
+2025-12-25 12:10:29 - INFO - 
+🔧 STEP D: Technical Planning...
+2025-12-25 12:10:29 - INFO - 🔧 Step 2: Technical Planning (gpt-4o-mini)...
+2025-12-25 12:10:41 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 12:10:41 - INFO -    💰 Cost: $0.0031 (18,637 in, 560 out)
+2025-12-25 12:10:41 - INFO -    Created 13 extraction strategies
+2025-12-25 12:10:41 - INFO - Cache saved: 1 entries
+2025-12-25 12:10:41 - INFO - 💾 Saved new plan to cache: 58d3697a6c9df197
+2025-12-25 12:10:41 - INFO - 
+⚙️  STEP E: Executing Extraction...
+2025-12-25 12:10:41 - INFO - ⚙️  Executing extraction plan...
+2025-12-25 12:10:41 - INFO -    Processing 13 extraction strategies...
+2025-12-25 12:10:42 - WARNING -       ❌ Error extracting field 'listing_id': Pseudo-element found at position 25
+2025-12-25 12:10:42 - WARNING -       ❌ Error extracting field 'image_url': Pseudo-element found at position 17
+2025-12-25 12:10:42 - WARNING -       ❌ Error extracting field 'product_url': Pseudo-element found at position 30
+2025-12-25 12:10:42 - INFO -    Extraction complete: 10/13 successful (76.9%)
+2025-12-25 12:10:42 - INFO -    Extracted 13 fields
+2025-12-25 12:10:42 - INFO - 
+✅ STEP F: Verification & Summary...
+2025-12-25 12:10:42 - INFO - ✅ Verifying extraction quality (gpt-4o)...
+2025-12-25 12:10:47 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 12:10:47 - INFO -    💰 Cost: $0.0045 (1,097 in, 172 out)
+2025-12-25 12:10:47 - INFO -    Completeness: 70
+2025-12-25 12:10:47 - INFO - Cache saved: 1 entries
+2025-12-25 12:10:47 - INFO - 📊 Updated cache stats: 58d3697a6c9df197 (success: 50.0%)
+2025-12-25 12:10:47 - INFO - 
+📊 STEP G: Generating Report...
+2025-12-25 12:10:47 - INFO - 📄 Reports generated:
+2025-12-25 12:10:47 - INFO -    - 20251225-1210_1B - Marketplace Sold - 2025-12-24_06：23：40.md
+2025-12-25 12:10:47 - INFO -    - 20251225-1210_1B - Marketplace Sold - 2025-12-24_06：23：40.json
+2025-12-25 12:10:47 - INFO -    - 20251225-1210_1B - Marketplace Sold - 2025-12-24_06：23：40_DEBUG.txt
+2025-12-25 12:10:47 - INFO - 
+================================================================================
+2025-12-25 12:10:47 - INFO - ✅ SUCCESS (Full Analysis) - Archived: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:10:47 - INFO - ================================================================================
+
+2025-12-25 12:15:53 - INFO - Loaded fingerprint cache with 1 entries
+2025-12-25 12:15:53 - INFO - 
+================================================================================
+2025-12-25 12:15:53 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED (DUAL API MODE)
+2025-12-25 12:15:53 - INFO - ================================================================================
+2025-12-25 12:15:53 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 12:15:53 - INFO - 💾 Cache file: /home/pi5/projects/web-parser/fingerprint_cache.json
+2025-12-25 12:15:53 - INFO - 
+🔧 API Configuration:
+2025-12-25 12:15:53 - INFO -    Context Analysis: gemini-2.5-flash (Google Gemini)
+2025-12-25 12:15:53 - INFO -    Technical Planning: gpt-4o-mini (OpenAI)
+2025-12-25 12:15:53 - INFO -    Verification: gpt-4o (OpenAI)
+2025-12-25 12:15:53 - INFO - 
+📊 Cache Statistics:
+2025-12-25 12:15:53 - INFO -    Cached Plans: 1
+2025-12-25 12:15:53 - INFO -    Total Uses: 2
+2025-12-25 12:15:53 - INFO -    Avg Success: 50.0%
+2025-12-25 12:15:53 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 12:15:53 - INFO - ================================================================================
+
+2025-12-25 12:57:20 - INFO - 
+================================================================================
+2025-12-25 12:57:20 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-25 12:57:20 - INFO - ================================================================================
+2025-12-25 12:57:20 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 12:57:20 - INFO - 
+🔧 API Configuration:
+2025-12-25 12:57:20 - INFO -    Hypothesis: gpt-4o (OpenAI GPT-4o)
+2025-12-25 12:57:20 - INFO -    Extraction: gemini-2.5-flash (Google Gemini)
+2025-12-25 12:57:20 - INFO -    Validation: gpt-4o (OpenAI GPT-4o)
+2025-12-25 12:57:20 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 12:57:20 - INFO - ================================================================================
+2025-12-25 12:57:33 - INFO - 
+📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:57:35 - INFO - ================================================================================
+2025-12-25 12:57:35 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:57:35 - INFO - ================================================================================
+2025-12-25 12:57:35 - INFO - 
+📋 Step 1: Cleaning HTML...
+2025-12-25 12:57:35 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 12:57:35 - INFO - Found 0 JSON-LD blobs
+2025-12-25 12:57:35 - INFO - Removed 0 non-content tags
+2025-12-25 12:57:35 - INFO - Removed 0 Base64 images
+2025-12-25 12:57:35 - INFO - Brief complete: 0.1KB → 0.1KB (-28.4% reduction)
+2025-12-25 12:57:35 - INFO - Estimated tokens: ~32
+2025-12-25 12:57:35 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 12:57:35 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o)...
+2025-12-25 12:57:37 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 12:57:37 - INFO -    💰 Cost: $0.0019 (349 in, 102 out)
+2025-12-25 12:57:37 - INFO -    📋 Page Type: auction results
+2025-12-25 12:57:37 - INFO -    🌐 Source: unknown marketplace
+2025-12-25 12:57:37 - INFO -    📦 Category: unknown
+2025-12-25 12:57:37 - INFO -    🔢 Items: multiple (estimate)
+2025-12-25 12:57:37 - INFO -    ✅ Confidence: low
+2025-12-25 12:57:37 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 12:57:37 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 12:57:37 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 12:57:39 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 12:57:39 - INFO -    💰 Cost: $0.0000 (402 in, 9 out)
+2025-12-25 12:57:39 - INFO -    📦 Extracted 0 items
+2025-12-25 12:57:39 - INFO - 
+✅ Step 3: Validating & Creating Report...
+2025-12-25 12:57:39 - INFO - ✅ Step 3: Validation & Report (GPT-4o)...
+2025-12-25 12:57:40 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 12:57:40 - INFO -    💰 Cost: $0.0030 (622 in, 145 out)
+2025-12-25 12:57:40 - WARNING -    ⚠️  Status: EXTRACTION_FAILED
+2025-12-25 12:57:40 - WARNING -    ❌ Problem: No items were extracted from the page, despite expecting multiple auction results.
+2025-12-25 12:57:40 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 12:57:40 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 12:57:40 - INFO -    📄 Generated reports:
+2025-12-25 12:57:40 - INFO -       - 20251225-1257_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.md
+2025-12-25 12:57:40 - INFO -       - 20251225-1257_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.json
+2025-12-25 12:57:40 - INFO -       - 20251225-1257_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_DEBUG.json
+2025-12-25 12:57:40 - INFO - 
+================================================================================
+2025-12-25 12:57:40 - INFO - ❌ FAILED - Moved to errors: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:57:40 - INFO - ================================================================================
+2025-12-25 12:57:40 - INFO - 
+📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:57:42 - INFO - ================================================================================
+2025-12-25 12:57:42 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 12:57:42 - INFO - ================================================================================
+2025-12-25 12:57:42 - INFO - 
+📋 Step 1: Cleaning HTML...
+2025-12-25 12:57:42 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 12:57:42 - INFO - Found 0 JSON-LD blobs
+2025-12-25 12:57:42 - INFO - Removed 0 non-content tags
+2025-12-25 12:57:42 - INFO - Removed 0 Base64 images
+2025-12-25 12:57:42 - INFO - Brief complete: 0.1KB → 0.1KB (-28.4% reduction)
+2025-12-25 12:57:42 - INFO - Estimated tokens: ~32
+2025-12-25 12:57:42 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 12:57:42 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o)...
+2025-12-25 12:57:44 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 12:57:44 - INFO -    💰 Cost: $0.0020 (349 in, 110 out)
+2025-12-25 12:57:44 - INFO -    📋 Page Type: auction results
+2025-12-25 12:57:44 - INFO -    🌐 Source: unknown marketplace
+2025-12-25 12:57:44 - INFO -    📦 Category: unknown
+2025-12-25 12:57:44 - INFO -    🔢 Items: multiple (estimate)
+2025-12-25 12:57:44 - INFO -    ✅ Confidence: low
+2025-12-25 12:57:44 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 12:57:44 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 12:57:44 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 12:57:46 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 12:57:46 - INFO -    💰 Cost: $0.0000 (402 in, 9 out)
+2025-12-25 12:57:46 - INFO -    📦 Extracted 0 items
+2025-12-25 12:57:46 - INFO - 
+✅ Step 3: Validating & Creating Report...
+2025-12-25 12:57:46 - INFO - ✅ Step 3: Validation & Report (GPT-4o)...
+2025-12-25 12:57:48 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 12:57:48 - INFO -    💰 Cost: $0.0030 (630 in, 141 out)
+2025-12-25 12:57:48 - WARNING -    ⚠️  Status: EXTRACTION_FAILED
+2025-12-25 12:57:48 - WARNING -    ❌ Problem: No items were extracted from the page despite expecting multiple auction results.
+2025-12-25 12:57:48 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 12:57:48 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 12:57:48 - INFO -    📄 Generated reports:
+2025-12-25 12:57:48 - INFO -       - 20251225-1257_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.md
+2025-12-25 12:57:48 - INFO -       - 20251225-1257_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.json
+2025-12-25 12:57:48 - INFO -       - 20251225-1257_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_DEBUG.json
+2025-12-25 12:57:48 - ERROR - 
+❌ CRITICAL ERROR: [Errno 2] No such file or directory: '/home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html' -> '/home/pi5/projects/web-parser/Pi_Inbox/Errors/1B - Marketplace Sold - 2025-12-24_06：23：40.html'
+2025-12-25 12:57:48 - ERROR - Traceback:
+Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/main_runner.py", line 115, in process_file_safely
+    file_path.rename(error_path)
+  File "/usr/lib/python3.11/pathlib.py", line 1176, in rename
+    os.rename(self, target)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html' -> '/home/pi5/projects/web-parser/Pi_Inbox/Errors/1B - Marketplace Sold - 2025-12-24_06：23：40.html'
+
+2025-12-25 12:57:48 - ERROR - Failed to move file: [Errno 2] No such file or directory: '/home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html' -> '/home/pi5/projects/web-parser/Pi_Inbox/Errors/1B - Marketplace Sold - 2025-12-24_06：23：40.html'
+2025-12-25 13:04:34 - INFO - 
+================================================================================
+2025-12-25 13:04:34 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-25 13:04:34 - INFO - ================================================================================
+2025-12-25 13:04:34 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 13:04:34 - INFO - 
+🔧 API Configuration:
+2025-12-25 13:04:34 - INFO -    Hypothesis: gpt-4o (OpenAI GPT-4o)
+2025-12-25 13:04:34 - INFO -    Extraction: gemini-2.5-flash (Google Gemini)
+2025-12-25 13:04:34 - INFO -    Validation: gpt-4o (OpenAI GPT-4o)
+2025-12-25 13:04:34 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 13:04:34 - INFO - ================================================================================
+2025-12-25 13:04:43 - INFO - 
+📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:04:43 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 13:04:45 - INFO -    📊 Receiving: 2887.1 KB...
+2025-12-25 13:04:48 - INFO -    ✅ Transfer complete: 2887.1 KB
+2025-12-25 13:04:48 - INFO - ================================================================================
+2025-12-25 13:04:48 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:04:48 - INFO -    File size: 2887.1 KB
+2025-12-25 13:04:48 - INFO - ================================================================================
+2025-12-25 13:04:48 - INFO - 
+📋 Step 1: Cleaning HTML...
+2025-12-25 13:04:48 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 13:04:48 - INFO - Found 0 JSON-LD blobs
+2025-12-25 13:04:48 - INFO - Removed 0 non-content tags
+2025-12-25 13:04:48 - INFO - Removed 0 Base64 images
+2025-12-25 13:04:48 - INFO - Brief complete: 0.1KB → 0.1KB (-28.4% reduction)
+2025-12-25 13:04:48 - INFO - Estimated tokens: ~32
+2025-12-25 13:04:48 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 13:04:48 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o)...
+2025-12-25 13:04:50 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 13:04:50 - INFO -    💰 Cost: $0.0019 (349 in, 103 out)
+2025-12-25 13:04:50 - INFO -    📋 Page Type: auction results
+2025-12-25 13:04:50 - INFO -    🌐 Source: unknown marketplace
+2025-12-25 13:04:50 - INFO -    📦 Category: unknown
+2025-12-25 13:04:50 - INFO -    🔢 Items: multiple (estimate)
+2025-12-25 13:04:50 - INFO -    ✅ Confidence: low
+2025-12-25 13:04:50 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 13:04:50 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 13:04:50 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 13:04:54 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 13:04:54 - INFO -    💰 Cost: $0.0000 (402 in, 9 out)
+2025-12-25 13:04:54 - INFO -    📦 Extracted 0 items
+2025-12-25 13:04:54 - INFO - 
+✅ Step 3: Validating & Creating Report...
+2025-12-25 13:04:54 - INFO - ✅ Step 3: Validation & Report (GPT-4o)...
+2025-12-25 13:04:55 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 13:04:55 - INFO -    💰 Cost: $0.0030 (623 in, 144 out)
+2025-12-25 13:04:55 - WARNING -    ⚠️  Status: EXTRACTION_FAILED
+2025-12-25 13:04:55 - WARNING -    ❌ Problem: No items were extracted from the page despite expecting multiple auction results.
+2025-12-25 13:04:55 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 13:04:55 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 13:04:55 - INFO -    📄 Generated reports:
+2025-12-25 13:04:55 - INFO -       - 20251225-1304_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.md
+2025-12-25 13:04:55 - INFO -       - 20251225-1304_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.json
+2025-12-25 13:04:55 - INFO -       - 20251225-1304_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_DEBUG.json
+2025-12-25 13:04:55 - INFO - 
+================================================================================
+2025-12-25 13:04:55 - INFO - ❌ FAILED - Moved to errors: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:04:55 - INFO - ================================================================================
+2025-12-25 13:04:55 - INFO - 
+📥 New file detected: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue/._1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:04:55 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 13:04:56 - INFO -    📊 Receiving: 4.0 KB...
+2025-12-25 13:04:59 - INFO -    ✅ Transfer complete: 4.0 KB
+2025-12-25 13:04:59 - INFO - ================================================================================
+2025-12-25 13:04:59 - INFO - 🚀 Processing: ._1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:04:59 - INFO -    File size: 4.0 KB
+2025-12-25 13:04:59 - INFO - ================================================================================
+2025-12-25 13:04:59 - INFO - 
+📋 Step 1: Cleaning HTML...
+2025-12-25 13:04:59 - INFO - Generating HTML Brief (Full Clean Mode)...
+2025-12-25 13:04:59 - INFO - Found 0 JSON-LD blobs
+2025-12-25 13:04:59 - INFO - Removed 0 non-content tags
+2025-12-25 13:04:59 - INFO - Removed 0 Base64 images
+2025-12-25 13:04:59 - INFO - Brief complete: 0.1KB → 0.1KB (-27.9% reduction)
+2025-12-25 13:04:59 - INFO - Estimated tokens: ~33
+2025-12-25 13:04:59 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 13:04:59 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o)...
+2025-12-25 13:05:01 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 13:05:01 - INFO -    💰 Cost: $0.0019 (350 in, 104 out)
+2025-12-25 13:05:01 - INFO -    📋 Page Type: auction results
+2025-12-25 13:05:01 - INFO -    🌐 Source: unknown marketplace
+2025-12-25 13:05:01 - INFO -    📦 Category: unknown
+2025-12-25 13:05:01 - INFO -    🔢 Items: multiple (estimate)
+2025-12-25 13:05:01 - INFO -    ✅ Confidence: low
+2025-12-25 13:05:01 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 13:05:01 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 13:05:01 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 13:05:03 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 13:05:03 - INFO -    💰 Cost: $0.0000 (403 in, 9 out)
+2025-12-25 13:05:03 - INFO -    📦 Extracted 0 items
+2025-12-25 13:05:03 - INFO - 
+✅ Step 3: Validating & Creating Report...
+2025-12-25 13:05:03 - INFO - ✅ Step 3: Validation & Report (GPT-4o)...
+2025-12-25 13:05:04 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 13:05:04 - INFO -    💰 Cost: $0.0030 (625 in, 148 out)
+2025-12-25 13:05:04 - WARNING -    ⚠️  Status: EXTRACTION_FAILED
+2025-12-25 13:05:04 - WARNING -    ❌ Problem: No items were extracted from the page despite expecting multiple auction results.
+2025-12-25 13:05:04 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 13:05:04 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 13:05:04 - INFO -    📄 Generated reports:
+2025-12-25 13:05:04 - INFO -       - 20251225-1305_._1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.md
+2025-12-25 13:05:04 - INFO -       - 20251225-1305_._1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_FAILED.json
+2025-12-25 13:05:04 - INFO -       - 20251225-1305_._1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_DEBUG.json
+2025-12-25 13:05:04 - INFO - 
+================================================================================
+2025-12-25 13:05:04 - INFO - ❌ FAILED - Moved to errors: ._1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:05:04 - INFO - ================================================================================
+2025-12-25 13:22:08 - INFO - 
+================================================================================
+2025-12-25 13:22:08 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-25 13:22:08 - INFO - ================================================================================
+2025-12-25 13:22:08 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-25 13:22:08 - INFO - 
+🔧 API Configuration:
+2025-12-25 13:22:08 - INFO -    Hypothesis: gpt-4o (OpenAI GPT-4o)
+2025-12-25 13:22:08 - INFO -    Extraction: gemini-2.5-flash (Google Gemini)
+2025-12-25 13:22:08 - INFO -    Validation: gpt-4o (OpenAI GPT-4o)
+2025-12-25 13:22:08 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-25 13:22:08 - INFO - ================================================================================
+2025-12-25 13:22:48 - INFO - 
+📥 New file detected: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:22:48 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 13:22:50 - INFO -    📊 Receiving: 2887.1 KB...
+2025-12-25 13:22:53 - INFO -    ✅ Transfer complete: 2887.1 KB
+2025-12-25 13:22:53 - INFO - ================================================================================
+2025-12-25 13:22:53 - INFO - 🚀 Processing: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:22:53 - INFO -    File size: 2887.1 KB
+2025-12-25 13:22:53 - INFO - ================================================================================
+2025-12-25 13:22:53 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 13:22:53 - INFO -    ✅ Read 2,956,402 characters from file
+2025-12-25 13:22:53 - INFO -    📄 Processing HTML: 2,956,402 characters (2887.1 KB)
+2025-12-25 13:22:53 - INFO -    ℹ️  No JSON-LD structured data found
+2025-12-25 13:22:53 - INFO -    🗑️  Removed 726 non-content tags
+2025-12-25 13:22:53 - INFO -    🗑️  Removed 2 HTML comments
+2025-12-25 13:22:53 - INFO -    🖼️  Removed 54 Base64 inline images
+2025-12-25 13:22:54 - INFO -    ✅ Cleaning complete: 2887.1KB → 503.7KB (82.6% reduction)
+2025-12-25 13:22:54 - INFO -    📊 Estimated tokens: ~128,934
+2025-12-25 13:22:54 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 13:22:54 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o)...
+2025-12-25 13:22:57 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 13:22:57 - INFO -    💰 Cost: $0.0431 (16,658 in, 145 out)
+2025-12-25 13:22:57 - INFO -    📋 Page Type: search results
+2025-12-25 13:22:57 - INFO -    🌐 Source: eBay
+2025-12-25 13:22:57 - INFO -    📦 Category: Consumer Electronics
+2025-12-25 13:22:57 - INFO -    🔢 Items: multiple (estimate)
+2025-12-25 13:22:57 - INFO -    ✅ Confidence: high
+2025-12-25 13:22:57 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 13:22:57 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 13:22:57 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 13:24:20 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 13:24:20 - INFO -    💰 Cost: $0.0210 (227,949 in, 12,936 out)
+2025-12-25 13:24:20 - INFO -    📦 Extracted 22 items
+2025-12-25 13:24:20 - INFO - 
+✅ Step 3: Validating & Creating Report...
+2025-12-25 13:24:20 - INFO - ✅ Step 3: Validation & Report (GPT-4o)...
+2025-12-25 13:24:23 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 13:24:23 - INFO -    💰 Cost: $0.0331 (11,799 in, 360 out)
+2025-12-25 13:24:23 - INFO -    ✅ Status: SUCCESS
+2025-12-25 13:24:23 - INFO -    📊 Items: 20
+2025-12-25 13:24:23 - INFO -    ⭐ Quality: excellent
+2025-12-25 13:24:23 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 13:24:23 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 13:24:23 - INFO -    📄 Generated reports:
+2025-12-25 13:24:23 - INFO -       - 20251225-1324_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40.md
+2025-12-25 13:24:23 - INFO -       - 20251225-1324_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40.json
+2025-12-25 13:24:23 - INFO -       - 20251225-1324_1B_-_Marketplace_Sold_-_2025-12-24_06：23：40_DEBUG.json
+2025-12-25 13:24:23 - INFO - 
+================================================================================
+2025-12-25 13:24:23 - INFO - ✅ SUCCESS - Archived: 1B - Marketplace Sold - 2025-12-24_06：23：40.html
+2025-12-25 13:24:23 - INFO - ================================================================================
+2025-12-25 13:24:23 - INFO -    ⏭️  Skipping macOS metadata file: ._1B - Marketplace Sold - 2025-12-24_06：23：40.html
