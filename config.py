@@ -24,9 +24,12 @@ if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY not found in .env file")
 
 # --- Model Strategies ---
-# PAY FOR ACCURACY - Use GPT-4o for critical thinking
-MODEL_SMART = "gpt-4o"           # Context Analysis & Verification
-MODEL_FAST = "gpt-4o-mini"       # Technical Planning (follows guidelines)
+# Using gpt-4o-mini for context analysis to stay within rate limits
+# Your account: gpt-4o = 30K TPM, gpt-4o-mini = 200K TPM
+# Large HTML files (100KB+) exceed gpt-4o limits but fit in gpt-4o-mini
+MODEL_SMART = "gpt-4o-mini"      # Context Analysis (needs high token limit)
+MODEL_VERIFY = "gpt-4o"          # Verification (small payload, wants quality)
+MODEL_FAST = "gpt-4o-mini"       # Technical Planning
 
 PRICING = {
     "gpt-4o": {"input": 2.50, "output": 10.00},

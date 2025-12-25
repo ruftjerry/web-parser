@@ -1,6 +1,6 @@
 import json
 from openai import OpenAI
-from config import OPENAI_API_KEY, MODEL_SMART
+from config import OPENAI_API_KEY, MODEL_VERIFY
 from utils_logging import log_event, log_token_usage
 
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -45,7 +45,7 @@ Be concise and business-focused in your summary.
 
 def verify_and_summarize(extracted_data: dict, context: dict) -> dict:
     """Verify extraction quality and create executive summary."""
-    log_event(f"✅ Verifying extraction quality ({MODEL_SMART})...")
+    log_event(f"✅ Verifying extraction quality ({MODEL_VERIFY})...")
     
     payload = json.dumps({
         "original_context": context,
@@ -54,7 +54,7 @@ def verify_and_summarize(extracted_data: dict, context: dict) -> dict:
     
     try:
         response = client.chat.completions.create(
-            model=MODEL_SMART,
+            model=MODEL_VERIFY,
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT_VERIFIER},
                 {"role": "user", "content": f"Review this extraction:\n\n{payload}"}
@@ -65,7 +65,7 @@ def verify_and_summarize(extracted_data: dict, context: dict) -> dict:
         
         content = response.choices[0].message.content
         usage = response.usage
-        log_token_usage("Verification", MODEL_SMART, usage.prompt_tokens, usage.completion_tokens)
+        log_token_usage("Verification", MODEL_VERIFY, usage.prompt_tokens, usage.completion_tokens)
         
         review = json.loads(content)
         log_event(f"   Completeness: {review.get('completeness_score', 'N/A')}")

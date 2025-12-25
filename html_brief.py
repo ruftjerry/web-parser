@@ -6,12 +6,12 @@ def create_brief(html_content: str) -> dict:
     """
     Create a comprehensive brief from HTML.
     
-    Strategy: PAY FOR ACCURACY
+    Strategy: SEND FULL CLEANED HTML
     - Extract JSON-LD (structured data gold mine)
     - Send FULL cleaned HTML (no truncation, no guessing)
-    - Let the LLM see everything to make accurate decisions
+    - gpt-4o-mini has 200K TPM limit - plenty of headroom
     
-    Cost: ~10-15K tokens per page = $0.02-0.04 in API calls
+    Cost: ~10-15K tokens per page = $0.002-0.003 in API calls (mini pricing)
     Value: 95%+ extraction accuracy on first pass
     """
     log_event("Generating HTML Brief (Full Clean Mode)...")
@@ -63,7 +63,7 @@ def create_brief(html_content: str) -> dict:
 
     # --- STEP 4: GENERATE FULL CLEAN HTML ---
     # NO TRUNCATION - send everything
-    # The LLM needs to see the whole structure to be accurate
+    # gpt-4o-mini can handle it (200K TPM limit)
     clean_html = soup.body.prettify() if soup.body else soup.prettify()
     
     original_size_kb = len(html_content) / 1024

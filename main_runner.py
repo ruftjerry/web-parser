@@ -163,8 +163,9 @@ def start_watching():
     log_event("=" * 80)
     log_event(f"📂 Monitoring: {config.QUEUE_DIR}")
     log_event(f"💾 Cache file: {config.CACHE_FILE}")
-    log_event(f"🧠 Smart Model: {config.MODEL_SMART}")
-    log_event(f"⚡ Fast Model: {config.MODEL_FAST}")
+    log_event(f"🧠 Analysis Model: {config.MODEL_SMART}")
+    log_event(f"✅ Verify Model: {config.MODEL_VERIFY}")
+    log_event(f"⚡ Planning Model: {config.MODEL_FAST}")
     
     # Show cache stats
     stats = fingerprint.cache.get_stats()
