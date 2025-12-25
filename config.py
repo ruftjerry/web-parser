@@ -26,12 +26,16 @@ if not OPENAI_API_KEY:
 if not GOOGLE_API_KEY:
     raise ValueError("GOOGLEAISTUDIO_API_KEY not found in .env file")
 
-# --- Model Strategies (DUAL API APPROACH) ---
-# GPT-4o: Hypothesis generation and validation/reporting
-# Gemini 2.5 Flash: Data extraction (1M token window, handles big HTML)
+# --- Model Strategies (TWO-STEP VALIDATION) ---
+# Step 1: Hypothesis - mini classifies page type (fast & cheap)
+# Step 2: Extraction - Gemini extracts with massive context window
+# Step 3A: Formatting - mini converts JSON to markdown (mechanical work)
+# Step 3B: Validation - 4o reviews and adds insights (strategic oversight)
 
-MODEL_VERIFY = "gpt-4o"                 # OpenAI - for hypothesis & validation
-MODEL_CONTEXT = "gemini-2.5-flash"      # Google - for data extraction
+MODEL_HYPOTHESIS = "gpt-4o-mini"        # OpenAI - cheap classification
+MODEL_CONTEXT = "gemini-2.5-flash"      # Google - 1M token window
+MODEL_FORMATTER = "gpt-4o-mini"         # OpenAI - mechanical formatting
+MODEL_VALIDATOR = "gpt-4o"              # OpenAI - strategic validation
 
 PRICING = {
     # OpenAI pricing (per 1M tokens)
@@ -42,10 +46,10 @@ PRICING = {
     # Source: https://ai.google.dev/pricing
     "gemini-1.5-flash": {"input": 0.075, "output": 0.30},
     "gemini-1.5-pro": {"input": 1.25, "output": 5.00},
-    "gemini-2.5-flash": {"input": 0.075, "output": 0.30},  # Same as 1.5 Flash
-    "gemini-2.5-pro": {"input": 1.25, "output": 5.00},     # Same as 1.5 Pro
-    "gemini-2.0-flash": {"input": 0.075, "output": 0.30},  # Same pricing
-    "gemini-flash-latest": {"input": 0.075, "output": 0.30}  # Points to latest Flash
+    "gemini-2.5-flash": {"input": 0.075, "output": 0.30},
+    "gemini-2.5-pro": {"input": 1.25, "output": 5.00},
+    "gemini-2.0-flash": {"input": 0.075, "output": 0.30},
+    "gemini-flash-latest": {"input": 0.075, "output": 0.30}
 }
 
 # --- System Settings ---

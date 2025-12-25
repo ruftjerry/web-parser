@@ -1,10 +1,10 @@
 """
-analyzer.py - GPT-4o analyzes a sample of the page to form a hypothesis
+analyzer.py - GPT-4o-mini analyzes a sample of the page to form a hypothesis
 """
 
 import json
 from openai import OpenAI
-from config import OPENAI_API_KEY, MODEL_VERIFY
+from config import OPENAI_API_KEY, MODEL_HYPOTHESIS
 from utils_logging import log_event, log_token_usage
 
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -43,7 +43,7 @@ Return ONLY valid JSON in this format:
 
 def analyze_page(html_sample: str) -> dict:
     """
-    GPT-4o analyzes a sample of HTML to form a hypothesis about the page.
+    GPT-4o-mini analyzes a sample of HTML to form a hypothesis about the page.
     
     Args:
         html_sample: First ~50KB of cleaned HTML
@@ -51,11 +51,11 @@ def analyze_page(html_sample: str) -> dict:
     Returns:
         dict with hypothesis about page type, source, expected data, etc.
     """
-    log_event("🔍 Step 2A: Forming Hypothesis (GPT-4o)...")
+    log_event("🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...")
     
     try:
         response = client.chat.completions.create(
-            model=MODEL_VERIFY,
+            model=MODEL_HYPOTHESIS,
             messages=[
                 {"role": "system", "content": HYPOTHESIS_PROMPT},
                 {"role": "user", "content": f"HTML Sample:\n\n{html_sample}"}
@@ -66,7 +66,7 @@ def analyze_page(html_sample: str) -> dict:
         
         content = response.choices[0].message.content
         usage = response.usage
-        log_token_usage("Hypothesis", MODEL_VERIFY, usage.prompt_tokens, usage.completion_tokens)
+        log_token_usage("Hypothesis", MODEL_HYPOTHESIS, usage.prompt_tokens, usage.completion_tokens)
         
         hypothesis = json.loads(content)
         

@@ -1,12 +1,14 @@
 """
 main_runner.py - Smart Web Data Extraction Pipeline
-Simple, AI-powered extraction with self-validation
+Two-step validation for optimal cost/quality
 
 Architecture:
 1. Clean HTML (Python)
-2. Form Hypothesis (GPT-4o on sample)
+2. Form Hypothesis (GPT-4o-mini on sample)
 3. Extract Data (Gemini on full HTML)
-4. Validate & Report (GPT-4o)
+4A. Format Data (GPT-4o-mini converts JSON to markdown)
+4B. Validate & Insights (GPT-4o adds strategic oversight)
+5. Generate Reports
 """
 
 import time
@@ -18,7 +20,8 @@ import config
 import html_brief
 import analyzer
 import gemini_extractor
-import validator_reporter
+import formatter
+import validator
 import reporter
 from utils_logging import log_event
 
@@ -51,11 +54,10 @@ class HTMLFileHandler(FileSystemEventHandler):
             log_event(f"\n📥 New file detected: {file_path.name}")
             
             # Wait for file to finish copying over network
-            # Check file size until it stabilizes
             log_event(f"   ⏳ Waiting for file transfer to complete...")
             last_size = 0
             stable_count = 0
-            max_wait = 30  # Maximum 30 seconds
+            max_wait = 30
             wait_count = 0
             
             while wait_count < max_wait:
@@ -69,7 +71,7 @@ class HTMLFileHandler(FileSystemEventHandler):
                 
                 if current_size == last_size:
                     stable_count += 1
-                    if stable_count >= 3:  # Size stable for 3 seconds
+                    if stable_count >= 3:
                         log_event(f"   ✅ Transfer complete: {current_size / 1024:.1f} KB")
                         break
                 else:
@@ -103,10 +105,9 @@ def process_file_safely(file_path: Path):
             return
         
         file_size = file_path.stat().st_size
-        if file_size < 1000:  # Less than 1KB is suspiciously small
+        if file_size < 1000:
             log_event(f"⚠️  File is too small ({file_size} bytes) - may be corrupted", "warning")
             log_event(f"   Skipping: {file_path.name}", "warning")
-            # Move to errors
             error_path = config.ERROR_DIR / file_path.name
             file_path.rename(error_path)
             return
@@ -119,36 +120,36 @@ def process_file_safely(file_path: Path):
         # === STEP 1: READ AND CLEAN HTML ===
         log_event("\n📋 Step 1: Reading and Cleaning HTML...")
         
-        # READ THE ACTUAL FILE CONTENT (FIX: was passing file path as string)
         try:
             html_content = file_path.read_text(encoding='utf-8')
             log_event(f"   ✅ Read {len(html_content):,} characters from file")
         except UnicodeDecodeError:
-            # Try with different encoding if UTF-8 fails
             log_event(f"   ⚠️  UTF-8 decode failed, trying latin-1...", "warning")
             html_content = file_path.read_text(encoding='latin-1')
             log_event(f"   ✅ Read {len(html_content):,} characters with latin-1 encoding")
         
-        # Now clean the HTML content
         brief = html_brief.create_brief(html_content)
         
         # === STEP 2A: FORM HYPOTHESIS ===
         log_event("\n🔍 Step 2A: Forming Hypothesis...")
-        # Send first 50KB to GPT-4o for quick classification
         html_sample = brief.get('full_clean_html', '')[:50000]
         hypothesis = analyzer.analyze_page(html_sample)
         
         # === STEP 2B: EXTRACT DATA ===
         log_event("\n⚡ Step 2B: Extracting Data...")
-        # Send full HTML to Gemini for extraction
         full_html = brief.get('full_clean_html', '')
         extracted_data = gemini_extractor.extract_data(full_html, hypothesis)
         
-        # === STEP 3: VALIDATE & REPORT ===
-        log_event("\n✅ Step 3: Validating & Creating Report...")
-        validation_result = validator_reporter.validate_and_report(
+        # === STEP 3A: FORMAT DATA ===
+        log_event("\n📝 Step 3A: Formatting Data...")
+        formatted_markdown = formatter.format_data(hypothesis, extracted_data)
+        
+        # === STEP 3B: VALIDATE & ADD INSIGHTS ===
+        log_event("\n✅ Step 3B: Validation & Insights...")
+        validation_result = validator.validate_report(
             hypothesis,
             extracted_data,
+            formatted_markdown,
             file_path.name
         )
         
@@ -157,6 +158,7 @@ def process_file_safely(file_path: Path):
         md_path, json_path, debug_path = reporter.generate_reports(
             hypothesis,
             extracted_data,
+            formatted_markdown,
             validation_result,
             file_path.name
         )
@@ -164,13 +166,11 @@ def process_file_safely(file_path: Path):
         # === FINAL STATUS ===
         status = validation_result.get('status', 'unknown')
         
-        # Check if file still exists before trying to move it
         if not file_path.exists():
             log_event(f"\n⚠️  File already moved or deleted: {file_path.name}", "warning")
             return
         
         if status == 'success':
-            # Move to archive
             archive_path = config.ARCHIVE_DIR / file_path.name
             file_path.rename(archive_path)
             log_event("\n" + "=" * 80)
@@ -178,7 +178,6 @@ def process_file_safely(file_path: Path):
             log_event("=" * 80)
         
         elif status == 'extraction_incomplete':
-            # Move to archive but flag as incomplete
             archive_path = config.ARCHIVE_DIR / file_path.name
             file_path.rename(archive_path)
             log_event("\n" + "=" * 80)
@@ -186,7 +185,6 @@ def process_file_safely(file_path: Path):
             log_event("=" * 80)
         
         else:
-            # Move to error directory
             error_path = config.ERROR_DIR / file_path.name
             file_path.rename(error_path)
             log_event("\n" + "=" * 80)
@@ -200,7 +198,6 @@ def process_file_safely(file_path: Path):
         traceback_str = traceback.format_exc()
         log_event(f"Traceback:\n{traceback_str}", "error")
         
-        # Move to error directory
         try:
             if file_path.exists():
                 error_path = config.ERROR_DIR / file_path.name
@@ -218,10 +215,11 @@ def main():
     log_event("🚀 SMART EXTRACTION PIPELINE - STARTED")
     log_event("=" * 80)
     log_event(f"📂 Monitoring: {config.QUEUE_DIR}")
-    log_event(f"\n🔧 API Configuration:")
-    log_event(f"   Hypothesis: {config.MODEL_VERIFY} (OpenAI GPT-4o)")
-    log_event(f"   Extraction: {config.MODEL_CONTEXT} (Google Gemini)")
-    log_event(f"   Validation: {config.MODEL_VERIFY} (OpenAI GPT-4o)")
+    log_event(f"\n🔧 API Configuration (Two-Step Validation):")
+    log_event(f"   Hypothesis:  {config.MODEL_HYPOTHESIS} (classification)")
+    log_event(f"   Extraction:  {config.MODEL_CONTEXT} (big context)")
+    log_event(f"   Formatting:  {config.MODEL_FORMATTER} (mechanical work)")
+    log_event(f"   Validation:  {config.MODEL_VALIDATOR} (strategic insights)")
     log_event(f"\n⏳ Waiting for HTML files...")
     log_event("=" * 80)
     

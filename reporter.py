@@ -1,5 +1,5 @@
 """
-reporter.py - Generates output files from validation results
+reporter.py - Generates output files from formatted data and validation results
 """
 
 import json
@@ -11,6 +11,7 @@ from utils_logging import log_event
 def generate_reports(
     hypothesis: dict,
     extracted_data: dict,
+    formatted_markdown: str,
     validation_result: dict,
     original_filename: str
 ) -> tuple:
@@ -46,11 +47,23 @@ def generate_reports(
     debug_path = OUTPUT_DIR / debug_filename
     
     # Generate Markdown report
-    md_content = generate_markdown(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+    md_content = generate_markdown(
+        hypothesis, 
+        formatted_markdown, 
+        validation_result, 
+        original_filename, 
+        timestamp
+    )
     md_path.write_text(md_content, encoding='utf-8')
     
     # Generate JSON output
-    json_content = generate_json_output(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+    json_content = generate_json_output(
+        hypothesis, 
+        extracted_data, 
+        validation_result, 
+        original_filename, 
+        timestamp
+    )
     json_path.write_text(json.dumps(json_content, indent=2, ensure_ascii=False), encoding='utf-8')
     
     # Generate DEBUG file (full diagnostic info)
@@ -59,6 +72,7 @@ def generate_reports(
         "original_file": original_filename,
         "hypothesis": hypothesis,
         "extracted_data": extracted_data,
+        "formatted_markdown_length": len(formatted_markdown),
         "validation_result": validation_result
     }
     debug_path.write_text(json.dumps(debug_content, indent=2, ensure_ascii=False), encoding='utf-8')
@@ -71,32 +85,34 @@ def generate_reports(
     return (md_path, json_path, debug_path)
 
 
-def generate_markdown(hypothesis: dict, extracted_data: dict, validation_result: dict, 
+def generate_markdown(hypothesis: dict, formatted_markdown: str, validation_result: dict, 
                      original_filename: str, timestamp: str) -> str:
-    """Generate a beautiful Markdown report."""
+    """Generate a beautiful Markdown report by combining insights with formatted data."""
     
     status = validation_result.get('status', 'unknown')
     
     if status == 'success':
-        return generate_success_markdown(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+        return generate_success_markdown(hypothesis, formatted_markdown, validation_result, original_filename, timestamp)
     else:
-        return generate_failure_markdown(hypothesis, extracted_data, validation_result, original_filename, timestamp)
+        return generate_failure_markdown(hypothesis, formatted_markdown, validation_result, original_filename, timestamp)
 
 
-def generate_success_markdown(hypothesis: dict, extracted_data: dict, validation_result: dict,
+def generate_success_markdown(hypothesis: dict, formatted_markdown: str, validation_result: dict,
                               original_filename: str, timestamp: str) -> str:
     """Generate Markdown for successful extraction."""
     
-    report = validation_result.get('report', {})
+    insights = validation_result.get('insights', {})
+    statistics = validation_result.get('statistics', {})
     validation = validation_result.get('validation', {})
     
-    summary = report.get('summary', 'Data extracted successfully.')
-    insights = report.get('insights', '')
-    stats = report.get('statistics', {})
-    recommendation = report.get('recommendation', '')
+    exec_summary = insights.get('executive_summary', 'Data extracted successfully.')
+    key_findings = insights.get('key_findings', '')
+    recommendation = insights.get('recommendation', '')
     
-    total_items = stats.get('total_items', 'Unknown')
-    key_metrics = stats.get('key_metrics', '')
+    total_items = statistics.get('total_items', 'Unknown')
+    key_metrics = statistics.get('key_metrics', '')
+    
+    data_quality = validation.get('data_quality', 'Unknown')
     
     md = f"""# 📊 Extraction Report: {original_filename}
 **Processed:** {timestamp}
@@ -110,13 +126,13 @@ def generate_success_markdown(hypothesis: dict, extracted_data: dict, validation
 **Items Found:** {total_items}
 
 ### 💡 Executive Summary
-{summary}
+{exec_summary}
 
 """
 
-    if insights:
-        md += f"""### 🎯 Key Insights
-{insights}
+    if key_findings:
+        md += f"""### 🎯 Key Findings
+{key_findings}
 
 """
 
@@ -126,47 +142,46 @@ def generate_success_markdown(hypothesis: dict, extracted_data: dict, validation
 
 """
 
+    # Insert the formatted data from formatter.py
+    md += f"""---
+
+{formatted_markdown}
+
+---
+
+"""
+
     if recommendation:
         md += f"""### 💭 Recommendation
 {recommendation}
 
 """
 
-    # Add validation details
-    data_quality = validation.get('data_quality', 'Unknown')
-    expected_fields = validation.get('expected_fields_found', [])
-    missing_fields = validation.get('missing_fields', [])
-    
     md += f"""### ✅ Validation
 **Data Quality:** {data_quality}  
-**Fields Extracted:** {', '.join(expected_fields) if expected_fields else 'See JSON file'}
+**Completeness:** {validation.get('completeness', 'Complete')}
 
-"""
-
-    if missing_fields:
-        md += f"""**Missing Fields:** {', '.join(missing_fields)}
-
-"""
-
-    md += f"""---
-*Full data: `{timestamp}_{Path(original_filename).stem}.json`*  
+---
+*Full JSON data: `{timestamp}_{Path(original_filename).stem}.json`*  
 *Debug info: `{timestamp}_{Path(original_filename).stem}_DEBUG.json`*
 """
 
     return md
 
 
-def generate_failure_markdown(hypothesis: dict, extracted_data: dict, validation_result: dict,
+def generate_failure_markdown(hypothesis: dict, formatted_markdown: str, validation_result: dict,
                               original_filename: str, timestamp: str) -> str:
     """Generate Markdown for failed/incomplete extraction."""
     
     validation = validation_result.get('validation', {})
     user_message = validation_result.get('user_message', 'Extraction failed.')
-    partial_report = validation_result.get('partial_report', {})
+    partial_insights = validation_result.get('partial_insights', {})
     
     problem = validation.get('problem', 'Unknown issue')
     expected = validation.get('expected_items', 'Unknown')
     actual = validation.get('actual_items', 'Unknown')
+    
+    partial_summary = partial_insights.get('summary', '')
     
     md = f"""# ⚠️ Extraction Report: {original_filename}
 **Processed:** {timestamp}
@@ -188,9 +203,15 @@ def generate_failure_markdown(hypothesis: dict, extracted_data: dict, validation
 
 """
 
-    if partial_report.get('summary'):
+    if partial_summary:
         md += f"""### 📦 Partial Results
-{partial_report['summary']}
+{partial_summary}
+
+"""
+
+    if formatted_markdown and len(formatted_markdown) > 50:
+        md += f"""### 📋 Partial Data Extracted
+{formatted_markdown}
 
 """
 
@@ -229,9 +250,10 @@ def generate_json_output(hypothesis: dict, extracted_data: dict, validation_resu
     }
     
     if status == 'success':
-        output["report"] = validation_result.get('report', {})
+        output["insights"] = validation_result.get('insights', {})
+        output["statistics"] = validation_result.get('statistics', {})
     else:
         output["issue"] = validation_result.get('user_message', 'Extraction failed')
-        output["partial_report"] = validation_result.get('partial_report', {})
+        output["partial_insights"] = validation_result.get('partial_insights', {})
     
     return output
