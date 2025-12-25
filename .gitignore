@@ -1,7 +1,7 @@
+.env/
 venv/
 __pycache__/
 .DS_Store
 inbox/
 # Exclude PDFs in Pi_Inbox (but keep JSON and MD files)
 Pi_Inbox/**/*.pdf
-.env
