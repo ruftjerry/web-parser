@@ -1,0 +1,32 @@
+============================================================
+EXTRACTION PLAN DEBUG
+============================================================
+
+Domain: E-commerce
+Page Type: Search Results
+Guidelines: Focus on extracting data from the main content area where individual product listings are displayed. Look for repeating container patterns such as .s-item within the .srp-results container. Extract each listing's title (.s-item__title), price (.s-item__price), and condition (.s-item__subtitle). Avoid extracting data from filter sidebars (.x-refine), price range selectors, category breadcrumbs, related searches, and sorting dropdown options.
+
+============================================================
+EXTRACTION STRATEGIES
+============================================================
+
+Field: title
+  Method: css
+  Selector: .srp-main .s-item__title
+  Result: None
+
+Field: price
+  Method: css
+  Selector: .srp-main .s-item__price
+  Result: None
+
+Field: condition
+  Method: css
+  Selector: .srp-main .s-item__subtitle
+  Result: None
+
+Field: endedDate
+  Method: css
+  Selector: .srp-main .s-item__endedDate
+  Result: None
+

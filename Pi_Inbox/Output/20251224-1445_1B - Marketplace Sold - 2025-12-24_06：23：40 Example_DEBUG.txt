@@ -1,0 +1,52 @@
+============================================================
+EXTRACTION PLAN DEBUG
+============================================================
+
+Domain: E-commerce
+Page Type: Search Result
+Guidelines: For this e-commerce search result page, the extraction engineer should focus on capturing product details such as product titles, prices, item conditions (new or used), and shipping options (e.g., free shipping, local pickup). Pay attention to the filters available on the left rail, which include categories, price ranges, and buying formats. Ensure that related search terms are also captured as they can provide insights into user behavior and search trends. Be cautious of dynamic content that may load asynchronously, and ensure that all relevant data is captured even if it requires scrolling or interaction with the page.
+
+============================================================
+EXTRACTION STRATEGIES
+============================================================
+
+Field: product_titles
+  Method: css
+  Selector: .srp-related-searches a
+  Result: adcom gfa555ii
+
+Field: prices
+  Method: css
+  Selector: .x-refine__price .x-refine__main__list--value .x-refine__multi-select a
+  Result: Under $150.00
+
+Field: item_conditions
+  Method: css
+  Selector: .x-refine__main__list--value .x-refine__multi-select a
+  Result: Free Shipping
+
+Field: shipping_options
+  Method: css
+  Selector: .x-refine__main__list--value .x-refine__multi-select a
+  Result: Free Shipping
+
+Field: categories
+  Method: css
+  Selector: .srp-refine__category__list .srp-refine__category__item a
+  Result: Consumer Electronics
+
+Field: price_ranges
+  Method: css
+  Selector: .x-refine__price__selection-group .x-refine__multi-select a
+  Result: Under $150.00
+
+Field: buying_formats
+  Method: css
+  Selector: .x-refine__main__list--value .x-refine__single-select a
+  Result: ...[TRUNCATED]...
+
+Field: related_search_terms
+  Method: css
+  Selector: .srp-related-searches a
+  Result: adcom gfa555ii
+
