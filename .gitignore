@@ -4,3 +4,4 @@ __pycache__/
 inbox/
 # Exclude PDFs in Pi_Inbox (but keep JSON and MD files)
 Pi_Inbox/**/*.pdf
+.env
