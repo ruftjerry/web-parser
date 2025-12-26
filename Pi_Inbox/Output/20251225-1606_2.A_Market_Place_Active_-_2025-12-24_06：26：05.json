@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "timestamp": "20251225-1606",
+    "original_file": "2.A Market Place Active - 2025-12-24_06：26：05.html",
+    "status": "success",
+    "page_type": "single product",
+    "source": "Craigslist",
+    "category": "electronics"
+  },
+  "hypothesis": {
+    "page_type": "single product",
+    "source": "Craigslist",
+    "category": "electronics",
+    "item_count": "single",
+    "expected_fields": [
+      "title",
+      "price",
+      "description",
+      "images",
+      "location",
+      "post_date",
+      "update_date",
+      "contact_info"
+    ],
+    "confidence": "high",
+    "notes": "The page features a single listing for a Rotel HiFi Preamplifier RC-1070, including images and detailed description, typical of Craigslist product listings."
+  },
+  "extracted_data": {
+    "item": {
+      "title": "Rotel HiFi Preamplifier RC-1070",
+      "price": "$350",
+      "location": "salinas",
+      "latitude": "36.756300",
+      "longitude": "-121.670300",
+      "post_date": "2025-08-25T14:37:58-0700",
+      "update_date": "2025-12-23T20:40:35-0800",
+      "description": "Looking to sell Rotel RC-1070 Pre-Amplifier as I realize I don't use it much. It's in great working condition with some minor scratches shown in the pictures. Sorry don't have the original remote. Please access the provided link to review any spec information on the product. Also have the matching 200w Amp Rotel RB-1080 for sale. Will reduce the total price if you buy both. Thanks.",
+      "description_links": [
+        "https://www.rotel.com/sites/default/files/product/infosheets/RC1070_InfoSheet_LR.pdf",
+        "https://www.enjoythemusic.com/magazine/equipment/0601/rotel.htm"
+      ],
+      "images": [
+        "https://images.craigslist.org/00R0R_gn2On4Barha_0CI0t2_600x450.jpg",
+        "https://images.craigslist.org/00N0N_evTzj8ZVbh5_0CI0t2_600x450.jpg",
+        "https://images.craigslist.org/00P0P_3YXvYFlflr3_0CI0t2_600x450.jpg",
+        "https://images.craigslist.org/00M0M_8a0FOlrQgSm_0CI0t2_600x450.jpg",
+        "https://images.craigslist.org/00W0W_hHECDogAwYp_0CI0t2_600x450.jpg",
+        "https://images.craigslist.org/00s0s_QK74w9qzj1_0CI0t2_600x450.jpg"
+      ],
+      "contact_info": "Not directly available (requires 'reply' button interaction)",
+      "post_id": "7876552519",
+      "category": "electronics",
+      "area": "monterey"
+    }
+  },
+  "validation": {
+    "hypothesis_match": true,
+    "expected_items": "single",
+    "actual_items": 1,
+    "data_quality": "excellent",
+    "completeness": "all items formatted",
+    "notes": "All expected fields were extracted successfully, except for direct contact info which is typical for Craigslist."
+  },
+  "insights": {
+    "executive_summary": "The extraction successfully captured a single product listing for a Rotel HiFi Preamplifier RC-1070 from Craigslist. The listing includes comprehensive details such as price, location, description, images, and post dates, providing a complete overview of the product offering.",
+    "key_findings": "The product is priced at $350 and is located in Salinas. It is in great working condition with minor scratches and lacks the original remote. The seller offers a discount if purchased with a matching amplifier. The listing includes multiple images and links to additional product information.",
+    "recommendation": "Consider reaching out to the seller via the Craigslist 'reply' function for further inquiries or negotiations, especially if interested in the bundled amplifier offer."
+  },
+  "statistics": {
+    "total_items": 1,
+    "key_metrics": "Price: $350, Location: Salinas, Post Date: August 25, 2025, Update Date: December 23, 2025, Condition: Great with minor scratches"
+  }
+}

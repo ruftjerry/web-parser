@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "timestamp": "20251225-1615",
+    "original_file": "Brand Product Page 2025-12-24_06：30：23.html",
+    "status": "success",
+    "page_type": "category listing",
+    "source": "Schiit Audio",
+    "category": "audio equipment"
+  },
+  "hypothesis": {
+    "page_type": "category listing",
+    "source": "Schiit Audio",
+    "category": "audio equipment",
+    "item_count": "multiple (estimate: 30+)",
+    "expected_fields": [
+      "product_name",
+      "product_link",
+      "price",
+      "product_description",
+      "product_images",
+      "specifications"
+    ],
+    "confidence": "high",
+    "notes": "The page lists various audio products categorized by type, including headphone amps, DACs, and preamps. It provides links to individual product pages and includes pricing information."
+  },
+  "extracted_data": {
+    "items": [
+      {
+        "product_name": "Fulla",
+        "product_link": "https://www.schiit.com/products/fulla-2",
+        "price": "$109",
+        "category": "Gaming"
+      },
+      {
+        "product_name": "Gunnr",
+        "product_link": "https://www.schiit.com/products/gunnr",
+        "price": "$229",
+        "category": "Gaming"
+      },
+      {
+        "product_name": "Gjallarhorn F",
+        "product_link": "https://www.schiit.com/products/gjallarhorn-f",
+        "price": "$299",
+        "category": "Speaker Amps"
+      },
+      {
+        "product_name": "Vidar 2F",
+        "product_link": "https://www.schiit.com/products/vidar-2f",
+        "price": "$799",
+        "category": "Speaker Amps"
+      },
+      {
+        "product_name": "Aegir 2F",
+        "product_link": "https://www.schiit.com/products/aegir-2f",
+        "price": "$949",
+        "category": "Speaker Amps"
+      },
+      {
+        "product_name": "Wotan",
+        "product_link": "https://www.schiit.com/products/wotan",
+        "price": "$1999",
+        "category": "Speaker Amps"
+      },
+      {
+        "product_name": "Tyr",
+        "product_link": "https://www.schiit.com/products/tyr",
+        "price": "$1599",
+        "category": "Speaker Amps"
+      },
+      {
+        "product_name": "Magni",
+        "product_link": "https://www.schiit.com/products/magni-unity",
+        "price": "$119",
+        "category": "Headphone Amps"
+      },
+      {
+        "product_name": "Vali 3",
+        "product_link": "https://www.schiit.com/products/vali3",
+        "price": "$149",
+        "category": "Headphone Amps"
+      },
+      {
+        "product_name": "Midgard",
+        "product_link": "https://www.schiit.com/products/A-MIDG-B-US-FBA",
+        "price": "$219",
+        "category": "Headphone Amps"
+      },
+      {
+        "product_name": "Asgard X",
+        "product_link": "https://www.schiit.com/products/asgard-x",
+        "price": "$399",
+        "category": "Headphone Amps"
+      },
+      {
+        "product_name": "Jotunheim 3",
+        "product_link": "https://www.schiit.com/products/jotunheim-3",
+        "price": "$499",
+        "category": "Headphone Amps"
+      },
+      {
+        "product_name": "Valhalla 3",
+        "product_link": "https://www.schiit.com/products/valhalla-3",
+        "price": "$499",
+        "category": "Headphone Amps"
+      },
+      {
+        "product_name": "Mjolnir",
+        "product_link": "https://www.schiit.com/products/mjolnir-3",
+        "price": "$1199",
+        "category": "Headphone Amps"
+      },
+      {
+        "product_name": "Modi 5",
+        "product_link": "https://www.schiit.com/products/modi-5",
+        "price": "$149",
+        "category": "DACs"
+      },
+      {
+        "product_name": "Mimir",
+        "product_link": "https://www.schiit.com/products/mimir",
+        "price": "$299",
+        "category": "DACs"
+      },
+      {
+        "product_name": "Bifrost",
+        "product_link": "https://www.schiit.com/products/bifrost",
+        "price": "$799",
+        "category": "DACs"
+      },
+      {
+        "product_name": "Gungnir 2",
+        "product_link": "https://www.schiit.com/products/gungnir-2",
+        "price": "$1599",
+        "category": "DACs"
+      },
+      {
+        "product_name": "Yggdrasil",
+        "product_link": "https://www.schiit.com/products/yggdrasil",
+        "price": "$2299",
+        "category": "DACs"
+      },
+      {
+        "product_name": "SYS",
+        "product_link": "https://www.schiit.com/products/sys",
+        "price": "$49",
+        "category": "Preamps"
+      },
+      {
+        "product_name": "Saga 2",
+        "product_link": "https://www.schiit.com/products/saga_2",
+        "price": "$279",
+        "category": "Preamps",
+        "product_subtitle": "Class A, Zero-Feedback, Differential Preamplifier",
+        "product_images": [
+          "https://www.schiit.com/public/upload/images/saga 2 blk main 1920.jpg",
+          "https://www.schiit.com/public/upload/images/saga 2 rear 1920.jpg",
+          "https://www.schiit.com/public/upload/images/saga 2 detail 1920.jpg",
+          "https://www.schiit.com/public/upload/images/saga 2 insitu 1920.jpg",
+          "https://www.schiit.com/public/upload/images/saga 2 pcb 1920.jpg"
+        ],
+        "options": [
+          {
+            "label": "Forkbeard",
+            "choices": [
+              {
+                "value": "",
+                "text": "Please Select"
+              },
+              {
+                "value": "882",
+                "text": "No"
+              },
+              {
+                "value": "883",
+                "text": "Yes",
+                "modifier": "+$50.00"
+              }
+            ]
+          },
+          {
+            "label": "AC Adapter",
+            "choices": [
+              {
+                "value": "",
+                "text": "Please Select"
+              },
+              {
+                "value": "808",
+                "text": "115VAC USA Plug"
+              },
+              {
+                "value": "809",
+                "text": "230VAC Europlug"
+              },
+              {
+                "value": "810",
+                "text": "230VAC Australian Plug"
+              },
+              {
+                "value": "811",
+                "text": "230VAC UK Plug"
+              }
+            ]
+          },
+          {
+            "label": "Finish",
+            "choices": [
+              {
+                "value": "",
+                "text": "Please Select"
+              },
+              {
+                "value": "818",
+                "text": "Black"
+              }
+            ]
+          }
+        ],
+        "availability": "Ships 7-10 Days",
+        "product_description": "",
+        "specifications": [
+          {
+            "section": "SPECS THAT MATTER",
+            "details": {
+              "Noise": "inaudible",
+              "Distortion": "unmeasurable by APx555 in passive mode, better than any recording and/or transducer on the planet in either active mode",
+              "Heat": "gets moderately warm; not surprising for a Class A device",
+              "Size": "desk- and rack-friendly"
+            }
+          },
+          {
+            "section": "ALL SPECS",
+            "details": {}
+          },
+          {
+            "section": "Passive",
+            "details": {
+              "Output Impedance": "varies, maximum 4.8 kohms",
+              "THD": "unmeasurable on APx555",
+              "IMD": "unmeasurable on APx555",
+              "SNR": "maxed on APx555 (typically >120dB ref 2/4V RMS)"
+            }
+          },
+          {
+            "section": "Low Gain",
+            "details": {
+              "Gain": "1x/2x (SE/balanced)",
+              "Frequency Response": "20Hz-20Khz, -0.5db, 3Hz-200KHz, -3dB",
+              "THD": "<0.001%, 20Hz-20KHz, at 2V RMS",
+              "IMD": "<0.001%, CCIR (active stage)",
+              "SNR": ">124db, A-weighted, referenced to 2V RMS",
+              "Output Impedance": "75 ohms",
+              "Maximum Output": ">10V RMS"
+            }
+          },
+          {
+            "section": "High Gain",
+            "details": {
+              "Gain": "4x/8x (SE/balanced)",
+              "Frequency Response": "20Hz-20Khz, -0.5db, 3Hz-200KHz, -3dB",
+              "THD": "<0.001%, 20Hz-20KHz, at 2V RMS",
+              "IMD": "<0.001%, CCIR (active stage)",
+              "SNR": ">116db, A-weighted, referenced to 2V RMS",
+              "Output Impedance": "75 ohms",
+              "Maximum Output": ">10V RMS"
+            }
+          },
+          {
+            "section": "General",
+            "details": {
+              "Inputs": "4 RCA pairs, selectable via front switch or remote",
+              "Outputs": "1 XLR pair and one RCA pair, both active at the same time",
+              "Gain Stage": "Equipoise differential discrete Class A, zero feedback, 75V rails",
+              "Headphone stage": "booster based on OPA1656, 150mW typical max output",
+              "Volume Control": "relay-switched stepped attenuator with discrete thin-film 0.5% resistors , 64 1dB steps",
+              "Power Supply": "Wall wart, 24VAC/6VAC, internal +45V/-28V and 5V/3.3V rails",
+              "Power Consumption": "15W typical",
+              "Size": "9\"W x6\"D x 1.5”H",
+              "Weight": "3 lbs"
+            }
+          },
+          {
+            "section": "Documents",
+            "details": {
+              "APx555 Report for Saga 2": "https://www.schiit.com/public/upload/PDF/Schiit%20Preamp%20APx%20Test%20Suite_%20Saga%202.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "product_name": "Kara F",
+        "product_link": "https://www.schiit.com/products/kara-f",
+        "price": "$799",
+        "category": "Preamps"
+      },
+      {
+        "product_name": "Freya+ F",
+        "product_link": "https://www.schiit.com/products/freya-f",
+        "price": "$999",
+        "category": "Preamps"
+      },
+      {
+        "product_name": "Mani",
+        "product_link": "https://www.schiit.com/products/mani",
+        "price": "$149",
+        "category": "Phono"
+      },
+      {
+        "product_name": "Skoll F",
+        "product_link": "https://www.schiit.com/products/skoll-f",
+        "price": "$399",
+        "category": "Phono"
+      },
+      {
+        "product_name": "Stjarna",
+        "product_link": "https://www.schiit.com/products/stjarna",
+        "price": "$1699",
+        "category": "Phono"
+      },
+      {
+        "product_name": "Loki Mini+",
+        "product_link": "https://www.schiit.com/products/loki-mini-3",
+        "price": "$149",
+        "category": "EQ"
+      },
+      {
+        "product_name": "Lokius",
+        "product_link": "https://www.schiit.com/products/lokius",
+        "price": "$299",
+        "category": "EQ"
+      },
+      {
+        "product_name": "Loki Max F",
+        "product_link": "https://www.schiit.com/products/loki-max-f",
+        "price": "$1599",
+        "category": "EQ"
+      },
+      {
+        "product_name": "GigaStack",
+        "product_link": "https://www.schiit.com/products/gigastack",
+        "price": "$4247",
+        "category": "Packages"
+      },
+      {
+        "product_name": "Lyr",
+        "product_link": "https://www.schiit.com/products/lyr",
+        "price": "$449",
+        "category": "Last Call"
+      },
+      {
+        "product_name": "Current Deals",
+        "product_link": "https://www.schiit.com/b-stocks",
+        "price": null,
+        "category": "B-Stock & Closeout"
+      }
+    ]
+  },
+  "validation": {
+    "hypothesis_match": true,
+    "expected_items": "multiple (estimate: 30+)",
+    "actual_items": 21,
+    "data_quality": "good",
+    "completeness": "missing some items and fields like product_description, product_images, and specifications",
+    "notes": "The extraction captured a significant portion of the expected items, but some fields are incomplete or missing."
+  },
+  "insights": {
+    "executive_summary": "The data extraction from Schiit Audio's category listing page successfully captured 21 audio equipment items, covering a range of categories including gaming, speaker amps, headphone amps, DACs, and preamps. However, some expected fields such as product descriptions and images were not fully extracted, indicating room for improvement in data completeness.",
+    "key_findings": "The extraction highlights a diverse product range with prices spanning from $49 to $2299, indicating a broad market appeal. Notably, the speaker amps and DACs categories feature higher-priced items, suggesting a focus on premium audio solutions. The absence of detailed product descriptions and images limits the depth of product insights.",
+    "recommendation": "Enhance the extraction process to capture missing fields such as product descriptions and images to provide a more comprehensive dataset. This will aid in better product analysis and comparison."
+  },
+  "statistics": {
+    "total_items": 21,
+    "key_metrics": "Price range: $49 - $2299; Categories: Gaming, Speaker Amps, Headphone Amps, DACs, Preamps"
+  }
+}

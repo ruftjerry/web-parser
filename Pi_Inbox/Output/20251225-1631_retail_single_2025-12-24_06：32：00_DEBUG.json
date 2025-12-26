@@ -1,0 +1,346 @@
+{
+  "timestamp": "20251225-1631",
+  "original_file": "retail single 2025-12-24_06：32：00.html",
+  "hypothesis": {
+    "page_type": "category listing",
+    "source": "Amazon",
+    "category": "Computers",
+    "item_count": "multiple (estimate)",
+    "expected_fields": [
+      "product_name",
+      "price",
+      "rating",
+      "availability",
+      "product_link"
+    ],
+    "confidence": "high",
+    "notes": "The page appears to be part of the Amazon website, specifically focused on the Computers category, suggesting a listing of multiple products related to computers and accessories."
+  },
+  "extracted_data": {
+    "items": [
+      {
+        "rank": 1,
+        "product_name": "Samsung 990 PRO SSD 2TB NVMe M.2 PCIe Gen4, M.2 2280 Internal Solid State Hard Drive, Seq. Read Speeds Up to 7,450 MB/s for High End Computing, Gaming, and Heavy Duty Workstations, MZ-V9P2T0B/AM",
+        "product_link": "https://www.amazon.com/SAMSUNG-Internal-Expansion-MZ-V9P2T0B-AM/dp/B0BHJJ9Y77/ref=zg_bs_g_1292116011_d_sccl_1/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71OWtcxKgvL._AC_UL300_SR300,200_.jpg",
+        "price": "$229.99",
+        "rating": "4.7 out of 5 stars",
+        "number_of_ratings": "16,147",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 2,
+        "product_name": "WD_BLACK SN850X 2TB NVMe SSD with Heatsink - M.2 2280, Up to 7,300 MB/s Read speeds, Up to 6,300 MB/s write speeds, Works with Playstation 5, High Performance Internal Solid State Drive - WDS200T2XHE",
+        "product_link": "https://www.amazon.com/WD_BLACK-SN850X-Internal-Gaming-Heatsink/dp/B0B7CKZGN6/ref=zg_bs_g_1292116011_d_sccl_2/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/618RFfiA8dL._AC_UL300_SR300,200_.jpg",
+        "price": "$249.85",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "30,512",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 3,
+        "product_name": "WD_Black SN7100 2TB NVMe SSD - Gen4 PCIe, M.2 2280, Up to 7,250 MB/s Read Speed, Up to 6,900 MB/s Write Speed, Next Gen TLC 3D NAND, for Laptops, Handheld Gaming Devices - WDS200T4X0E",
+        "product_link": "https://www.amazon.com/WD_BLACK-SN7100-Internal-Gaming-Solid/dp/B0DN6ZQ3PD/ref=zg_bs_g_1292116011_d_sccl_3/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61uDl4amtnL._AC_UL300_SR300,200_.jpg",
+        "price": "$201.49",
+        "rating": "4.7 out of 5 stars",
+        "number_of_ratings": "3,715",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 4,
+        "product_name": "Samsung 990 EVO Plus SSD 2TB, PCIe Gen 4x4, Gen 5x2 M.2 2280, Speeds Up-to 7,250 MB/s, Upgrade Storage for PC/Laptops, HMB Technology and Intelligent Turbowrite 2.0, (MZ-V9S2T0B/AM)",
+        "product_link": "https://www.amazon.com/SAMSUNG-Technology-Intelligent-Turbowrite-MZ-V9S2T0B/dp/B0DHLCRF91/ref=zg_bs_g_1292116011_d_sccl_4/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61nq7N0igEL._AC_UL300_SR300,200_.jpg",
+        "price": "$164.34",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "8,575",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 5,
+        "product_name": "Crucial P310 2TB SSD, PCIe Gen4 NVMe M.2 2280, Up to 7,100MB/s, for Laptop, Desktop (PC), & Handheld Gaming Consoles, Includes Acronis Data Recovery Software, Solid State Drive - CT2000P310SSD801",
+        "product_link": "https://www.amazon.com/Crucial-P310-2280-PCIe-Gen4/dp/B0DC8RVRBZ/ref=zg_bs_g_1292116011_d_sccl_5/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/41-GwINeIhL._AC_UL300_SR300,200_.jpg",
+        "price": "$191.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "6,472",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 6,
+        "product_name": "Samsung 870 EVO SATA III SSD 1TB 2.5” Internal Solid State Drive, Upgrade PC or Laptop Memory and Storage for IT Pros, Creators, Everyday Users, MZ-77E1T0B/AM",
+        "product_link": "https://www.amazon.com/SAMSUNG-Inch-Internal-MZ-77E1T0B-AM/dp/B08QBJ2YMG/ref=zg_bs_g_1292116011_d_sccl_6/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/911ujeCkGfL._AC_UL300_SR300,200_.jpg",
+        "price": "$116.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "44,521",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 7,
+        "product_name": "Crucial P510 PCIe Gen5 NVMe 1TB SSD, Up to 11,000MB/s, TLC NAND, Laptop & Desktop (PC) Compatible, for Gamers & Creatives, Solid State Drive – CT1000P510SSD8-01",
+        "product_link": "https://www.amazon.com/Crucial-Internal-Compatible-Desktop-Software/dp/B0DZ5ZK225/ref=zg_bs_g_1292116011_d_sccl_7/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51nDsjHC-GL._AC_UL300_SR300,200_.jpg",
+        "price": "$139.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "617",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 8,
+        "product_name": "WD_BLACK 2TB SN850P NVMe M.2 SSD Officially Licensed Storage Expansion for PS5 Consoles, up to 7,300MB/s, with heatsink - WDBBYV0020BNC-WRSN",
+        "product_link": "https://www.amazon.com/Western-Digital-Officially-Licensed-Expansion/dp/B0C47ZX1WB/ref=zg_bs_g_1292116011_d_sccl_8/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61yrfsiKrSL._AC_UL300_SR300,200_.jpg",
+        "price": "$279.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "9,806",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 9,
+        "product_name": "Samsung SSD 9100 PRO 4TB, PCIe 5.0x4 M.2 2280, Seq. Read Speeds Up to 14,800MB/s, Best for AI Computing, Gaming, and Heavy Duty Workstations (MZ VAP4T0B/AM)",
+        "product_link": "https://www.amazon.com/Samsung-Computing-Workstations-VAP4T0B-AM/dp/B0DX2GJ1YR/ref=zg_bs_g_1292116011_d_sccl_9/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71qygJIcKnL._AC_UL300_SR300,200_.jpg",
+        "price": "$466.17",
+        "rating": "4.7 out of 5 stars",
+        "number_of_ratings": "1,146",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 10,
+        "product_name": "PNY CS900 250GB 3D NAND 2.5\" SATA III Internal Solid State Drive (SSD) - (SSD7CS900-250-RB)",
+        "product_link": "https://www.amazon.com/PNY-CS900-250GB-Internal-Solid/dp/B07XZLW68F/ref=zg_bs_g_1292116011_d_sccl_10/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61cyHqB+KmL._AC_UL300_SR300,200_.jpg",
+        "price": "$54.24",
+        "rating": "4.7 out of 5 stars",
+        "number_of_ratings": "17,327",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 11,
+        "product_name": "WD_Black SN8100 2TB NVMe SSD - PCIe 5.0x4, M.2 2280, Up to 14,900MB/s Read Speed, up to 11,000MB/s Write Speed, Best for AI Applications, Gaming, and Video Editing - WDS200T1X0M",
+        "product_link": "https://www.amazon.com/WD_BLACK-SN8100-Internal-Solid-State/dp/B0F3BD1W6R/ref=zg_bs_g_1292116011_d_sccl_11/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51qMSD089BL._AC_UL300_SR300,200_.jpg",
+        "price": "$259.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "555",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 12,
+        "product_name": "Crucial T710 PCIe Gen5 NVMe 1TB SSD, Up to 14,900 MB/s, Laptop & Desktop Compatible (PC), for Creatives and Hardcore Gamers, Solid State Drive, Includes 1Mo Adobe CC – CT1000T710SSD8-01",
+        "product_link": "https://www.amazon.com/Internal-Compatible-Software-Mac-OS-X/dp/B0F9XN4DCC/ref=zg_bs_g_1292116011_d_sccl_12/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51WMvihHRvL._AC_UL300_SR300,200_.jpg",
+        "price": "$169.99",
+        "rating": "4.6 out of 5 stars",
+        "number_of_ratings": "1,502",
+        "availability": "In Stock",
+        "brand": "Crucial",
+        "compatibility": "Mac, Windows"
+      },
+      {
+        "rank": 13,
+        "product_name": "KingSpec SSD 256GB, M.2 NVMe Gen3x4 SSD 2280 - Up to 2400MB/s, Internal Solid State Drive with 3D NAND Flash, Compatible with Desktop and Laptop",
+        "product_link": "https://www.amazon.com/KingSpec-256GB-NVMe-Gen3x4-2280/dp/B0D1R7HDJF/ref=zg_bs_g_1292116011_d_sccl_13/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61AwEi1DPIL._AC_UL300_SR300,200_.jpg",
+        "price": "$39.99",
+        "rating": "4.6 out of 5 stars",
+        "number_of_ratings": "1,171",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 14,
+        "product_name": "Crucial BX500 1TB 3D NAND SATA 2.5-Inch Internal SSD, up to 540MB/s - CT1000BX500SSD1, Solid State Drive",
+        "product_link": "https://www.amazon.com/Crucial-BX500-NAND-2-5-Inch-Internal/dp/B07YD579WM/ref=zg_bs_g_1292116011_d_sccl_14/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51zhuXxYuRL._AC_UL300_SR300,200_.jpg",
+        "price": "$99.99",
+        "rating": "4.6 out of 5 stars",
+        "number_of_ratings": "129,701",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 15,
+        "product_name": "Western Digital 1TB WD Blue SA510 SATA Internal Solid State Drive SSD - SATA III 6 Gb/s, 2.5\"/7mm, Up to 560 MB/s - WDS100T3B0A",
+        "product_link": "https://www.amazon.com/Western-Digital-SA510-Internal-Solid/dp/B09ZYQ84CM/ref=zg_bs_g_1292116011_d_sccl_15/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71DvBmAUduL._AC_UL300_SR300,200_.jpg",
+        "price": "$119.99",
+        "rating": "4.4 out of 5 stars",
+        "number_of_ratings": "11,069",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 16,
+        "product_name": "WD Blue SN5100 2TB NVMe SSD - M.2 2280, PCIe Gen 4.0, Internal Solid State Drive - Read Speeds Up to 7,100MB/s, Upgrade Storage for PC/Laptops - WDS200T5B0E",
+        "product_link": "https://www.amazon.com/Blue-SN5100-2TB-NVMe-SSD/dp/B0FJ8QMW4H/ref=zg_bs_g_1292116011_d_sccl_16/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51UbZMDoe7L._AC_UL300_SR300,200_.jpg",
+        "price": "$201.49",
+        "rating": "4.6 out of 5 stars",
+        "number_of_ratings": "248",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 17,
+        "product_name": "Silicon Power 1TB - NVMe M.2 PCIe Gen3x4 2280 SSD (SP001TBP34A60M28)",
+        "product_link": "https://www.amazon.com/Silicon-Power-NVMe-Gen3x4-SP001TBP34A60M28/dp/B07ZGJVTZK/ref=zg_bs_g_1292116011_d_sccl_17/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61jPnNoTCTL._AC_UL300_SR300,200_.jpg",
+        "price": "$139.97",
+        "rating": "4.5 out of 5 stars",
+        "number_of_ratings": "12,539",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 18,
+        "product_name": "Kingston NV3 1TB M.2 2280 NVMe SSD | PCIe 4.0 Gen 4x4 | Up to 6000 MB/s | SNV3S/1000G",
+        "product_link": "https://www.amazon.com/Kingston-NV3-Solid-State-Drive/dp/B0DBR3DZWG/ref=zg_bs_g_1292116011_d_sccl_18/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71c5uuoM1bL._AC_UL300_SR300,200_.jpg",
+        "price": "$136.00",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "10,138",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 19,
+        "product_name": "SIX NVME M.2 SSD PCIe 4.0-1TB m.2 2280 ssd, Read UP to 7350MB/s 1TB for Gaming PS5 Memory Storage Expansion with Heatsink, Internal Solid State Hard Drive PCIe gen 4x4 Nvme for Laptop Desktop pc",
+        "product_link": "https://www.amazon.com/SIX-SSD-Expansion-Heatsink-Internal/dp/B0FGP7W3NJ/ref=zg_bs_g_1292116011_d_sccl_19/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71gk6okbBcL._AC_UL300_SR300,200_.jpg",
+        "price": "$112.99",
+        "rating": "4.7 out of 5 stars",
+        "number_of_ratings": "183",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 20,
+        "product_name": "KingSpec 128GB 2.5 SSD SATA III Internal - 550MB/s Read, 520MB/s Write with 3D NAND Flash, for Laptop & Desktop PC Upgrade",
+        "product_link": "https://www.amazon.com/KingSpec-Internal-Drives-Compatible-Desktop/dp/B0BVZL4R9L/ref=zg_bs_g_1292116011_d_sccl_20/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51YwKU-01DL._AC_UL300_SR300,200_.jpg",
+        "price": "$22.97",
+        "rating": "4.6 out of 5 stars",
+        "number_of_ratings": "1,886",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 21,
+        "product_name": "fanxiang S101 1TB SSD SATA SSD 1TB Internal Solid State Drive SATA III 6Gb/s 2.5\" SSD, UP to 550MB/s, 3D NAND TLC, Upgrade Laptop PC and Desktops",
+        "product_link": "https://www.amazon.com/Fanxiang-S101-Internal-Compatible-Desktops/dp/B09XDJ673F/ref=zg_bs_g_1292116011_d_sccl_21/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61iVqetmlLL._AC_UL300_SR300,200_.jpg",
+        "price": "$127.59",
+        "rating": "4.5 out of 5 stars",
+        "number_of_ratings": "22,988",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 22,
+        "product_name": "Crucial P310 1TB M.2 2230 SSD, PCIe Gen4 NVMe, Up to 7,100MB/s, Internal Solid State Drive, Ideal for Steam Deck, ASUS ROG Ally, MSI Claw, Mini PCs & Ultrabooks - CT1000P310SSD2",
+        "product_link": "https://www.amazon.com/Crucial-2024-P310-PCIe-Gen4/dp/B0D61Z8R1W/ref=zg_bs_g_1292116011_d_sccl_22/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61zFwQXNRxL._AC_UL300_SR300,200_.jpg",
+        "price": "$129.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "1,620",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 23,
+        "product_name": "TEAMGROUP T-FORCE VULCAN Z 1TB SLC Cache 3D NAND TLC 2.5 Inch SATA III Internal Solid State Drive SSD (R/W Speed up to 550/500 MB/s) T253TZ001T0C101",
+        "product_link": "https://www.amazon.com/TEAMGROUP-T-Force-Vulcan-Internal-T253TZ001T0C101/dp/B09WMP5B5N/ref=zg_bs_g_1292116011_d_sccl_23/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/91FAhElMh8L._AC_UL300_SR300,200_.jpg",
+        "price": "$93.25",
+        "rating": "4.6 out of 5 stars",
+        "number_of_ratings": "7,536",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 24,
+        "product_name": "Crucial P3 Plus PCIe Gen4 NVMe 1TB SSD, Up to 5,000MB/s Read, Laptop & Desktop (PC) Compatible, Solid State Drive – CT1000P3SSD8",
+        "product_link": "https://www.amazon.com/Crucial-Plus-PCIe-NAND-5000MB/dp/B0B25NXWC7/ref=zg_bs_g_1292116011_d_sccl_24/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51pMg25AthL._AC_UL300_SR300,200_.jpg",
+        "price": "$59.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "23,680",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 25,
+        "product_name": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5\" Internal Solid State Drive SU256GBSS3A55S25AH",
+        "product_link": "https://www.amazon.com/Silicon-Power-Performance-Internal-SU256GBSS3A55S25AH/dp/B0CQCH4RSD/ref=zg_bs_g_1292116011_d_sccl_25/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71kWymZ+c+L._AC_UL300_SR300,200_.jpg",
+        "price": "$32.97",
+        "rating": "4.5 out of 5 stars",
+        "number_of_ratings": "12,083",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 26,
+        "product_name": "Fanxiang 1TB NVMe SSD PCIe Gen4 M.2 Internal Gaming SSD for PS5, Up to 4800 MB/s, 3D NAND SLC Cache Solid State Drive Upgrade Storage for PC/Laptops S690Q",
+        "product_link": "https://www.amazon.com/fanxiang-Internal-Playstation-Upgrade-S690Q/dp/B0CM8RVVG1/ref=zg_bs_g_1292116011_d_sccl_26/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/51pS27vJ21L._AC_UL300_SR300,200_.jpg",
+        "price": "$138.03",
+        "rating": "4.4 out of 5 stars",
+        "number_of_ratings": "1,119",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 27,
+        "product_name": "WD_BLACK 2TB SN770 NVMe Internal Gaming SSD Solid State Drive - Gen4 PCIe, M.2 2280, Up to 5,150 MB/s - WDS200T3X0E - [Previous Generation]",
+        "product_link": "https://www.amazon.com/WD_BLACK-SN770-Internal-Gaming-Solid/dp/B09QV5KJHV/ref=zg_bs_g_1292116011_d_sccl_27/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71Sr1zjPhwL._AC_UL300_SR300,200_.jpg",
+        "price": "$118.25",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "25,009",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 28,
+        "product_name": "Silicon Power 1TB UD90 NVMe 4.0 Gen4 PCIe M.2 SSD R/W up to 5,000/4,800 MB/s (SP01KGBP44UD9005)",
+        "product_link": "https://www.amazon.com/Silicon-Power-UD90-NVMe-SP01KGBP44UD9005/dp/B0B217LZBG/ref=zg_bs_g_1292116011_d_sccl_28/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61ZdMoaYqcL._AC_UL300_SR300,200_.jpg",
+        "price": "$138.97",
+        "rating": "4.5 out of 5 stars",
+        "number_of_ratings": "3,169",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 29,
+        "product_name": "Samsung 980 PRO SSD 2TB PCIe NVMe Gen 4 Gaming M.2 Internal Solid State Drive Memory Card, Maximum Speed, Thermal Control MZ-V8P2T0B/AM",
+        "product_link": "https://www.amazon.com/SAMSUNG-Internal-Gaming-MZ-V8P2T0B-AM/dp/B08RK2SR23/ref=zg_bs_g_1292116011_d_sccl_29/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/71KeDAkw+0L._AC_UL300_SR300,200_.jpg",
+        "price": "$229.99",
+        "rating": "4.8 out of 5 stars",
+        "number_of_ratings": "41,907",
+        "availability": "In Stock"
+      },
+      {
+        "rank": 30,
+        "product_name": "KingSpec NX Series 1TB Gen3x4 NVMe M.2 SSD, Up to 3500MB/s, 3D NAND Flash M2 2280 Internal Solid State Drive, for Desktop and Laptop",
+        "product_link": "https://www.amazon.com/KingSpec-Gen3x4-2280-Internal-Desktop/dp/B0CP9CXCXG/ref=zg_bs_g_1292116011_d_sccl_30/139-8645107-5793051?psc=1",
+        "image_url": "https://images-na.ssl-images-amazon.com/images/I/61ezTUPtLxL._AC_UL300_SR300,200_.jpg",
+        "price": "$91.99",
+        "rating": "4.6 out of 5 stars",
+        "number_of_ratings": "1,191",
+        "availability": "In Stock"
+      }
+    ]
+  },
+  "formatted_markdown_length": 14523,
+  "validation_result": {
+    "status": "success",
+    "validation": {
+      "hypothesis_match": true,
+      "expected_items": "multiple",
+      "actual_items": 30,
+      "data_quality": "excellent",
+      "completeness": "all items formatted",
+      "notes": "The extraction successfully captured multiple items from the Computers category on Amazon, with all expected fields present."
+    },
+    "insights": {
+      "executive_summary": "The data extraction from Amazon's Computers category successfully retrieved detailed information on multiple SSD products, including pricing, ratings, and availability. This provides a comprehensive view of the current market offerings for SSDs, which is crucial for understanding consumer options and pricing trends.",
+      "key_findings": "The extracted data shows a range of SSD products with prices from $116.99 to $249.85, indicating a diverse market with various options for consumers. High ratings across products suggest strong customer satisfaction. Samsung and WD_BLACK are prominent brands in this category.",
+      "recommendation": "Consider analyzing the price trends and customer ratings further to identify potential market opportunities or gaps. Additionally, monitoring changes in availability and pricing can provide insights into market dynamics."
+    },
+    "statistics": {
+      "total_items": 30,
+      "key_metrics": "Price range: $116.99 - $249.85, Rating range: 4.7 - 4.8 stars, High number of ratings indicates popular products."
+    }
+  }
+}

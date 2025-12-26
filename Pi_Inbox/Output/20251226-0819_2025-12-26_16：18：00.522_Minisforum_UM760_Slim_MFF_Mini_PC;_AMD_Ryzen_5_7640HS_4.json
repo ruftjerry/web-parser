@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "timestamp": "20251226-0819",
+    "original_file": "2025-12-26_16：18：00.522 Minisforum UM760 Slim MFF Mini PC; AMD Ryzen 5 7640HS 4.html",
+    "status": "success",
+    "page_type": "single product",
+    "source": "Micro Center",
+    "category": "Desktop Computers"
+  },
+  "hypothesis": {
+    "page_type": "single product",
+    "source": "Micro Center",
+    "category": "Desktop Computers",
+    "item_count": "single",
+    "expected_fields": [
+      "product_name",
+      "brand",
+      "SKU",
+      "Mfr Part#",
+      "price",
+      "description",
+      "rating",
+      "number_of_reviews",
+      "images"
+    ],
+    "confidence": "high",
+    "notes": "The page contains detailed information about a specific product, including specifications and user reviews."
+  },
+  "extracted_data": {
+    "item": {
+      "product_name": "Minisforum UM760 Slim MFF Mini PC; AMD Ryzen 5 7640HS 4.3GHz Processor; 16GB DDR5-4800 RAM; 1TB Solid State Drive; AMD Radeon 760M Graphics; Microsoft Windows 11 Pro; WiFi 6E; Bluetooth 5.3",
+      "brand": "Minisforum",
+      "SKU": "794602",
+      "Mfr Part#": "UM760S7640HS",
+      "UPC": "4897118833127",
+      "price": 399.99,
+      "original_price": 449.99,
+      "savings": 50.0,
+      "rating": 4.7,
+      "number_of_reviews": 111,
+      "description": "The Minisforum UM760 Slim mini pc is equipped with the AMD Ryzen 5 7640HS processor, with 6 cores and 12 threads (Max. frequency up to 5.0 GHz), providing excellent multi-tasking capabilities and high performance. The AMD Radeon 760M integrated GPU supports ultra-high-definition image quality through HDMI 2.1 (8K@60Hz), DP 1.4 (4K@144Hz), and USB4 interfaces (8K@60Hz), meeting the needs of professional work and entertainment. The active cooling system with phase change material reduces CPU temperature by 25% compared to passive heat sinks, ensuring stable and efficient performance under heavy workloads. It delivers a stable 60W performance while the system operates at a noise level below 35dB, keeping your device cool and quiet whether you're working or playing. For networking, the 2.5G WLAN wired network port and Wi-Fi 6E/BT5.3 wireless network card provides a stable network connection (software routers, firewalls, NAT, and network isolation) and fast transmission speeds.",
+      "key_features": [
+        "AMD Ryzen 5 7640HS (4.3GHz) Processor",
+        "16GB DDR5-4800 RAM",
+        "AMD Radeon 760M Integrated Graphics",
+        "1TB PCIe M.2 Gen4 SSD",
+        "WiFi 6E (802.11ax), Bluetooth 5.3",
+        "Windows 11 Pro"
+      ],
+      "images": [
+        "https://productimages.microcenter.com/689621_794602_01_front_zoom.jpg",
+        "https://productimages.microcenter.com/689621_794602_02_front_zoom.jpg",
+        "https://productimages.microcenter.com/689621_794602_03_front_zoom.jpg",
+        "https://productimages.microcenter.com/689621_794602_04_package_zoom.jpg"
+      ],
+      "specifications": {
+        "general_information": {
+          "expandability": "Memory"
+        },
+        "operating_system": {
+          "operating_system": "Windows 11 Pro"
+        },
+        "case_motherboard": {
+          "case_orientation": "Horizontal"
+        },
+        "processor_cpu": {
+          "cpu_model": "AMD Ryzen 7000 Series Processor",
+          "turbo_boost_speed": "Up to 5GHz",
+          "cpu_summary": "AMD Ryzen 5 7640HS (4.3GHz)",
+          "cpu_core": "Phoenix",
+          "cores": "Six-Core",
+          "cpu_threads": "12 Threads",
+          "level_2_cache": "6MB",
+          "level_3_cache": "16MB",
+          "cpu_main_features": "AMD Enhanced Virus Protection (NX bit)"
+        },
+        "memory_ram": {
+          "total_memory": "16GB",
+          "memory_speed": "DDR5-4800",
+          "memory_slots_total": 2,
+          "maximum_memory_supported": "96GB"
+        },
+        "solid_state_drive": {
+          "ssd_capacity": "1TB"
+        },
+        "display": {
+          "display_type": "Display Not Included"
+        },
+        "graphics_video": {
+          "gpu_type": "AMD Radeon 760M",
+          "video_memory": "Shared",
+          "gpu_interface": "Integrated"
+        },
+        "communications": {
+          "wlan": "Wireless LAN WiFi 6E (802.11ax)",
+          "bluetooth": "Bluetooth 5.3",
+          "wireless_technology": [
+            "802.11a",
+            "802.11b",
+            "802.11g",
+            "WiFi 5 (802.11ac)",
+            "WiFi 4 (802.11n)",
+            "WiFi 6 (802.11ax)",
+            "WiFi 6E (802.11ax)"
+          ]
+        },
+        "front_top_panel_ports": {
+          "usb_3_1": "2 x USB 3.2 (Gen 2 Type-A)",
+          "audio": "1 x Headphone/Microphone Combo"
+        },
+        "back_panel_ports": {
+          "usb_2_0": "2 x USB 2.0 (Type-A)",
+          "usb_3_1": "1 x USB 4.0 (Gen 3 Type-C)",
+          "hdmi": 1,
+          "displayport": 1,
+          "lan_rj_45": 1
+        },
+        "power": {
+          "power_supply": "120 Watt External Adapter"
+        },
+        "physical_specifications": {
+          "width": "5.12 in. (130.05 mm)",
+          "depth": "4.98 in. (126.49 mm)",
+          "height": "1.98 in. (50.29 mm)",
+          "weight": "1.48 lbs. (0.67 kg)",
+          "box_dimensions_wxdxh": "7.20 x 6.30 x 4.45 in. (182.88 x 160.02 x 113.03 mm)"
+        },
+        "package_contents": {
+          "whats_in_the_box": "UM760 Slim MFF Mini PC"
+        }
+      },
+      "warranty": {
+        "parts": "2 Years Limited",
+        "labor": "2 Years Limited"
+      },
+      "vendor_support": {
+        "main_website": "https://www.minisforum.com/",
+        "support_website": "https://www.minisforum.cn/new/support?lang=en#/",
+        "support_email": "support@minisforum.com"
+      },
+      "return_policy_days": 15,
+      "in_stock_at_santa_clara_store": 24
+    }
+  },
+  "validation": {
+    "hypothesis_match": true,
+    "expected_items": "single",
+    "actual_items": 1,
+    "data_quality": "excellent",
+    "completeness": "all items formatted",
+    "notes": "All expected fields were extracted and formatted correctly."
+  },
+  "insights": {
+    "executive_summary": "The extraction successfully captured detailed information about the Minisforum UM760 Slim MFF Mini PC from Micro Center. This includes comprehensive specifications, pricing, and customer feedback, providing a complete view of the product's market offering.",
+    "key_findings": "The product is competitively priced at $399.99, with a notable discount from its original price. It boasts high performance with an AMD Ryzen 5 7640HS processor and integrated AMD Radeon 760M graphics, making it suitable for both professional and entertainment purposes. The product has received positive feedback, with a high rating of 4.7 from 111 reviews.",
+    "recommendation": "Consider leveraging the positive customer reviews and competitive pricing in marketing strategies to enhance sales. Additionally, highlight the advanced features like WiFi 6E and Bluetooth 5.3 to attract tech-savvy consumers."
+  },
+  "statistics": {
+    "total_items": 1,
+    "key_metrics": "Price: $399.99 (originally $449.99), Rating: 4.7, Number of Reviews: 111, Processor: AMD Ryzen 5 7640HS, RAM: 16GB DDR5-4800, SSD: 1TB PCIe M.2 Gen4"
+  }
+}

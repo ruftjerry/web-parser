@@ -1599,3 +1599,826 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/pi5/projects/web-
 2025-12-25 14:30:37 - INFO - ================================================================================
 2025-12-25 14:30:37 - INFO -    ⏭️  Skipping macOS metadata file: ._1A Marketplace Search - 2025-12-24_06：25：22.html
 2025-12-25 14:30:37 - INFO -    ⏭️  Skipping macOS metadata file: ._1A Marketplace Search - 2025-12-24_06：25：22.html
+2025-12-25 16:06:09 - INFO - 
+📥 New file detected: 2.A Market Place Active - 2025-12-24_06：26：05.html
+2025-12-25 16:06:09 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:06:10 - INFO -    📊 Receiving: 245.6 KB...
+2025-12-25 16:06:13 - INFO -    ✅ Transfer complete: 245.6 KB
+2025-12-25 16:06:13 - INFO - ================================================================================
+2025-12-25 16:06:13 - INFO - 🚀 Processing: 2.A Market Place Active - 2025-12-24_06：26：05.html
+2025-12-25 16:06:13 - INFO -    File size: 245.6 KB
+2025-12-25 16:06:13 - INFO - ================================================================================
+2025-12-25 16:06:13 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:06:13 - INFO -    ✅ Read 251,518 characters from file
+2025-12-25 16:06:13 - INFO -    📄 Processing HTML: 251,518 characters (245.6 KB)
+2025-12-25 16:06:13 - INFO -    ✅ Found 2 JSON-LD structured data blocks
+2025-12-25 16:06:13 - INFO -    🗑️  Removed 29 non-content tags
+2025-12-25 16:06:13 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-25 16:06:13 - INFO -    🖼️  Removed 13 Base64 inline images
+2025-12-25 16:06:13 - INFO -    ✅ Cleaning complete: 245.6KB → 14.4KB (94.1% reduction)
+2025-12-25 16:06:13 - INFO -    📊 Estimated tokens: ~3,682
+2025-12-25 16:06:13 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:06:13 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:06:17 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:06:17 - INFO -    💰 Cost: $0.0008 (4,816 in, 111 out)
+2025-12-25 16:06:17 - INFO -    📋 Page Type: single product
+2025-12-25 16:06:17 - INFO -    🌐 Source: Craigslist
+2025-12-25 16:06:17 - INFO -    📦 Category: electronics
+2025-12-25 16:06:17 - INFO -    🔢 Items: single
+2025-12-25 16:06:17 - INFO -    ✅ Confidence: high
+2025-12-25 16:06:17 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:06:17 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:06:17 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:06:24 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:06:24 - INFO -    💰 Cost: $0.0006 (5,442 in, 647 out)
+2025-12-25 16:06:24 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-25 16:06:24 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:06:24 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:06:36 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:06:36 - INFO -    💰 Cost: $0.0004 (839 in, 522 out)
+2025-12-25 16:06:36 - INFO -    ✅ Formatted data into markdown
+2025-12-25 16:06:36 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:06:36 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:06:40 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:06:40 - INFO -    💰 Cost: $0.0061 (1,215 in, 304 out)
+2025-12-25 16:06:40 - INFO -    ✅ Status: SUCCESS
+2025-12-25 16:06:40 - INFO -    📊 Items: 1
+2025-12-25 16:06:40 - INFO -    ⭐ Quality: excellent
+2025-12-25 16:06:40 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:06:40 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:06:40 - INFO -    📄 Generated reports:
+2025-12-25 16:06:40 - INFO -       - 20251225-1606_2.A_Market_Place_Active_-_2025-12-24_06：26：05.md
+2025-12-25 16:06:40 - INFO -       - 20251225-1606_2.A_Market_Place_Active_-_2025-12-24_06：26：05.json
+2025-12-25 16:06:40 - INFO -       - 20251225-1606_2.A_Market_Place_Active_-_2025-12-24_06：26：05_DEBUG.json
+2025-12-25 16:06:40 - INFO - 
+================================================================================
+2025-12-25 16:06:40 - INFO - ✅ SUCCESS - Archived: 2.A Market Place Active - 2025-12-24_06：26：05.html
+2025-12-25 16:06:40 - INFO - ================================================================================
+2025-12-25 16:06:40 - INFO -    ⏭️  Skipping macOS metadata file: ._2.A Market Place Active - 2025-12-24_06：26：05.html
+2025-12-25 16:06:40 - INFO - 
+📥 New file detected: 2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:06:40 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:06:41 - INFO -    📊 Receiving: 6230.2 KB...
+2025-12-25 16:06:44 - INFO -    ✅ Transfer complete: 6230.2 KB
+2025-12-25 16:06:44 - INFO - ================================================================================
+2025-12-25 16:06:44 - INFO - 🚀 Processing: 2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:06:44 - INFO -    File size: 6230.2 KB
+2025-12-25 16:06:44 - INFO - ================================================================================
+2025-12-25 16:06:44 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:06:44 - INFO -    ✅ Read 6,379,721 characters from file
+2025-12-25 16:06:44 - INFO -    📄 Processing HTML: 6,379,721 characters (6230.2 KB)
+2025-12-25 16:06:44 - INFO -    ✅ Found 2 JSON-LD structured data blocks
+2025-12-25 16:06:44 - INFO -    🗑️  Removed 660 non-content tags
+2025-12-25 16:06:44 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-25 16:06:44 - INFO -    🖼️  Removed 46 Base64 inline images
+2025-12-25 16:06:44 - INFO -    ✅ Cleaning complete: 6230.2KB → 307.4KB (95.1% reduction)
+2025-12-25 16:06:44 - INFO -    📊 Estimated tokens: ~78,690
+2025-12-25 16:06:44 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:06:44 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:06:50 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:06:50 - INFO -    💰 Cost: $0.0022 (14,104 in, 100 out)
+2025-12-25 16:06:50 - INFO -    📋 Page Type: single product
+2025-12-25 16:06:50 - INFO -    🌐 Source: eBay
+2025-12-25 16:06:50 - INFO -    📦 Category: audio equipment
+2025-12-25 16:06:50 - INFO -    🔢 Items: single
+2025-12-25 16:06:50 - INFO -    ✅ Confidence: high
+2025-12-25 16:06:50 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:06:50 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:06:50 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:07:06 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:07:06 - INFO -    💰 Cost: $0.0092 (119,332 in, 899 out)
+2025-12-25 16:07:06 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-25 16:07:06 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:07:06 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:07:19 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:07:19 - INFO -    💰 Cost: $0.0006 (1,036 in, 694 out)
+2025-12-25 16:07:19 - INFO -    ✅ Formatted data into markdown
+2025-12-25 16:07:19 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:07:19 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:07:21 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:07:21 - INFO -    💰 Cost: $0.0065 (1,382 in, 300 out)
+2025-12-25 16:07:21 - INFO -    ✅ Status: SUCCESS
+2025-12-25 16:07:21 - INFO -    📊 Items: 1
+2025-12-25 16:07:21 - INFO -    ⭐ Quality: excellent
+2025-12-25 16:07:21 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:07:21 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:07:21 - INFO -    📄 Generated reports:
+2025-12-25 16:07:21 - INFO -       - 20251225-1607_2B_Marketplace_Sold_-_2025-12-24_06：29：02.md
+2025-12-25 16:07:21 - INFO -       - 20251225-1607_2B_Marketplace_Sold_-_2025-12-24_06：29：02.json
+2025-12-25 16:07:21 - INFO -       - 20251225-1607_2B_Marketplace_Sold_-_2025-12-24_06：29：02_DEBUG.json
+2025-12-25 16:07:21 - INFO - 
+================================================================================
+2025-12-25 16:07:21 - INFO - ✅ SUCCESS - Archived: 2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:07:21 - INFO - ================================================================================
+2025-12-25 16:07:21 - INFO -    ⏭️  Skipping macOS metadata file: ._2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:14:14 - INFO - 
+📥 New file detected: Brand Product Page 2025-12-24_06：30：23.html
+2025-12-25 16:14:14 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:14:15 - INFO -    📊 Receiving: 2048.0 KB...
+2025-12-25 16:14:16 - INFO -    📊 Receiving: 3836.4 KB...
+2025-12-25 16:14:19 - INFO -    ✅ Transfer complete: 3836.4 KB
+2025-12-25 16:14:19 - INFO - ================================================================================
+2025-12-25 16:14:19 - INFO - 🚀 Processing: Brand Product Page 2025-12-24_06：30：23.html
+2025-12-25 16:14:19 - INFO -    File size: 3836.4 KB
+2025-12-25 16:14:19 - INFO - ================================================================================
+2025-12-25 16:14:19 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:14:19 - INFO -    ✅ Read 3,928,496 characters from file
+2025-12-25 16:14:19 - INFO -    📄 Processing HTML: 3,928,496 characters (3836.4 KB)
+2025-12-25 16:14:19 - INFO -    ℹ️  No JSON-LD structured data found
+2025-12-25 16:14:19 - INFO -    🗑️  Removed 16 non-content tags
+2025-12-25 16:14:19 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-25 16:14:19 - INFO -    🖼️  Removed 7 Base64 inline images
+2025-12-25 16:14:19 - INFO -    ✅ Cleaning complete: 3836.4KB → 20.7KB (99.5% reduction)
+2025-12-25 16:14:19 - INFO -    📊 Estimated tokens: ~5,297
+2025-12-25 16:14:19 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:14:19 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:14:23 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:14:23 - INFO -    💰 Cost: $0.0010 (5,879 in, 116 out)
+2025-12-25 16:14:23 - INFO -    📋 Page Type: category listing
+2025-12-25 16:14:23 - INFO -    🌐 Source: Schiit Audio
+2025-12-25 16:14:23 - INFO -    📦 Category: audio equipment
+2025-12-25 16:14:23 - INFO -    🔢 Items: multiple (estimate: 30+)
+2025-12-25 16:14:23 - INFO -    ✅ Confidence: high
+2025-12-25 16:14:23 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:14:23 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:14:23 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:15:01 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:15:01 - INFO -    💰 Cost: $0.0015 (6,584 in, 3,462 out)
+2025-12-25 16:15:01 - INFO -    📦 Extracted 32 items
+2025-12-25 16:15:01 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:15:01 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:15:48 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:15:48 - INFO -    💰 Cost: $0.0019 (3,115 in, 2,413 out)
+2025-12-25 16:15:48 - INFO -    ✅ Formatted 32 items into markdown
+2025-12-25 16:15:48 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:15:48 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:15:51 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:15:51 - INFO -    💰 Cost: $0.0079 (1,794 in, 337 out)
+2025-12-25 16:15:51 - INFO -    ✅ Status: SUCCESS
+2025-12-25 16:15:51 - INFO -    📊 Items: 21
+2025-12-25 16:15:51 - INFO -    ⭐ Quality: good
+2025-12-25 16:15:51 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:15:51 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:15:51 - INFO -    📄 Generated reports:
+2025-12-25 16:15:51 - INFO -       - 20251225-1615_Brand_Product_Page_2025-12-24_06：30：23.md
+2025-12-25 16:15:51 - INFO -       - 20251225-1615_Brand_Product_Page_2025-12-24_06：30：23.json
+2025-12-25 16:15:51 - INFO -       - 20251225-1615_Brand_Product_Page_2025-12-24_06：30：23_DEBUG.json
+2025-12-25 16:15:51 - INFO - 
+================================================================================
+2025-12-25 16:15:51 - INFO - ✅ SUCCESS - Archived: Brand Product Page 2025-12-24_06：30：23.html
+2025-12-25 16:15:51 - INFO - ================================================================================
+2025-12-25 16:15:51 - INFO -    ⏭️  Skipping macOS metadata file: ._Brand Product Page 2025-12-24_06：30：23.html
+2025-12-25 16:16:01 - INFO - 
+📥 New file detected: Brand Product Page 2025-12-24_06：30：54.html
+2025-12-25 16:16:01 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:16:02 - INFO -    📊 Receiving: 1536.0 KB...
+2025-12-25 16:16:03 - INFO -    📊 Receiving: 8704.0 KB...
+2025-12-25 16:16:04 - INFO -    📊 Receiving: 11836.5 KB...
+2025-12-25 16:16:07 - INFO -    ✅ Transfer complete: 11836.5 KB
+2025-12-25 16:16:07 - INFO - ================================================================================
+2025-12-25 16:16:07 - INFO - 🚀 Processing: Brand Product Page 2025-12-24_06：30：54.html
+2025-12-25 16:16:07 - INFO -    File size: 11836.5 KB
+2025-12-25 16:16:07 - INFO - ================================================================================
+2025-12-25 16:16:07 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:16:07 - INFO -    ✅ Read 12,120,521 characters from file
+2025-12-25 16:16:07 - INFO -    📄 Processing HTML: 12,120,521 characters (11836.4 KB)
+2025-12-25 16:16:07 - INFO -    ✅ Found 2 JSON-LD structured data blocks
+2025-12-25 16:16:07 - INFO -    🗑️  Removed 202 non-content tags
+2025-12-25 16:16:07 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-25 16:16:07 - INFO -    🖼️  Removed 66 Base64 inline images
+2025-12-25 16:16:07 - INFO -    ✅ Cleaning complete: 11836.4KB → 133.5KB (98.9% reduction)
+2025-12-25 16:16:07 - INFO -    📊 Estimated tokens: ~34,172
+2025-12-25 16:16:07 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:16:07 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:16:11 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:16:11 - INFO -    💰 Cost: $0.0019 (11,963 in, 124 out)
+2025-12-25 16:16:11 - INFO -    📋 Page Type: single product
+2025-12-25 16:16:11 - INFO -    🌐 Source: Emotiva
+2025-12-25 16:16:11 - INFO -    📦 Category: audio equipment
+2025-12-25 16:16:11 - INFO -    🔢 Items: single
+2025-12-25 16:16:11 - INFO -    ✅ Confidence: high
+2025-12-25 16:16:11 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:16:11 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:16:11 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:16:28 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:16:28 - INFO -    💰 Cost: $0.0034 (40,170 in, 1,353 out)
+2025-12-25 16:16:28 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-25 16:16:28 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:16:28 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:16:49 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:16:49 - INFO -    💰 Cost: $0.0009 (1,465 in, 1,132 out)
+2025-12-25 16:16:49 - INFO -    ✅ Formatted data into markdown
+2025-12-25 16:16:49 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:16:49 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:16:50 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:16:50 - INFO -    💰 Cost: $0.0055 (1,449 in, 185 out)
+2025-12-25 16:16:50 - WARNING -    ⚠️  Status: EXTRACTION_INCOMPLETE
+2025-12-25 16:16:50 - WARNING -    ❌ Problem: The extracted product does not match the expected product (NOSTALA LB12 Vintage Loudspeakers).
+2025-12-25 16:16:50 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:16:50 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:16:50 - INFO -    📄 Generated reports:
+2025-12-25 16:16:50 - INFO -       - 20251225-1616_Brand_Product_Page_2025-12-24_06：30：54_INCOMPLETE.md
+2025-12-25 16:16:50 - INFO -       - 20251225-1616_Brand_Product_Page_2025-12-24_06：30：54_INCOMPLETE.json
+2025-12-25 16:16:50 - INFO -       - 20251225-1616_Brand_Product_Page_2025-12-24_06：30：54_DEBUG.json
+2025-12-25 16:16:50 - INFO - 
+================================================================================
+2025-12-25 16:16:50 - INFO - ⚠️  INCOMPLETE - Check report: Brand Product Page 2025-12-24_06：30：54.html
+2025-12-25 16:16:50 - INFO - ================================================================================
+2025-12-25 16:16:50 - INFO -    ⏭️  Skipping macOS metadata file: ._Brand Product Page 2025-12-24_06：30：54.html
+2025-12-25 16:23:50 - INFO - 
+📥 New file detected: retail list 2025-12-24_06：31：19.html
+2025-12-25 16:23:50 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:23:51 - INFO -    📊 Receiving: 1024.0 KB...
+2025-12-25 16:23:52 - INFO -    📊 Receiving: 2885.7 KB...
+2025-12-25 16:23:55 - INFO -    ✅ Transfer complete: 2885.7 KB
+2025-12-25 16:23:55 - INFO - ================================================================================
+2025-12-25 16:23:55 - INFO - 🚀 Processing: retail list 2025-12-24_06：31：19.html
+2025-12-25 16:23:55 - INFO -    File size: 2885.7 KB
+2025-12-25 16:23:55 - INFO - ================================================================================
+2025-12-25 16:23:55 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:23:55 - INFO -    ✅ Read 2,954,873 characters from file
+2025-12-25 16:23:55 - INFO -    📄 Processing HTML: 2,954,873 characters (2885.6 KB)
+2025-12-25 16:23:55 - INFO -    ✅ Found 2 JSON-LD structured data blocks
+2025-12-25 16:23:55 - INFO -    🗑️  Removed 557 non-content tags
+2025-12-25 16:23:55 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-25 16:23:55 - INFO -    🖼️  Removed 95 Base64 inline images
+2025-12-25 16:23:55 - INFO -    ✅ Cleaning complete: 2885.6KB → 854.3KB (70.4% reduction)
+2025-12-25 16:23:55 - INFO -    📊 Estimated tokens: ~218,701
+2025-12-25 16:23:55 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:23:55 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:23:58 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:23:58 - INFO -    💰 Cost: $0.0020 (13,117 in, 104 out)
+2025-12-25 16:23:58 - INFO -    📋 Page Type: category listing
+2025-12-25 16:23:58 - INFO -    🌐 Source: Crutchfield
+2025-12-25 16:23:58 - INFO -    📦 Category: audio equipment
+2025-12-25 16:23:58 - INFO -    🔢 Items: multiple (estimate)
+2025-12-25 16:23:58 - INFO -    ✅ Confidence: high
+2025-12-25 16:23:58 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:23:58 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:23:58 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:26:53 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:26:53 - INFO -    💰 Cost: $0.0191 (244,355 in, 2,610 out)
+2025-12-25 16:26:53 - ERROR - ❌ Failed to parse Gemini response as JSON: Expecting property name enclosed in double quotes: line 162 column 1 (char 6439)
+2025-12-25 16:26:53 - ERROR -    Raw response: {
+  "items": [
+    {
+      "product_name": "Klipsch Reference Premiere RP-8000F",
+      "product_url": "https://www.crutchfield.com/p_714RP8000E/Klipsch-Reference-Premiere-RP-8000F-Ebony.html?tp=185",
+      "item_number": "714RP8000E",
+      "image_url": "//images.crutchfieldonline.com/ImageHandler/trim/350/265/products/2018/27/714/g714RP8000E-F.jpg",
+      "short_description": "Floor-standing speaker",
+      "features": [
+        "1\" horn-loaded titanium tweeter",
+        "dual 8\" Cerametalli...
+2025-12-25 16:26:53 - ERROR - 
+❌ CRITICAL ERROR: Expecting property name enclosed in double quotes: line 162 column 1 (char 6439)
+2025-12-25 16:26:53 - ERROR - Traceback:
+Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/main_runner.py", line 141, in process_file_safely
+    extracted_data = gemini_extractor.extract_data(full_html, hypothesis)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/gemini_extractor.py", line 104, in extract_data
+    extracted = json.loads(content)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 162 column 1 (char 6439)
+
+2025-12-25 16:26:53 - ERROR - Moved to error directory: /home/pi5/projects/web-parser/Pi_Inbox/Errors/retail list 2025-12-24_06：31：19.html
+2025-12-25 16:26:53 - INFO -    ⏭️  Skipping macOS metadata file: ._retail list 2025-12-24_06：31：19.html
+2025-12-25 16:26:53 - INFO - 
+📥 New file detected: Retail single 2025-12-24_06：31：39.html
+2025-12-25 16:26:53 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:26:54 - INFO -    📊 Receiving: 2071.6 KB...
+2025-12-25 16:26:57 - INFO -    ✅ Transfer complete: 2071.6 KB
+2025-12-25 16:26:57 - INFO - ================================================================================
+2025-12-25 16:26:57 - INFO - 🚀 Processing: Retail single 2025-12-24_06：31：39.html
+2025-12-25 16:26:57 - INFO -    File size: 2071.6 KB
+2025-12-25 16:26:57 - INFO - ================================================================================
+2025-12-25 16:26:57 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:26:57 - INFO -    ✅ Read 2,121,342 characters from file
+2025-12-25 16:26:57 - INFO -    📄 Processing HTML: 2,121,342 characters (2071.6 KB)
+2025-12-25 16:26:57 - INFO -    ℹ️  No JSON-LD structured data found
+2025-12-25 16:26:57 - INFO -    🗑️  Removed 129 non-content tags
+2025-12-25 16:26:57 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-25 16:26:57 - INFO -    🖼️  Removed 46 Base64 inline images
+2025-12-25 16:26:57 - INFO -    ✅ Cleaning complete: 2071.6KB → 341.3KB (83.5% reduction)
+2025-12-25 16:26:57 - INFO -    📊 Estimated tokens: ~87,373
+2025-12-25 16:26:57 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:26:57 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:27:06 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:27:06 - INFO -    💰 Cost: $0.0020 (12,709 in, 113 out)
+2025-12-25 16:27:06 - INFO -    📋 Page Type: single product
+2025-12-25 16:27:06 - INFO -    🌐 Source: MacSales.com
+2025-12-25 16:27:06 - INFO -    📦 Category: computers
+2025-12-25 16:27:06 - INFO -    🔢 Items: single
+2025-12-25 16:27:06 - INFO -    ✅ Confidence: high
+2025-12-25 16:27:06 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:27:06 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:27:06 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:27:17 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:27:17 - INFO -    💰 Cost: $0.0171 (221,730 in, 1,632 out)
+2025-12-25 16:27:17 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-25 16:27:17 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:27:17 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:28:00 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:28:00 - INFO -    💰 Cost: $0.0011 (1,738 in, 1,321 out)
+2025-12-25 16:28:00 - INFO -    ✅ Formatted data into markdown
+2025-12-25 16:28:00 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:28:00 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:28:03 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:28:03 - INFO -    💰 Cost: $0.0068 (1,511 in, 306 out)
+2025-12-25 16:28:03 - INFO -    ✅ Status: SUCCESS
+2025-12-25 16:28:03 - INFO -    📊 Items: 1
+2025-12-25 16:28:03 - INFO -    ⭐ Quality: excellent
+2025-12-25 16:28:03 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:28:03 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:28:03 - INFO -    📄 Generated reports:
+2025-12-25 16:28:03 - INFO -       - 20251225-1628_Retail_single_2025-12-24_06：31：39.md
+2025-12-25 16:28:03 - INFO -       - 20251225-1628_Retail_single_2025-12-24_06：31：39.json
+2025-12-25 16:28:03 - INFO -       - 20251225-1628_Retail_single_2025-12-24_06：31：39_DEBUG.json
+2025-12-25 16:28:03 - INFO - 
+================================================================================
+2025-12-25 16:28:03 - INFO - ✅ SUCCESS - Archived: Retail single 2025-12-24_06：31：39.html
+2025-12-25 16:28:03 - INFO - ================================================================================
+2025-12-25 16:28:03 - INFO -    ⏭️  Skipping macOS metadata file: ._Retail single 2025-12-24_06：31：39.html
+2025-12-25 16:28:03 - INFO -    ⏭️  Skipping macOS metadata file: ._Retail single 2025-12-24_06：31：39.html
+2025-12-25 16:28:03 - INFO - 
+📥 New file detected: retail single 2025-12-24_06：32：00.html
+2025-12-25 16:28:03 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:28:04 - INFO -    📊 Receiving: 1629.0 KB...
+2025-12-25 16:28:07 - INFO -    ✅ Transfer complete: 1629.0 KB
+2025-12-25 16:28:07 - INFO - ================================================================================
+2025-12-25 16:28:07 - INFO - 🚀 Processing: retail single 2025-12-24_06：32：00.html
+2025-12-25 16:28:07 - INFO -    File size: 1629.0 KB
+2025-12-25 16:28:07 - INFO - ================================================================================
+2025-12-25 16:28:07 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:28:07 - INFO -    ✅ Read 1,667,981 characters from file
+2025-12-25 16:28:07 - INFO -    📄 Processing HTML: 1,667,981 characters (1628.9 KB)
+2025-12-25 16:28:07 - INFO -    ℹ️  No JSON-LD structured data found
+2025-12-25 16:28:07 - INFO -    🗑️  Removed 31 non-content tags
+2025-12-25 16:28:07 - INFO -    🗑️  Removed 4 HTML comments
+2025-12-25 16:28:07 - INFO -    🖼️  Removed 34 Base64 inline images
+2025-12-25 16:28:07 - INFO -    ✅ Cleaning complete: 1628.9KB → 234.8KB (85.6% reduction)
+2025-12-25 16:28:07 - INFO -    📊 Estimated tokens: ~60,105
+2025-12-25 16:28:07 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:28:07 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:28:11 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:28:11 - INFO -    💰 Cost: $0.0022 (14,519 in, 100 out)
+2025-12-25 16:28:11 - INFO -    📋 Page Type: category listing
+2025-12-25 16:28:11 - INFO -    🌐 Source: Amazon
+2025-12-25 16:28:11 - INFO -    📦 Category: Computers
+2025-12-25 16:28:11 - INFO -    🔢 Items: multiple (estimate)
+2025-12-25 16:28:11 - INFO -    ✅ Confidence: high
+2025-12-25 16:28:11 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:28:11 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:28:11 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:28:51 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:28:51 - INFO -    💰 Cost: $0.0087 (81,237 in, 8,565 out)
+2025-12-25 16:28:51 - INFO -    📦 Extracted 30 items
+2025-12-25 16:28:51 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:28:51 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:31:24 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:31:24 - INFO -    💰 Cost: $0.0043 (6,801 in, 5,460 out)
+2025-12-25 16:31:24 - INFO -    ✅ Formatted 30 items into markdown
+2025-12-25 16:31:24 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:31:24 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:31:27 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:31:27 - INFO -    💰 Cost: $0.0075 (1,814 in, 301 out)
+2025-12-25 16:31:27 - INFO -    ✅ Status: SUCCESS
+2025-12-25 16:31:27 - INFO -    📊 Items: 30
+2025-12-25 16:31:27 - INFO -    ⭐ Quality: excellent
+2025-12-25 16:31:27 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:31:27 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:31:27 - INFO -    📄 Generated reports:
+2025-12-25 16:31:27 - INFO -       - 20251225-1631_retail_single_2025-12-24_06：32：00.md
+2025-12-25 16:31:27 - INFO -       - 20251225-1631_retail_single_2025-12-24_06：32：00.json
+2025-12-25 16:31:27 - INFO -       - 20251225-1631_retail_single_2025-12-24_06：32：00_DEBUG.json
+2025-12-25 16:31:27 - INFO - 
+================================================================================
+2025-12-25 16:31:27 - INFO - ✅ SUCCESS - Archived: retail single 2025-12-24_06：32：00.html
+2025-12-25 16:31:27 - INFO - ================================================================================
+2025-12-25 16:31:27 - INFO -    ⏭️  Skipping macOS metadata file: ._retail single 2025-12-24_06：32：00.html
+2025-12-25 16:31:27 - INFO -    ⏭️  Skipping macOS metadata file: ._retail single 2025-12-24_06：32：00.html
+2025-12-25 16:31:27 - INFO - 
+📥 New file detected: Retail single 2025-12-24_06：32：21.html
+2025-12-25 16:31:27 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:31:28 - INFO -    📊 Receiving: 7317.8 KB...
+2025-12-25 16:31:31 - INFO -    ✅ Transfer complete: 7317.8 KB
+2025-12-25 16:31:31 - INFO - ================================================================================
+2025-12-25 16:31:31 - INFO - 🚀 Processing: Retail single 2025-12-24_06：32：21.html
+2025-12-25 16:31:31 - INFO -    File size: 7317.8 KB
+2025-12-25 16:31:31 - INFO - ================================================================================
+2025-12-25 16:31:31 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:31:31 - INFO -    ✅ Read 7,493,344 characters from file
+2025-12-25 16:31:31 - INFO -    📄 Processing HTML: 7,493,344 characters (7317.7 KB)
+2025-12-25 16:31:31 - INFO -    ✅ Found 2 JSON-LD structured data blocks
+2025-12-25 16:31:31 - INFO -    🗑️  Removed 383 non-content tags
+2025-12-25 16:31:31 - INFO -    🗑️  Removed 7 HTML comments
+2025-12-25 16:31:31 - INFO -    🖼️  Removed 38 Base64 inline images
+2025-12-25 16:31:31 - INFO -    ✅ Cleaning complete: 7317.7KB → 276.4KB (96.2% reduction)
+2025-12-25 16:31:31 - INFO -    📊 Estimated tokens: ~70,770
+2025-12-25 16:31:31 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:31:31 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:31:37 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:31:37 - INFO -    💰 Cost: $0.0020 (12,599 in, 115 out)
+2025-12-25 16:31:37 - INFO -    📋 Page Type: single product
+2025-12-25 16:31:37 - INFO -    🌐 Source: KEF US
+2025-12-25 16:31:37 - INFO -    📦 Category: audio equipment
+2025-12-25 16:31:37 - INFO -    🔢 Items: multiple (estimate: 20+)
+2025-12-25 16:31:37 - INFO -    ✅ Confidence: high
+2025-12-25 16:31:37 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:31:37 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:31:37 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:31:58 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:31:58 - INFO -    💰 Cost: $0.0090 (108,698 in, 2,665 out)
+2025-12-25 16:31:58 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-25 16:31:58 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:31:58 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:32:40 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:32:40 - INFO -    💰 Cost: $0.0016 (2,503 in, 2,036 out)
+2025-12-25 16:32:40 - INFO -    ✅ Formatted data into markdown
+2025-12-25 16:32:40 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:32:40 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:32:42 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:32:42 - INFO -    💰 Cost: $0.0063 (1,787 in, 183 out)
+2025-12-25 16:32:42 - WARNING -    ⚠️  Status: EXTRACTION_INCOMPLETE
+2025-12-25 16:32:42 - WARNING -    ❌ Problem: Expected multiple products but only one product was extracted.
+2025-12-25 16:32:42 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:32:42 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:32:42 - INFO -    📄 Generated reports:
+2025-12-25 16:32:42 - INFO -       - 20251225-1632_Retail_single_2025-12-24_06：32：21_INCOMPLETE.md
+2025-12-25 16:32:42 - INFO -       - 20251225-1632_Retail_single_2025-12-24_06：32：21_INCOMPLETE.json
+2025-12-25 16:32:42 - INFO -       - 20251225-1632_Retail_single_2025-12-24_06：32：21_DEBUG.json
+2025-12-25 16:32:42 - INFO - 
+================================================================================
+2025-12-25 16:32:42 - INFO - ⚠️  INCOMPLETE - Check report: Retail single 2025-12-24_06：32：21.html
+2025-12-25 16:32:42 - INFO - ================================================================================
+2025-12-25 16:32:42 - INFO -    ⏭️  Skipping macOS metadata file: ._Retail single 2025-12-24_06：32：21.html
+2025-12-25 16:32:42 - INFO - 
+📥 New file detected: 2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:32:42 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:32:43 - INFO -    📊 Receiving: 6230.2 KB...
+2025-12-25 16:32:46 - INFO -    ✅ Transfer complete: 6230.2 KB
+2025-12-25 16:32:46 - INFO - ================================================================================
+2025-12-25 16:32:46 - INFO - 🚀 Processing: 2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:32:46 - INFO -    File size: 6230.2 KB
+2025-12-25 16:32:46 - INFO - ================================================================================
+2025-12-25 16:32:46 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:32:46 - INFO -    ✅ Read 6,379,721 characters from file
+2025-12-25 16:32:46 - INFO -    📄 Processing HTML: 6,379,721 characters (6230.2 KB)
+2025-12-25 16:32:46 - INFO -    ✅ Found 2 JSON-LD structured data blocks
+2025-12-25 16:32:46 - INFO -    🗑️  Removed 660 non-content tags
+2025-12-25 16:32:46 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-25 16:32:46 - INFO -    🖼️  Removed 46 Base64 inline images
+2025-12-25 16:32:46 - INFO -    ✅ Cleaning complete: 6230.2KB → 307.4KB (95.1% reduction)
+2025-12-25 16:32:46 - INFO -    📊 Estimated tokens: ~78,690
+2025-12-25 16:32:46 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:32:46 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:32:49 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:32:49 - INFO -    💰 Cost: $0.0022 (14,104 in, 98 out)
+2025-12-25 16:32:49 - INFO -    📋 Page Type: single product
+2025-12-25 16:32:49 - INFO -    🌐 Source: eBay
+2025-12-25 16:32:49 - INFO -    📦 Category: audio equipment
+2025-12-25 16:32:49 - INFO -    🔢 Items: single
+2025-12-25 16:32:49 - INFO -    ✅ Confidence: high
+2025-12-25 16:32:49 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:32:49 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:32:49 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:33:02 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:33:02 - INFO -    💰 Cost: $0.0092 (119,334 in, 862 out)
+2025-12-25 16:33:02 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-25 16:33:02 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-25 16:33:02 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-25 16:33:16 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:33:16 - INFO -    💰 Cost: $0.0006 (1,007 in, 673 out)
+2025-12-25 16:33:16 - INFO -    ✅ Formatted data into markdown
+2025-12-25 16:33:16 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-25 16:33:16 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-25 16:33:19 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:33:19 - INFO -    💰 Cost: $0.0065 (1,358 in, 310 out)
+2025-12-25 16:33:19 - INFO -    ✅ Status: SUCCESS
+2025-12-25 16:33:19 - INFO -    📊 Items: 1
+2025-12-25 16:33:19 - INFO -    ⭐ Quality: excellent
+2025-12-25 16:33:19 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-25 16:33:19 - INFO - 📊 Step 4: Generating Reports...
+2025-12-25 16:33:19 - INFO -    📄 Generated reports:
+2025-12-25 16:33:19 - INFO -       - 20251225-1633_2B_Marketplace_Sold_-_2025-12-24_06：29：02.md
+2025-12-25 16:33:19 - INFO -       - 20251225-1633_2B_Marketplace_Sold_-_2025-12-24_06：29：02.json
+2025-12-25 16:33:19 - INFO -       - 20251225-1633_2B_Marketplace_Sold_-_2025-12-24_06：29：02_DEBUG.json
+2025-12-25 16:33:19 - INFO - 
+================================================================================
+2025-12-25 16:33:19 - INFO - ✅ SUCCESS - Archived: 2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:33:19 - INFO - ================================================================================
+2025-12-25 16:33:19 - INFO -    ⏭️  Skipping macOS metadata file: ._2B Marketplace Sold - 2025-12-24_06：29：02.html
+2025-12-25 16:33:19 - INFO - 
+📥 New file detected: 1A - market place active - 2025-12-24_06：29：45.html
+2025-12-25 16:33:19 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-25 16:33:20 - INFO -    📊 Receiving: 4347.2 KB...
+2025-12-25 16:33:23 - INFO -    ✅ Transfer complete: 4347.2 KB
+2025-12-25 16:33:23 - INFO - ================================================================================
+2025-12-25 16:33:23 - INFO - 🚀 Processing: 1A - market place active - 2025-12-24_06：29：45.html
+2025-12-25 16:33:23 - INFO -    File size: 4347.2 KB
+2025-12-25 16:33:23 - INFO - ================================================================================
+2025-12-25 16:33:23 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-25 16:33:23 - INFO -    ✅ Read 4,451,412 characters from file
+2025-12-25 16:33:23 - INFO -    📄 Processing HTML: 4,451,412 characters (4347.1 KB)
+2025-12-25 16:33:23 - INFO -    ✅ Found 1 JSON-LD structured data blocks
+2025-12-25 16:33:23 - INFO -    🗑️  Removed 1014 non-content tags
+2025-12-25 16:33:23 - INFO -    🗑️  Removed 2 HTML comments
+2025-12-25 16:33:23 - INFO -    🖼️  Removed 90 Base64 inline images
+2025-12-25 16:33:23 - INFO -    ✅ Cleaning complete: 4347.1KB → 781.4KB (82.0% reduction)
+2025-12-25 16:33:23 - INFO -    📊 Estimated tokens: ~200,030
+2025-12-25 16:33:23 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-25 16:33:23 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-25 16:33:28 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-25 16:33:28 - INFO -    💰 Cost: $0.0026 (16,824 in, 119 out)
+2025-12-25 16:33:28 - INFO -    📋 Page Type: search results
+2025-12-25 16:33:28 - INFO -    🌐 Source: eBay
+2025-12-25 16:33:28 - INFO -    📦 Category: audio equipment
+2025-12-25 16:33:28 - INFO -    🔢 Items: multiple (estimate 100+)
+2025-12-25 16:33:28 - INFO -    ✅ Confidence: high
+2025-12-25 16:33:28 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-25 16:33:28 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-25 16:33:28 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-25 16:36:50 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-25 16:36:50 - INFO -    💰 Cost: $0.0240 (309,684 in, 2,612 out)
+2025-12-25 16:36:50 - ERROR - ❌ Failed to parse Gemini response as JSON: Unterminated string starting at: line 73 column 21 (char 4640)
+2025-12-25 16:36:50 - ERROR -    Raw response: {
+  "items": [
+    {
+      "item_id": "358044475890",
+      "item_link": "https://www.ebay.com/itm/358044475890?_skw=schiit+preamp&itmmeta=01KD7GRWVZ87P9GMX2E4W9RB87&hash=item535d1d21f2:g:u2UAAeSwuOhpSiPg&itmprp=enc%3AAQAKAAAA0FkggFvd1GGDu0w3yXCmi1d0sjRDdrmhe3Z4cbCxqwf94sUYQy8dy654isYzi193elZH95kBXQdSwZHAfuixfmV%2F0oIOT6heUFNm6Mnlf%2Fb8GeIB24U5o6L59SURDUlGMwZB4jxsYMeNZeWNPp1%2FWbEJe03l6rHYApoFr4hYOaNpX7SLxmdMK0g9YwkfxgktZOVzFOGAT%2FxfektX6DPYSO%2Bho89wMf91QaaETdyhaQd5sbXcksJueRTRu8ytJqILOs6034QQ...
+2025-12-25 16:36:50 - ERROR - 
+❌ CRITICAL ERROR: Unterminated string starting at: line 73 column 21 (char 4640)
+2025-12-25 16:36:50 - ERROR - Traceback:
+Traceback (most recent call last):
+  File "/home/pi5/projects/web-parser/main_runner.py", line 141, in process_file_safely
+    extracted_data = gemini_extractor.extract_data(full_html, hypothesis)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pi5/projects/web-parser/gemini_extractor.py", line 104, in extract_data
+    extracted = json.loads(content)
+                ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 73 column 21 (char 4640)
+
+2025-12-25 16:36:50 - ERROR - Moved to error directory: /home/pi5/projects/web-parser/Pi_Inbox/Errors/1A - market place active - 2025-12-24_06：29：45.html
+2025-12-25 16:36:50 - INFO -    ⏭️  Skipping macOS metadata file: ._1A - market place active - 2025-12-24_06：29：45.html
+2025-12-26 08:02:13 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 406657.crdownload
+2025-12-26 08:02:16 - INFO - 
+📥 New file detected: 2025-12-26_16：02：02.html
+2025-12-26 08:02:16 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-26 08:02:17 - INFO -    📊 Receiving: 7820.4 KB...
+2025-12-26 08:02:20 - INFO -    ✅ Transfer complete: 7820.4 KB
+2025-12-26 08:02:20 - INFO - ================================================================================
+2025-12-26 08:02:20 - INFO - 🚀 Processing: 2025-12-26_16：02：02.html
+2025-12-26 08:02:20 - INFO -    File size: 7820.4 KB
+2025-12-26 08:02:20 - INFO - ================================================================================
+2025-12-26 08:02:20 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-26 08:02:20 - INFO -    ✅ Read 8,008,067 characters from file
+2025-12-26 08:02:20 - INFO -    📄 Processing HTML: 8,008,067 characters (7820.4 KB)
+2025-12-26 08:02:21 - INFO -    ✅ Found 4 JSON-LD structured data blocks
+2025-12-26 08:02:21 - INFO -    🗑️  Removed 417 non-content tags
+2025-12-26 08:02:21 - INFO -    🗑️  Removed 2 HTML comments
+2025-12-26 08:02:21 - INFO -    🖼️  Removed 63 Base64 inline images
+2025-12-26 08:02:21 - INFO -    ✅ Cleaning complete: 7820.4KB → 473.6KB (93.9% reduction)
+2025-12-26 08:02:21 - INFO -    📊 Estimated tokens: ~121,230
+2025-12-26 08:02:21 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-26 08:02:21 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-26 08:02:29 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:02:29 - INFO -    💰 Cost: $0.0023 (15,114 in, 113 out)
+2025-12-26 08:02:29 - INFO -    📋 Page Type: search results
+2025-12-26 08:02:29 - INFO -    🌐 Source: Micro Center
+2025-12-26 08:02:29 - INFO -    📦 Category: Desktop Computers
+2025-12-26 08:02:29 - INFO -    🔢 Items: multiple (estimate 55)
+2025-12-26 08:02:29 - INFO -    ✅ Confidence: high
+2025-12-26 08:02:29 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-26 08:02:29 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-26 08:02:29 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-26 08:03:22 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-26 08:03:22 - INFO -    💰 Cost: $0.0152 (153,423 in, 12,424 out)
+2025-12-26 08:03:22 - INFO -    📦 Extracted 55 items
+2025-12-26 08:03:22 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-26 08:03:22 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-26 08:05:30 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:05:30 - INFO -    💰 Cost: $0.0053 (10,050 in, 6,294 out)
+2025-12-26 08:05:30 - INFO -    ✅ Formatted 55 items into markdown
+2025-12-26 08:05:30 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-26 08:05:30 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-26 08:05:35 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:05:35 - INFO -    💰 Cost: $0.0074 (1,660 in, 324 out)
+2025-12-26 08:05:35 - INFO -    ✅ Status: SUCCESS
+2025-12-26 08:05:35 - INFO -    📊 Items: 55
+2025-12-26 08:05:35 - INFO -    ⭐ Quality: excellent
+2025-12-26 08:05:35 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-26 08:05:35 - INFO - 📊 Step 4: Generating Reports...
+2025-12-26 08:05:35 - INFO -    📄 Generated reports:
+2025-12-26 08:05:35 - INFO -       - 20251226-0805_2025-12-26_16：02：02.md
+2025-12-26 08:05:35 - INFO -       - 20251226-0805_2025-12-26_16：02：02.json
+2025-12-26 08:05:35 - INFO -       - 20251226-0805_2025-12-26_16：02：02_DEBUG.json
+2025-12-26 08:05:35 - INFO - 
+================================================================================
+2025-12-26 08:05:35 - INFO - ✅ SUCCESS - Archived: 2025-12-26_16：02：02.html
+2025-12-26 08:05:35 - INFO - ================================================================================
+2025-12-26 08:05:35 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-26_16：02：02.html
+2025-12-26 08:11:55 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 591545.crdownload
+2025-12-26 08:11:57 - INFO - 
+📥 New file detected: 2025-12-26_16：11：48.html
+2025-12-26 08:11:57 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-26 08:11:58 - INFO -    📊 Receiving: 2328.1 KB...
+2025-12-26 08:12:01 - INFO -    ✅ Transfer complete: 2328.1 KB
+2025-12-26 08:12:01 - INFO - ================================================================================
+2025-12-26 08:12:01 - INFO - 🚀 Processing: 2025-12-26_16：11：48.html
+2025-12-26 08:12:01 - INFO -    File size: 2328.1 KB
+2025-12-26 08:12:01 - INFO - ================================================================================
+2025-12-26 08:12:01 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-26 08:12:01 - INFO -    ✅ Read 2,383,995 characters from file
+2025-12-26 08:12:01 - INFO -    📄 Processing HTML: 2,383,995 characters (2328.1 KB)
+2025-12-26 08:12:01 - INFO -    ℹ️  No JSON-LD structured data found
+2025-12-26 08:12:01 - INFO -    🗑️  Removed 776 non-content tags
+2025-12-26 08:12:01 - INFO -    🗑️  Removed 2 HTML comments
+2025-12-26 08:12:01 - INFO -    🖼️  Removed 45 Base64 inline images
+2025-12-26 08:12:01 - INFO -    ✅ Cleaning complete: 2328.1KB → 351.6KB (84.9% reduction)
+2025-12-26 08:12:01 - INFO -    📊 Estimated tokens: ~90,015
+2025-12-26 08:12:01 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-26 08:12:01 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-26 08:12:08 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:12:08 - INFO -    💰 Cost: $0.0025 (16,400 in, 123 out)
+2025-12-26 08:12:08 - INFO -    📋 Page Type: search results
+2025-12-26 08:12:08 - INFO -    🌐 Source: eBay
+2025-12-26 08:12:08 - INFO -    📦 Category: Computers, Tablets & Networking
+2025-12-26 08:12:08 - INFO -    🔢 Items: multiple (estimate 28)
+2025-12-26 08:12:08 - INFO -    ✅ Confidence: high
+2025-12-26 08:12:08 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-26 08:12:08 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-26 08:12:08 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-26 08:12:43 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-26 08:12:43 - INFO -    💰 Cost: $0.0130 (139,323 in, 8,458 out)
+2025-12-26 08:12:43 - INFO -    📦 Extracted 13 items
+2025-12-26 08:12:43 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-26 08:12:43 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-26 08:15:02 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:15:02 - INFO -    💰 Cost: $0.0042 (7,557 in, 5,135 out)
+2025-12-26 08:15:02 - INFO -    ✅ Formatted 13 items into markdown
+2025-12-26 08:15:02 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-26 08:15:02 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-26 08:15:08 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:15:08 - INFO -    💰 Cost: $0.0083 (2,148 in, 295 out)
+2025-12-26 08:15:08 - INFO -    ✅ Status: SUCCESS
+2025-12-26 08:15:08 - INFO -    📊 Items: 13
+2025-12-26 08:15:08 - INFO -    ⭐ Quality: excellent
+2025-12-26 08:15:08 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-26 08:15:08 - INFO - 📊 Step 4: Generating Reports...
+2025-12-26 08:15:08 - INFO -    📄 Generated reports:
+2025-12-26 08:15:08 - INFO -       - 20251226-0815_2025-12-26_16：11：48.md
+2025-12-26 08:15:08 - INFO -       - 20251226-0815_2025-12-26_16：11：48.json
+2025-12-26 08:15:08 - INFO -       - 20251226-0815_2025-12-26_16：11：48_DEBUG.json
+2025-12-26 08:15:08 - INFO - 
+================================================================================
+2025-12-26 08:15:08 - INFO - ✅ SUCCESS - Archived: 2025-12-26_16：11：48.html
+2025-12-26 08:15:08 - INFO - ================================================================================
+2025-12-26 08:15:08 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-26_16：11：48.html
+2025-12-26 08:18:09 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 36804.crdownload
+2025-12-26 08:18:16 - INFO - 
+📥 New file detected: 2025-12-26_16：18：00.522 Minisforum UM760 Slim MFF Mini PC; AMD Ryzen 5 7640HS 4.html
+2025-12-26 08:18:16 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-26 08:18:17 - INFO -    📊 Receiving: 8804.0 KB...
+2025-12-26 08:18:20 - INFO -    ✅ Transfer complete: 8804.0 KB
+2025-12-26 08:18:20 - INFO - ================================================================================
+2025-12-26 08:18:20 - INFO - 🚀 Processing: 2025-12-26_16：18：00.522 Minisforum UM760 Slim MFF Mini PC; AMD Ryzen 5 7640HS 4.html
+2025-12-26 08:18:20 - INFO -    File size: 8804.0 KB
+2025-12-26 08:18:20 - INFO - ================================================================================
+2025-12-26 08:18:20 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-26 08:18:20 - INFO -    ✅ Read 9,015,217 characters from file
+2025-12-26 08:18:20 - INFO -    📄 Processing HTML: 9,015,217 characters (8803.9 KB)
+2025-12-26 08:18:21 - INFO -    ✅ Found 4 JSON-LD structured data blocks
+2025-12-26 08:18:21 - INFO -    🗑️  Removed 593 non-content tags
+2025-12-26 08:18:21 - INFO -    🗑️  Removed 2 HTML comments
+2025-12-26 08:18:21 - INFO -    🖼️  Removed 63 Base64 inline images
+2025-12-26 08:18:21 - INFO -    ✅ Cleaning complete: 8803.9KB → 450.5KB (94.9% reduction)
+2025-12-26 08:18:21 - INFO -    📊 Estimated tokens: ~115,325
+2025-12-26 08:18:21 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-26 08:18:21 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-26 08:18:23 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:18:23 - INFO -    💰 Cost: $0.0023 (14,800 in, 100 out)
+2025-12-26 08:18:23 - INFO -    📋 Page Type: single product
+2025-12-26 08:18:23 - INFO -    🌐 Source: Micro Center
+2025-12-26 08:18:23 - INFO -    📦 Category: Desktop Computers
+2025-12-26 08:18:23 - INFO -    🔢 Items: single
+2025-12-26 08:18:23 - INFO -    ✅ Confidence: high
+2025-12-26 08:18:23 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-26 08:18:23 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.5-flash)...
+2025-12-26 08:18:23 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-26 08:18:39 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-26 08:18:39 - INFO -    💰 Cost: $0.0108 (136,910 in, 1,746 out)
+2025-12-26 08:18:39 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-26 08:18:39 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-26 08:18:39 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-26 08:19:06 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:19:06 - INFO -    💰 Cost: $0.0010 (1,717 in, 1,259 out)
+2025-12-26 08:19:06 - INFO -    ✅ Formatted data into markdown
+2025-12-26 08:19:06 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-26 08:19:06 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-26 08:19:13 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 08:19:13 - INFO -    💰 Cost: $0.0074 (1,588 in, 345 out)
+2025-12-26 08:19:13 - INFO -    ✅ Status: SUCCESS
+2025-12-26 08:19:13 - INFO -    📊 Items: 1
+2025-12-26 08:19:13 - INFO -    ⭐ Quality: excellent
+2025-12-26 08:19:13 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-26 08:19:13 - INFO - 📊 Step 4: Generating Reports...
+2025-12-26 08:19:13 - INFO -    📄 Generated reports:
+2025-12-26 08:19:13 - INFO -       - 20251226-0819_2025-12-26_16：18：00.522_Minisforum_UM760_Slim_MFF_Mini_PC;_AMD_Ryzen_5_7640HS_4.md
+2025-12-26 08:19:13 - INFO -       - 20251226-0819_2025-12-26_16：18：00.522_Minisforum_UM760_Slim_MFF_Mini_PC;_AMD_Ryzen_5_7640HS_4.json
+2025-12-26 08:19:13 - INFO -       - 20251226-0819_2025-12-26_16：18：00.522_Minisforum_UM760_Slim_MFF_Mini_PC;_AMD_Ryzen_5_7640HS_4_DEBUG.json
+2025-12-26 08:19:13 - INFO - 
+================================================================================
+2025-12-26 08:19:13 - INFO - ✅ SUCCESS - Archived: 2025-12-26_16：18：00.522 Minisforum UM760 Slim MFF Mini PC; AMD Ryzen 5 7640HS 4.html
+2025-12-26 08:19:13 - INFO - ================================================================================
+2025-12-26 08:19:13 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-26_16：18：00.522 Minisforum UM760 Slim MFF Mini PC; AMD Ryzen 5 7640HS 4.html
