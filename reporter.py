@@ -8,6 +8,86 @@ from pathlib import Path
 from datetime import datetime
 from config import OUTPUT_DIR
 from utils_logging import log_event
+from collections import Counter
+
+
+def analyze_list_items(items: list) -> dict:
+    """
+    Analyze items in a list to find dominant patterns.
+    
+    Returns dict with:
+        - dominant_model: Most common brand+model combo (if 50%+ match)
+        - dominant_brand: Most common brand (if 50%+ match) 
+        - dominant_attributes: Dict of most common attributes
+    """
+    if not items or len(items) < 2:
+        return {}
+    
+    brands = []
+    models = []
+    brand_model_combos = []
+    attributes = {}
+    
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        
+        # Extract brand
+        brand = item.get('brand', '').strip()
+        if brand:
+            brands.append(brand)
+        
+        # Extract model/product name and try to parse model from it
+        product_name = (item.get('product_name') or 
+                       item.get('title') or 
+                       item.get('name', '')).strip()
+        
+        # Try to extract model (usually first 2-3 words after brand)
+        if product_name and brand:
+            # Remove brand from product name and take next 1-2 significant words
+            name_without_brand = product_name.replace(brand, '').strip()
+            words = [w for w in name_without_brand.split() if len(w) > 1][:2]
+            if words:
+                model = ' '.join(words)
+                models.append(model)
+                brand_model_combos.append(f"{brand} {model}")
+        
+        # Extract common attributes
+        for key in ['capacity', 'size', 'color', 'condition', 'type']:
+            value = item.get(key, '').strip()
+            if value:
+                if key not in attributes:
+                    attributes[key] = []
+                attributes[key].append(value)
+    
+    total_items = len(items)
+    result = {}
+    
+    # Check for dominant brand+model (50%+ threshold)
+    if brand_model_combos:
+        combo_counts = Counter(brand_model_combos)
+        most_common_combo, combo_count = combo_counts.most_common(1)[0]
+        if combo_count / total_items >= 0.5:
+            result['dominant_model'] = most_common_combo
+    
+    # Check for dominant brand (50%+ threshold)
+    if brands:
+        brand_counts = Counter(brands)
+        most_common_brand, brand_count = brand_counts.most_common(1)[0]
+        if brand_count / total_items >= 0.5:
+            result['dominant_brand'] = most_common_brand
+    
+    # Find most common attribute for each type
+    result['dominant_attributes'] = {}
+    for attr_name, attr_values in attributes.items():
+        if attr_values:
+            attr_counts = Counter(attr_values)
+            most_common_attr, attr_count = attr_counts.most_common(1)[0]
+            if attr_count / total_items >= 0.3:  # Lower threshold for attributes
+                result['dominant_attributes'][attr_name] = most_common_attr
+    
+    return result
+
 
 def generate_smart_filename(
     hypothesis: dict, 
@@ -91,12 +171,51 @@ def generate_smart_filename(
             product = product[:30]  # Max 30 chars
     
     elif page_type == 'list' or page_type == 'auction':
-        # Get from hypothesis['category']
-        product = hypothesis.get('category', 'Unknown')
-        if product and product != 'Unknown':
-            product = re.sub(r'[^a-zA-Z0-9\s]', '', product)  # Remove special chars
-            product = product.replace(' ', '-')  # Replace spaces with hyphens
-            product = product[:30]  # Max 30 chars
+        # IMPROVED: Analyze items to find dominant pattern
+        items = extracted_data.get('items', [])
+        
+        if items and len(items) >= 2:
+            analysis = analyze_list_items(items)
+            
+            # Priority 1: Dominant model (brand + model, 50%+ of items)
+            if 'dominant_model' in analysis:
+                product = analysis['dominant_model']
+                product = re.sub(r'[^a-zA-Z0-9\s]', '', product)
+                product = product.replace(' ', '')[:30]  # No hyphens for brand+model
+            
+            # Priority 2: Dominant brand + most common attribute  
+            elif 'dominant_brand' in analysis and analysis.get('dominant_attributes'):
+                brand = analysis['dominant_brand']
+                # Get first available attribute (capacity, size, etc.)
+                attrs = analysis['dominant_attributes']
+                attr_value = next(iter(attrs.values()))
+                product = f"{brand}{attr_value}"
+                product = re.sub(r'[^a-zA-Z0-9\s]', '', product)
+                product = product.replace(' ', '')[:30]
+            
+            # Priority 3: Dominant attribute + category
+            elif analysis.get('dominant_attributes'):
+                attrs = analysis['dominant_attributes']
+                attr_value = next(iter(attrs.values()))
+                category_short = hypothesis.get('category', '').split()[0]  # First word of category
+                product = f"{attr_value}{category_short}"
+                product = re.sub(r'[^a-zA-Z0-9\s]', '', product)
+                product = product.replace(' ', '')[:30]
+            
+            # Priority 4: Fallback to category from hypothesis
+            else:
+                product = hypothesis.get('category', 'Unknown')
+                if product and product != 'Unknown':
+                    product = re.sub(r'[^a-zA-Z0-9\s]', '', product)
+                    product = product.replace(' ', '-')
+                    product = product[:30]
+        else:
+            # Single item in a "list" or no items - use category
+            product = hypothesis.get('category', 'Unknown')
+            if product and product != 'Unknown':
+                product = re.sub(r'[^a-zA-Z0-9\s]', '', product)
+                product = product.replace(' ', '-')
+                product = product[:30]
     
     # Fallback: try category even if page_type is unknown
     if not product or product == 'Unknown':

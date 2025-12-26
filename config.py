@@ -33,7 +33,7 @@ if not GOOGLE_API_KEY:
 # Step 3B: Validation - 4o reviews and adds insights (strategic oversight)
 
 MODEL_HYPOTHESIS = "gpt-4o-mini"        # OpenAI - cheap classification
-MODEL_CONTEXT = "gemini-2.5-flash"      # Google - 1M token window
+MODEL_CONTEXT = "gemini-2.0-flash"      # Google - 1M token window, BEST quality/cost/speed
 MODEL_FORMATTER = "gpt-4o-mini"         # OpenAI - mechanical formatting
 MODEL_VALIDATOR = "gpt-4o"              # OpenAI - strategic validation
 

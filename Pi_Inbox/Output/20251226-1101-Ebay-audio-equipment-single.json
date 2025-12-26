@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "timestamp": "20251226-1101",
+    "original_file": "2025-12-26_19：00：07.html",
+    "status": "success",
+    "page_type": "single product",
+    "source": "eBay",
+    "category": "audio equipment"
+  },
+  "hypothesis": {
+    "page_type": "single product",
+    "source": "eBay",
+    "category": "audio equipment",
+    "item_count": "single",
+    "expected_fields": [
+      "product_name",
+      "price",
+      "condition",
+      "seller_info",
+      "images",
+      "description",
+      "shipping_info",
+      "return_policy"
+    ],
+    "confidence": "high",
+    "notes": "The page contains detailed product information, images, and links related to a specific audio equipment item, indicating it is a single product listing on eBay."
+  },
+  "extracted_data": {
+    "item": {
+      "product_name": "Schiit Audio Saga+ Stereo Tube Hybrid Preamplifier + THREE tubes",
+      "price": "US $225.00",
+      "best_offer": true,
+      "condition": "Used",
+      "condition_description": "Good working condition",
+      "seller_info": {
+        "seller_name": "blazerfan111",
+        "seller_feedback_percentage": "98.3% positive",
+        "seller_feedback_score": "1433",
+        "seller_other_items_url": "https://www.ebay.com/sch/blazerfan111/m.html?item=297873443117&rt=nc&_trksid=p4429486.m3561.l170197",
+        "contact_seller_button": true
+      },
+      "images": [
+        "[BASE64_REMOVED]",
+        "[BASE64_REMOVED]",
+        "[BASE64_REMOVED]",
+        "[BASE64_REMOVED]"
+      ],
+      "in_carts": "In 1 cart",
+      "number_of_watchers": "7",
+      "shipping_info": {
+        "shipping_cost": "US $12.00",
+        "shipping_carrier": "USPS Ground Advantage",
+        "ships_from": "Bel Air, Maryland, United States",
+        "estimated_delivery": "Estimated between Wed, Dec 31 and Thu, Jan 8 to 95066",
+        "local_pickup": "Free local pickup from Bel Air, Maryland, United States 21014"
+      },
+      "return_policy": "30 days returns. Buyer pays for return shipping. If you use an eBay shipping label, it will be deducted from your refund amount",
+      "item_number": "297873443117",
+      "category": "Home Audio Amplifiers & Preamps",
+      "brand": "Schiit",
+      "type": "Preamplifier",
+      "audio_inputs": "Stereo L/R RCA",
+      "number_of_channels": "2",
+      "color": "Black",
+      "number_of_inputs": "5",
+      "model": "Schiit Audio Saga",
+      "audio_outputs": "Stereo L/R RCA",
+      "country_of_origin": "United States",
+      "number_of_outputs": "2",
+      "klarna_financing_available": true,
+      "additional_service_available": "1-year protection plan from Allstate - $24.99",
+      "payments": [
+        "Klarna Installment",
+        "PayPal",
+        "Venmo",
+        "Google Pay",
+        "Visa",
+        "Master Card",
+        "Discover",
+        "Paypal Credit"
+      ],
+      "shop_with_confidence_guarantee": "eBay Money Back Guarantee. Get the item you ordered or your money back.",
+      "seller_detailed_ratings": {
+        "accurate_description": "4.8",
+        "reasonable_shipping_cost": "5.0",
+        "shipping_speed": "5.0",
+        "communication": "5.0"
+      },
+      "seller_feedback": [
+        {
+          "username": "a***n (239)",
+          "time": "Past 6 months",
+          "verified_purchase": true,
+          "comment": "Excellent packaging for items, brand new and as described and an excellent value for this brand. Good shipping speed. I will probably check out the sellers items going forward.",
+          "item_link": "Tatcha Ageless Renewal Ritual Skin Care 4-piece Set FULL SIZES No Box (#297590177264)"
+        },
+        {
+          "username": "4***c (167)",
+          "time": "Past month",
+          "verified_purchase": true,
+          "comment": "Fast shipping. Very well packaged. Just as described.",
+          "item_link": "SureFire C2 Centurion – Classic Tactical EDC Flashlight – A44465 (#306590572357)"
+        },
+        {
+          "username": "i***2 (192)",
+          "time": "Past 6 months",
+          "verified_purchase": true,
+          "comment": "Shipping was fast, packaged very well exactly as described and what a great deal!! Thank you",
+          "item_link": "RC Boat Repair Kit includes New Octura Propeller x347 (#297750485036)"
+        },
+        {
+          "username": "l***i (219)",
+          "time": "More than a year ago",
+          "verified_purchase": true,
+          "comment": "10/10 Top notch seller! Beautiful item! Item exactly as described....bulletproof packaging....No worries here....Would absolutely buy again without hesitation! There was an issue with shipping and the item was delayed. The seller was very responsive and worked diligently to resolve the problem. The item was located and shipped in an expedited manner and arrived in perfect condition. The seller even issued a partial refund for the delays. Highly recommend this seller!",
+          "item_link": "Sanyo Plus N55 Noise Reduction Module (#296834607359)"
+        },
+        {
+          "username": "l***c (13)",
+          "time": "Past year",
+          "verified_purchase": true,
+          "comment": "My product arrived broken and it was disappointing but when I reached out to the seller they got back to me quickly and handled the situation very professionally. I would order from this seller again without hesitation. Five stars for customer service for sure.",
+          "item_link": "Saniflo SaniShower 010 0.2 HP Water Pump (#306173862792)"
+        },
+        {
+          "username": "a***c (151)",
+          "time": "Past 6 months",
+          "verified_purchase": true,
+          "comment": "No issues, no problems, and no concerns. Totally positive transaction. All parts were there and arrived in great shape. Really pleased. Shipping was faster than expected. I would purchase from again. Thanks.",
+          "item_link": "Snap On Scanner Adapter Set MT2500 Solus Modis Verus Domestic and Asian Import (#305850571933)"
+        },
+        {
+          "username": "s***s (393)",
+          "time": "Past year",
+          "verified_purchase": true,
+          "comment": "Awesome seller! Fast shipping! Exactly as described!",
+          "item_link": "AirSafti Hepa Filtration AS1200 High Performance Air Scrubber With Filters (#306325829394)"
+        },
+        {
+          "username": "r***a (526)",
+          "time": "Past 6 months",
+          "verified_purchase": true,
+          "comment": "Great seller! Part arrived fast and in great shape!",
+          "item_link": "Comp Cams 11-208-3 Magnum Hydraulic Flat Tappet Camshaft Big Block Chevy (#297623445253)"
+        }
+      ]
+    }
+  },
+  "validation": {
+    "hypothesis_match": true,
+    "expected_items": "single",
+    "actual_items": 1,
+    "data_quality": "excellent",
+    "completeness": "all items formatted",
+    "notes": "The extraction captured all expected fields with detailed information."
+  },
+  "insights": {
+    "executive_summary": "The extraction successfully captured a comprehensive set of data for a single product listing of a Schiit Audio Saga+ Stereo Tube Hybrid Preamplifier on eBay. This includes detailed product specifications, seller information, shipping details, and return policy, which are crucial for potential buyers to make informed decisions.",
+    "key_findings": "The product is listed at $225 with a 'Best Offer' option, indicating potential price negotiation. The seller has a high feedback score of 98.3%, suggesting reliability. The item is in good working condition and offers multiple payment options, enhancing buyer convenience.",
+    "recommendation": "Consider monitoring the listing for price changes or offers and evaluate the seller's other items for potential bundled purchases or discounts."
+  },
+  "statistics": {
+    "total_items": 1,
+    "key_metrics": "Price: $225, Condition: Used, Seller Feedback: 98.3% positive, Shipping Cost: $12, Return Policy: 30 days"
+  }
+}

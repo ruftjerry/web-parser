@@ -1,0 +1,265 @@
+{
+  "timestamp": "20251226-1057",
+  "original_file": "2025-12-26_18：53：54.html",
+  "hypothesis": {
+    "page_type": "search results",
+    "source": "eBay",
+    "category": "audio equipment",
+    "item_count": "multiple (estimate 100+)",
+    "expected_fields": [
+      "item title",
+      "price",
+      "condition",
+      "shipping options",
+      "seller information",
+      "item location"
+    ],
+    "confidence": "high",
+    "notes": "The page is a search results page for 'schiit preamp' on eBay, indicating multiple listings for audio equipment, specifically preamps. The presence of filters and categories suggests a comprehensive listing."
+  },
+  "extracted_data": {
+    "items": [
+      {
+        "item_title": "Schiit Kara Preamplifier Non-Forkbeard, Balanced XLR/RCA",
+        "condition": "Pre-Owned",
+        "price": "$583.26",
+        "shipping_cost": "+$107.70 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "stogoua",
+        "seller_feedback": "100% positive (257)",
+        "listing_date": "Dec-26 07:49",
+        "item_id": "227147667912"
+      },
+      {
+        "item_title": "Schiit Mani OG phono pre-amp, MM or MC, silver SCH-18 Schiit Mani OG phono pre",
+        "condition": "Pre-Owned",
+        "price": "$200.00",
+        "shipping_cost": "+$12.00 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "squidnerd",
+        "seller_feedback": "100% positive (397)",
+        "listing_date": "Dec-26 07:01",
+        "item_id": "227147631980"
+      },
+      {
+        "item_title": "Schiit Audio Freya+ Stereo Tube Hybrid Preamplifier (1/4)",
+        "condition": "Pre-Owned",
+        "price": "$819.00",
+        "shipping_cost": "+$36.99 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "tmraudio",
+        "seller_feedback": "99.8% positive (15K)",
+        "listing_date": "Dec-25 13:17",
+        "item_id": "336360747716"
+      },
+      {
+        "item_title": "Schiit Audio Saga+ Stereo Tube Hybrid Preamplifier + THREE tubes",
+        "condition": "Pre-Owned",
+        "price": "$225.00",
+        "shipping_cost": "+$12.00 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "blazerfan111",
+        "seller_feedback": "98.3% positive (1.4K)",
+        "listing_date": "Dec-24 06:14",
+        "item_id": "297873443117"
+      },
+      {
+        "item_title": "SYS Passive Preamp Volume Control and 2-Input Switch (Black)",
+        "condition": "Brand New",
+        "price": "$83.35",
+        "shipping_cost": "Free delivery",
+        "item_location": "Located in United States",
+        "seller_name": "idanma-1",
+        "seller_feedback": "99.9% positive (918)",
+        "listing_date": "Dec-22 02:55",
+        "item_id": "358042032377"
+      },
+      {
+        "item_title": "SYS Passive Preamp Volume Control and 2-Input Switch (Black)",
+        "condition": "Brand New",
+        "price": "$83.35",
+        "shipping_cost": "Free delivery",
+        "item_location": "Located in United States",
+        "seller_name": "j_tale2012",
+        "seller_feedback": "100% positive (1.2K)",
+        "listing_date": "Dec-21 13:55",
+        "item_id": "267519279336"
+      },
+      {
+        "item_title": "Schiit Magnius Balanced Headphone Amp and Preamp",
+        "condition": "Pre-Owned",
+        "price": "$129.99",
+        "shipping_cost": "+$10.00 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "hartj6585",
+        "seller_feedback": "100% positive (77)",
+        "listing_date": "Dec-20 18:02",
+        "item_id": "227140306167"
+      },
+      {
+        "item_title": "Schiit Lyr+ Fusion Architecture Headphone Amp And Preamp - 10/10 Condition",
+        "condition": "Pre-Owned",
+        "price": "$402.00",
+        "shipping_cost": "+$10.36 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "javarukeco",
+        "seller_feedback": "100% positive (141)",
+        "listing_date": "Dec-17 12:24",
+        "item_id": "116933190692"
+      },
+      {
+        "item_title": "Schiit Magni Heretic Silver Headphone Amplifier Preamp 2-Channel Stereo Amp",
+        "condition": "Brand New",
+        "price": "$150.00",
+        "shipping_cost": "+$13.44 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "ma_795203",
+        "seller_feedback": "100% positive (2)",
+        "listing_date": "Dec-17 10:44",
+        "item_id": "389383424769"
+      },
+      {
+        "item_title": "Schiit Lyr+ Hybrid Headphone Pre-Amplifier with Two Tubes",
+        "condition": "Pre-Owned",
+        "price": "$430.00",
+        "shipping_cost": "+$14.51 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "21bears",
+        "seller_feedback": "100% positive (411)",
+        "listing_date": "Dec-15 04:44",
+        "item_id": "277578487225"
+      },
+      {
+        "item_title": "Schiit SYS Passive Preamp Volume Control and 2-Input Switch (Black)",
+        "condition": "Open Box",
+        "price": "$79.95",
+        "shipping_cost": "+$12.95 delivery in 3-4 days",
+        "item_location": "Located in United States",
+        "seller_name": "restorationaccessories",
+        "seller_feedback": "100% positive (355)",
+        "listing_date": "Dec-14 12:43",
+        "item_id": "227131952394"
+      },
+      {
+        "item_title": "Schiit Asgard 2  Headphone Class A amp, Stereo Preamp,  Silver",
+        "condition": "Pre-Owned",
+        "price": "$130.89",
+        "shipping_cost": "+$24.71 delivery",
+        "item_location": "Located in Canada",
+        "seller_name": "mjah87",
+        "seller_feedback": "100% positive (565)",
+        "listing_date": "Dec-13 03:30",
+        "item_id": "287008115696"
+      },
+      {
+        "item_title": "Schiit SYS Passive Preamp Volume Control and 2-Input Switch (Black)",
+        "condition": "Brand New",
+        "price": "$89.27",
+        "shipping_cost": "Free delivery",
+        "item_location": "Located in United States",
+        "seller_name": "dako-2026",
+        "seller_feedback": "100% positive (1.7K)",
+        "listing_date": "Dec-10 00:25",
+        "item_id": "358002947365"
+      },
+      {
+        "item_title": "Schiit SYS Passive Preamp Volume Control and 2-Input Switch Black",
+        "condition": "Brand New",
+        "price": "$99.44",
+        "shipping_cost": "Free delivery",
+        "item_location": "Located in United States",
+        "seller_name": "buy_it_now_ny",
+        "seller_feedback": "98.7% positive (18.2K)",
+        "listing_date": "Dec-8 22:58",
+        "item_id": "157532285292"
+      },
+      {
+        "item_title": "Schiit Audio FRYEA+ preamp Two complete sets of Tubes Sylvania & Tung Sol Tube",
+        "condition": "Pre-Owned",
+        "price": "$999.00",
+        "shipping_cost": "+$34.16 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "hifial",
+        "seller_feedback": "100% positive (843)",
+        "listing_date": "Nov-29 08:13",
+        "item_id": "336319396949"
+      },
+      {
+        "item_title": "Schiit Magni Heretic 120db SINAD 2400mW Headphone Amp and Preamp",
+        "condition": "Brand New",
+        "price": "$145.00",
+        "shipping_cost": "Free delivery",
+        "item_location": "Located in United States",
+        "seller_name": "trickzwrld",
+        "seller_feedback": "98.5% positive (578)",
+        "listing_date": "Nov-28 11:23",
+        "item_id": "227107272420"
+      },
+      {
+        "item_title": "Schiit valhalla 1 headphone amplifier Silver",
+        "condition": "Pre-Owned",
+        "price": "$250.00",
+        "shipping_cost": "+$20.00 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "iceberg-antiques",
+        "seller_feedback": "99.7% positive (1.3K)",
+        "listing_date": "Nov-22 17:10",
+        "item_id": "297868808996"
+      },
+      {
+        "item_title": "Schiit Audio DAC & Amp Combo ( Modi 2 / Magni ) with Original RCA & USB Cables",
+        "condition": "Pre-Owned",
+        "price": "$189.99",
+        "shipping_cost": "+$15.00 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "northsupply",
+        "seller_feedback": "100% positive (2.4K)",
+        "listing_date": "Nov-16 03:24",
+        "item_id": "326915203818"
+      },
+      {
+        "item_title": "Schiit Magni Heretic 120db SINAD 2400mW Headphone Amp  Preamp Black",
+        "condition": "Brand New",
+        "price": "$128.08",
+        "shipping_cost": "+$61.63 delivery",
+        "item_location": "Located in United States",
+        "seller_name": "qualityworkz",
+        "seller_feedback": "100% positive (217)",
+        "listing_date": "Dec-5 14:38",
+        "item_id": "257245914793"
+      },
+      {
+        "item_title": "Schiit Lyr Tube-Hybrid Headphone Amplifier & Preamp – Made in USA",
+        "condition": "Pre-Owned",
+        "price": "$401.57",
+        "shipping_cost": "+$85.84 delivery",
+        "item_location": "Located in Australia",
+        "seller_name": "vintageaveletronics",
+        "seller_feedback": "100% positive (193)",
+        "listing_date": "Jul-3 10:26",
+        "item_id": "405086041428"
+      }
+    ]
+  },
+  "formatted_markdown_length": 6813,
+  "validation_result": {
+    "status": "success",
+    "validation": {
+      "hypothesis_match": true,
+      "expected_items": "multiple (estimate 100+)",
+      "actual_items": 20,
+      "data_quality": "good",
+      "completeness": "all items formatted",
+      "notes": "The extraction includes key fields such as item title, price, condition, shipping options, seller information, and item location. However, the number of items extracted is less than expected."
+    },
+    "insights": {
+      "executive_summary": "The data extraction from eBay's search results for 'schiit preamp' successfully captured 20 listings, providing detailed information on each item. This data is valuable for understanding the market landscape for Schiit preamps, including pricing and seller reputation.",
+      "key_findings": "The listings show a mix of pre-owned and brand-new items, with prices ranging from $83.35 to $819.00. Most sellers have high positive feedback, indicating reliable transactions. Shipping costs vary, with some items offering free delivery.",
+      "recommendation": "Consider further analysis to capture additional listings or refine search parameters to ensure a more comprehensive dataset. This could help in identifying broader market trends and pricing strategies."
+    },
+    "statistics": {
+      "total_items": 20,
+      "key_metrics": "Price range: $83.35 - $819.00, Condition breakdown: Pre-Owned and Brand New, Seller feedback: Mostly 98% and above"
+    }
+  }
+}
