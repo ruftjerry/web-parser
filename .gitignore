@@ -5,3 +5,5 @@ __pycache__/
 inbox/
 # Exclude PDFs in Pi_Inbox (but keep JSON and MD files)
 Pi_Inbox/**/*.pdf
+# Exclude processed HTML archive files
+Pi_Inbox/Processed_Archive/
