@@ -3162,3 +3162,17 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 2025-12-26 12:02:16 - INFO - ✅ SUCCESS - Archived: 2025-12-26_20：01：29.html
 2025-12-26 12:02:16 - INFO - ================================================================================
 2025-12-26 12:02:16 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-26_20：01：29.html
+2025-12-26 17:05:09 - INFO - 
+================================================================================
+2025-12-26 17:05:09 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-26 17:05:09 - INFO - ================================================================================
+2025-12-26 17:05:09 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-26 17:05:09 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2025-12-26 17:05:09 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2025-12-26 17:05:09 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2025-12-26 17:05:09 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2025-12-26 17:05:09 - INFO -    Validation:  gpt-4o (strategic insights)
+2025-12-26 17:05:09 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-26 17:05:09 - INFO - ================================================================================

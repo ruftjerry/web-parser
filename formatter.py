@@ -3,13 +3,30 @@ formatter.py - GPT-4o-mini formats extracted data into comprehensive markdown
 """
 
 import json
+from pathlib import Path
 from openai import OpenAI
 from config import OPENAI_API_KEY, MODEL_FORMATTER
 from utils_logging import log_event, log_token_usage
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-FORMATTER_PROMPT = """You are a data formatter. Your job is to convert extracted JSON data into clean, comprehensive markdown.
+# Load user context at module initialization
+def _load_user_context():
+    """Load the user context file for validation guidance."""
+    context_path = Path(__file__).parent / 'user_context_validation.txt'
+    if context_path.exists():
+        return context_path.read_text()
+    else:
+        log_event("⚠️  user_context_validation.txt not found - proceeding without context", "warning")
+        return ""
+
+USER_CONTEXT = _load_user_context()
+
+FORMATTER_PROMPT = f"""{USER_CONTEXT}
+
+YOUR SPECIFIC TASK: FORMATTING
+
+You are a data formatter. Your job is to convert extracted JSON data into clean, comprehensive markdown.
 
 Your task:
 1. Take the raw extracted data (JSON)
@@ -38,10 +55,9 @@ Example for marketplace listings:
 
 ### Item 2: [Product Name]
 ...continue for ALL items...
-```
 
 Example for product specs:
-```markdown
+
 ## Product Specifications
 
 **Model:** [model]
@@ -49,7 +65,6 @@ Example for product specs:
 - Feature 1: [detail]
 - Feature 2: [detail]
 ...all features...
-```
 
 Return ONLY the formatted markdown content. No JSON wrapper, no explanations.
 The markdown should be complete and ready to insert into a report.
@@ -58,7 +73,7 @@ The markdown should be complete and ready to insert into a report.
 def format_data(hypothesis: dict, extracted_data: dict) -> str:
     """
     GPT-4o-mini formats the extracted data into comprehensive markdown.
-    
+
     Args:
         hypothesis: The hypothesis about what was extracted
         extracted_data: Raw JSON data from Gemini
@@ -67,7 +82,7 @@ def format_data(hypothesis: dict, extracted_data: dict) -> str:
         str: Formatted markdown content
     """
     log_event("📝 Step 3A: Formatting Data (GPT-4o-mini)...")
-    
+
     # Provide context about what was extracted
     context = {
         "page_type": hypothesis.get('page_type', 'unknown'),
@@ -75,7 +90,7 @@ def format_data(hypothesis: dict, extracted_data: dict) -> str:
         "item_count": hypothesis.get('item_count', 'unknown'),
         "data": extracted_data
     }
-    
+
     try:
         response = client.chat.completions.create(
             model=MODEL_FORMATTER,

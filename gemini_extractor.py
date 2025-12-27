@@ -3,11 +3,24 @@ gemini_extractor.py - Gemini 2.5 Flash extracts data based on hypothesis
 """
 
 import json
+from pathlib import Path
 from google import genai
 from config import GOOGLE_API_KEY, MODEL_CONTEXT
 from utils_logging import log_event, log_token_usage
 
 client = genai.Client(api_key=GOOGLE_API_KEY)
+
+# Load user context at module initialization
+def _load_user_context():
+    """Load the user context file for extraction guidance."""
+    context_path = Path(__file__).parent / 'user_context_extraction.txt'
+    if context_path.exists():
+        return context_path.read_text()
+    else:
+        log_event("⚠️  user_context_extraction.txt not found - proceeding without context", "warning")
+        return ""
+
+USER_CONTEXT = _load_user_context()
 
 def create_extraction_prompt(hypothesis: dict) -> str:
     """
@@ -19,7 +32,7 @@ def create_extraction_prompt(hypothesis: dict) -> str:
     item_count = hypothesis.get('item_count', 'unknown')
     expected_fields = hypothesis.get('expected_fields', [])
     
-    prompt = f"""You are extracting data from a web page for product research.
+    prompt = f"""{USER_CONTEXT}
 
 HYPOTHESIS (from initial analysis):
 - Page Type: {page_type}
