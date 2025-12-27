@@ -3037,3 +3037,128 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 2025-12-26 11:53:59 - INFO - 
 ⏳ Waiting for HTML files...
 2025-12-26 11:53:59 - INFO - ================================================================================
+2025-12-26 11:59:00 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 700051.crdownload
+2025-12-26 11:59:02 - INFO - 
+📥 New file detected: 2025-12-26_19：58：53.html
+2025-12-26 11:59:02 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-26 11:59:03 - INFO -    📊 Receiving: 3836.4 KB...
+2025-12-26 11:59:06 - INFO -    ✅ Transfer complete: 3836.4 KB
+2025-12-26 11:59:06 - INFO - ================================================================================
+2025-12-26 11:59:06 - INFO - 🚀 Processing: 2025-12-26_19：58：53.html
+2025-12-26 11:59:06 - INFO -    File size: 3836.4 KB
+2025-12-26 11:59:06 - INFO - ================================================================================
+2025-12-26 11:59:06 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-26 11:59:06 - INFO -    ✅ Read 3,928,496 characters from file
+2025-12-26 11:59:06 - INFO -    📄 Processing HTML: 3,928,496 characters (3836.4 KB)
+2025-12-26 11:59:06 - INFO -    ℹ️  No JSON-LD structured data found
+2025-12-26 11:59:06 - INFO -    🗑️  Removed 16 non-content tags
+2025-12-26 11:59:06 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-26 11:59:06 - INFO -    🖼️  Removed 7 Base64 inline images
+2025-12-26 11:59:06 - INFO -    ✅ Cleaning complete: 3836.4KB → 20.7KB (99.5% reduction)
+2025-12-26 11:59:06 - INFO -    📊 Estimated tokens: ~5,297
+2025-12-26 11:59:06 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-26 11:59:06 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-26 11:59:13 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 11:59:13 - INFO -    💰 Cost: $0.0010 (5,879 in, 125 out)
+2025-12-26 11:59:13 - INFO -    📋 Page Type: category listing
+2025-12-26 11:59:13 - INFO -    🌐 Source: Schiit Audio
+2025-12-26 11:59:13 - INFO -    📦 Category: audio equipment
+2025-12-26 11:59:13 - INFO -    🔢 Items: multiple (estimate 30+)
+2025-12-26 11:59:13 - INFO -    ✅ Confidence: high
+2025-12-26 11:59:13 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-26 11:59:13 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.0-flash)...
+2025-12-26 11:59:13 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-26 11:59:22 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-26 11:59:22 - INFO -    💰 Cost: $0.0011 (6,578 in, 2,008 out)
+2025-12-26 11:59:22 - INFO -    📦 Extracted 32 items
+2025-12-26 11:59:22 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-26 11:59:22 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-26 11:59:50 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 11:59:50 - INFO -    💰 Cost: $0.0012 (1,908 in, 1,471 out)
+2025-12-26 11:59:50 - INFO -    ✅ Formatted 32 items into markdown
+2025-12-26 11:59:50 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-26 11:59:50 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-26 11:59:55 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 11:59:55 - INFO -    💰 Cost: $0.0077 (1,812 in, 316 out)
+2025-12-26 11:59:55 - INFO -    ✅ Status: SUCCESS
+2025-12-26 11:59:55 - INFO -    📊 Items: 32
+2025-12-26 11:59:55 - INFO -    ⭐ Quality: good
+2025-12-26 11:59:55 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-26 11:59:55 - INFO - 📊 Step 4: Generating Reports...
+2025-12-26 11:59:55 - INFO -    📄 Generated reports:
+2025-12-26 11:59:55 - INFO -       - 20251226-1159-Schiitaudio-audio-equipment-list.md
+2025-12-26 11:59:55 - INFO -       - 20251226-1159-Schiitaudio-audio-equipment-list.json
+2025-12-26 11:59:55 - INFO -       - 20251226-1159-Schiitaudio-audio-equipment-list_DEBUG.json
+2025-12-26 11:59:55 - INFO - 
+================================================================================
+2025-12-26 11:59:55 - INFO - ✅ SUCCESS - Archived: 2025-12-26_19：58：53.html
+2025-12-26 11:59:55 - INFO - ================================================================================
+2025-12-26 11:59:55 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-26_19：58：53.html
+2025-12-26 12:01:38 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 111678.crdownload
+2025-12-26 12:01:39 - INFO - 
+📥 New file detected: 2025-12-26_20：01：29.html
+2025-12-26 12:01:39 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-26 12:01:40 - INFO -    📊 Receiving: 363.0 KB...
+2025-12-26 12:01:43 - INFO -    ✅ Transfer complete: 363.0 KB
+2025-12-26 12:01:43 - INFO - ================================================================================
+2025-12-26 12:01:43 - INFO - 🚀 Processing: 2025-12-26_20：01：29.html
+2025-12-26 12:01:43 - INFO -    File size: 363.0 KB
+2025-12-26 12:01:43 - INFO - ================================================================================
+2025-12-26 12:01:43 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-26 12:01:43 - INFO -    ✅ Read 371,752 characters from file
+2025-12-26 12:01:43 - INFO -    📄 Processing HTML: 371,752 characters (363.0 KB)
+2025-12-26 12:01:43 - INFO -    ℹ️  No JSON-LD structured data found
+2025-12-26 12:01:43 - INFO -    🗑️  Removed 15 non-content tags
+2025-12-26 12:01:43 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-26 12:01:43 - INFO -    ✅ Cleaning complete: 363.0KB → 8.0KB (97.8% reduction)
+2025-12-26 12:01:43 - INFO -    📊 Estimated tokens: ~2,052
+2025-12-26 12:01:43 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-26 12:01:43 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-26 12:01:47 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 12:01:47 - INFO -    💰 Cost: $0.0004 (2,432 in, 101 out)
+2025-12-26 12:01:47 - INFO -    📋 Page Type: single product
+2025-12-26 12:01:47 - INFO -    🌐 Source: Schiit
+2025-12-26 12:01:47 - INFO -    📦 Category: audio equipment
+2025-12-26 12:01:47 - INFO -    🔢 Items: single
+2025-12-26 12:01:47 - INFO -    ✅ Confidence: high
+2025-12-26 12:01:47 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-26 12:01:47 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.0-flash)...
+2025-12-26 12:01:47 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-26 12:01:52 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-26 12:01:52 - INFO -    💰 Cost: $0.0005 (2,752 in, 937 out)
+2025-12-26 12:01:52 - INFO -    📦 Extracted 1 item (single-item page)
+2025-12-26 12:01:52 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-26 12:01:52 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-26 12:02:10 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 12:02:10 - INFO -    💰 Cost: $0.0006 (1,149 in, 739 out)
+2025-12-26 12:02:10 - INFO -    ✅ Formatted data into markdown
+2025-12-26 12:02:10 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-26 12:02:10 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-26 12:02:16 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-26 12:02:16 - INFO -    💰 Cost: $0.0065 (1,428 in, 296 out)
+2025-12-26 12:02:16 - INFO -    ✅ Status: SUCCESS
+2025-12-26 12:02:16 - INFO -    📊 Items: 1
+2025-12-26 12:02:16 - INFO -    ⭐ Quality: excellent
+2025-12-26 12:02:16 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-26 12:02:16 - INFO - 📊 Step 4: Generating Reports...
+2025-12-26 12:02:16 - INFO -    📄 Generated reports:
+2025-12-26 12:02:16 - INFO -       - 20251226-1202-Schiit-audio-equipment-single.md
+2025-12-26 12:02:16 - INFO -       - 20251226-1202-Schiit-audio-equipment-single.json
+2025-12-26 12:02:16 - INFO -       - 20251226-1202-Schiit-audio-equipment-single_DEBUG.json
+2025-12-26 12:02:16 - INFO - 
+================================================================================
+2025-12-26 12:02:16 - INFO - ✅ SUCCESS - Archived: 2025-12-26_20：01：29.html
+2025-12-26 12:02:16 - INFO - ================================================================================
+2025-12-26 12:02:16 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-26_20：01：29.html

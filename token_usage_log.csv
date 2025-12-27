@@ -612,3 +612,11 @@ timestamp,task,model,input_tokens,output_tokens,total_tokens,estimated_cost_usd
 2025-12-26T11:00:33.955099,Extraction,gemini-2.0-flash,189777,1746,$0.014757
 2025-12-26T11:01:00.939220,Formatting,gpt-4o-mini,1743,1354,$0.001074
 2025-12-26T11:01:08.489607,Validation & Insights,gpt-4o,1519,290,$0.006697
+2025-12-26T11:59:13.641486,Hypothesis,gpt-4o-mini,5879,125,$0.000957
+2025-12-26T11:59:22.460906,Extraction,gemini-2.0-flash,6578,2008,$0.001096
+2025-12-26T11:59:50.817531,Formatting,gpt-4o-mini,1908,1471,$0.001169
+2025-12-26T11:59:55.418502,Validation & Insights,gpt-4o,1812,316,$0.007690
+2025-12-26T12:01:47.280484,Hypothesis,gpt-4o-mini,2432,101,$0.000425
+2025-12-26T12:01:52.650016,Extraction,gemini-2.0-flash,2752,937,$0.000487
+2025-12-26T12:02:10.608924,Formatting,gpt-4o-mini,1149,739,$0.000616
+2025-12-26T12:02:16.273686,Validation & Insights,gpt-4o,1428,296,$0.006530
