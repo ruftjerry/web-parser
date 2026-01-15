@@ -3176,3 +3176,345 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 2025-12-26 17:05:09 - INFO - 
 ⏳ Waiting for HTML files...
 2025-12-26 17:05:09 - INFO - ================================================================================
+2025-12-27 08:31:53 - INFO - 
+================================================================================
+2025-12-27 08:31:53 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-27 08:31:53 - INFO - ================================================================================
+2025-12-27 08:31:53 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-27 08:31:53 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2025-12-27 08:31:53 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2025-12-27 08:31:53 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2025-12-27 08:31:53 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2025-12-27 08:31:53 - INFO -    Validation:  gpt-4o (strategic insights)
+2025-12-27 08:31:53 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-27 08:31:53 - INFO - ================================================================================
+2025-12-27 08:32:34 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 632649.crdownload
+2025-12-27 08:32:36 - INFO - 
+📥 New file detected: 2025-12-27_16：32：28.html
+2025-12-27 08:32:36 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-27 08:32:37 - INFO -    📊 Receiving: 3968.8 KB...
+2025-12-27 08:32:40 - INFO -    ✅ Transfer complete: 3968.8 KB
+2025-12-27 08:32:40 - INFO - ================================================================================
+2025-12-27 08:32:40 - INFO - 🚀 Processing: 2025-12-27_16：32：28.html
+2025-12-27 08:32:40 - INFO -    File size: 3968.8 KB
+2025-12-27 08:32:40 - INFO - ================================================================================
+2025-12-27 08:32:40 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-27 08:32:40 - INFO -    ✅ Read 4,063,998 characters from file
+2025-12-27 08:32:40 - INFO -    📄 Processing HTML: 4,063,998 characters (3968.7 KB)
+2025-12-27 08:32:40 - INFO -    ✅ Found 1 JSON-LD structured data blocks
+2025-12-27 08:32:40 - INFO -    🗑️  Removed 1004 non-content tags
+2025-12-27 08:32:40 - INFO -    🗑️  Removed 2 HTML comments
+2025-12-27 08:32:40 - INFO -    🖼️  Removed 89 Base64 inline images
+2025-12-27 08:32:41 - INFO -    ✅ Cleaning complete: 3968.7KB → 744.6KB (81.2% reduction)
+2025-12-27 08:32:41 - INFO -    📊 Estimated tokens: ~190,628
+2025-12-27 08:32:41 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-27 08:32:41 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-27 08:32:50 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 08:32:50 - INFO -    💰 Cost: $0.0026 (16,634 in, 103 out)
+2025-12-27 08:32:50 - INFO -    📋 Page Type: search results
+2025-12-27 08:32:50 - INFO -    🌐 Source: eBay
+2025-12-27 08:32:50 - INFO -    📦 Category: audio equipment
+2025-12-27 08:32:50 - INFO -    🔢 Items: multiple (estimate)
+2025-12-27 08:32:50 - INFO -    ✅ Confidence: high
+2025-12-27 08:32:50 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-27 08:32:50 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.0-flash)...
+2025-12-27 08:32:50 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-27 08:33:18 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-27 08:33:18 - INFO -    💰 Cost: $0.0237 (290,332 in, 6,333 out)
+2025-12-27 08:33:18 - INFO -    📦 Extracted 43 items
+2025-12-27 08:33:18 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-27 08:33:18 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-27 08:35:01 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 08:35:02 - INFO -    💰 Cost: $0.0036 (5,768 in, 4,610 out)
+2025-12-27 08:35:02 - INFO -    ✅ Formatted 43 items into markdown
+2025-12-27 08:35:02 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-27 08:35:02 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-27 08:35:06 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-27 08:35:06 - INFO -    💰 Cost: $0.0068 (1,980 in, 183 out)
+2025-12-27 08:35:06 - WARNING -    ⚠️  Status: EXTRACTION_INCOMPLETE
+2025-12-27 08:35:06 - WARNING -    ❌ Problem: Only 8 items are fully detailed in the formatted data, but 43 items were expected based on the raw extraction summary.
+2025-12-27 08:35:06 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-27 08:35:06 - INFO - 📊 Step 4: Generating Reports...
+2025-12-27 08:35:06 - INFO -    📄 Generated reports:
+2025-12-27 08:35:06 - INFO -       - 20251227-0835-Ebay-PreOwnedaudio-list_INCOMPLETE.md
+2025-12-27 08:35:06 - INFO -       - 20251227-0835-Ebay-PreOwnedaudio-list_INCOMPLETE.json
+2025-12-27 08:35:06 - INFO -       - 20251227-0835-Ebay-PreOwnedaudio-list_DEBUG.json
+2025-12-27 08:35:06 - INFO - 
+================================================================================
+2025-12-27 08:35:06 - INFO - ⚠️  INCOMPLETE - Check report: 2025-12-27_16：32：28.html
+2025-12-27 08:35:06 - INFO - ================================================================================
+2025-12-27 08:35:06 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-27_16：32：28.html
+2025-12-29 14:41:05 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 392320.crdownload
+2025-12-29 14:41:06 - INFO - 
+📥 New file detected: 2025-12-29_22：40：53.html
+2025-12-29 14:41:06 - INFO -    ⏳ Waiting for file transfer to complete...
+2025-12-29 14:41:07 - INFO -    📊 Receiving: 679.3 KB...
+2025-12-29 14:41:10 - INFO -    ✅ Transfer complete: 679.3 KB
+2025-12-29 14:41:10 - INFO - ================================================================================
+2025-12-29 14:41:10 - INFO - 🚀 Processing: 2025-12-29_22：40：53.html
+2025-12-29 14:41:10 - INFO -    File size: 679.3 KB
+2025-12-29 14:41:10 - INFO - ================================================================================
+2025-12-29 14:41:10 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2025-12-29 14:41:10 - INFO -    ✅ Read 695,639 characters from file
+2025-12-29 14:41:10 - INFO -    📄 Processing HTML: 695,639 characters (679.3 KB)
+2025-12-29 14:41:10 - INFO -    ✅ Found 1 JSON-LD structured data blocks
+2025-12-29 14:41:10 - INFO -    🗑️  Removed 623 non-content tags
+2025-12-29 14:41:10 - INFO -    🗑️  Removed 1 HTML comments
+2025-12-29 14:41:10 - INFO -    🖼️  Removed 12 Base64 inline images
+2025-12-29 14:41:10 - INFO -    ✅ Cleaning complete: 679.3KB → 156.2KB (77.0% reduction)
+2025-12-29 14:41:10 - INFO -    📊 Estimated tokens: ~40,000
+2025-12-29 14:41:10 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2025-12-29 14:41:10 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2025-12-29 14:41:17 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 14:41:17 - INFO -    💰 Cost: $0.0020 (12,912 in, 109 out)
+2025-12-29 14:41:17 - INFO -    📋 Page Type: category listing
+2025-12-29 14:41:17 - INFO -    🌐 Source: America's Tire
+2025-12-29 14:41:17 - INFO -    📦 Category: tires
+2025-12-29 14:41:17 - INFO -    🔢 Items: multiple (estimate)
+2025-12-29 14:41:17 - INFO -    ✅ Confidence: high
+2025-12-29 14:41:17 - INFO - 
+⚡ Step 2B: Extracting Data...
+2025-12-29 14:41:17 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.0-flash)...
+2025-12-29 14:41:17 - INFO - AFC is enabled with max remote calls: 10.
+2025-12-29 14:41:22 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-12-29 14:41:22 - INFO -    💰 Cost: $0.0037 (45,669 in, 1,022 out)
+2025-12-29 14:41:22 - INFO -    📦 Extracted 5 items
+2025-12-29 14:41:22 - INFO - 
+📝 Step 3A: Formatting Data...
+2025-12-29 14:41:22 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2025-12-29 14:41:37 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 14:41:37 - INFO -    💰 Cost: $0.0007 (1,557 in, 695 out)
+2025-12-29 14:41:37 - INFO -    ✅ Formatted 5 items into markdown
+2025-12-29 14:41:37 - INFO - 
+✅ Step 3B: Validation & Insights...
+2025-12-29 14:41:37 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2025-12-29 14:41:42 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-29 14:41:42 - INFO -    💰 Cost: $0.0072 (1,776 in, 271 out)
+2025-12-29 14:41:42 - INFO -    ✅ Status: SUCCESS
+2025-12-29 14:41:42 - INFO -    📊 Items: 5
+2025-12-29 14:41:42 - INFO -    ⭐ Quality: excellent
+2025-12-29 14:41:42 - INFO - 
+📊 Step 4: Generating Output Files...
+2025-12-29 14:41:42 - INFO - 📊 Step 4: Generating Reports...
+2025-12-29 14:41:42 - INFO -    📄 Generated reports:
+2025-12-29 14:41:42 - INFO -       - 20251229-1441-Americastire-tires-list.md
+2025-12-29 14:41:42 - INFO -       - 20251229-1441-Americastire-tires-list.json
+2025-12-29 14:41:42 - INFO -       - 20251229-1441-Americastire-tires-list_DEBUG.json
+2025-12-29 14:41:42 - INFO - 
+================================================================================
+2025-12-29 14:41:42 - INFO - ✅ SUCCESS - Archived: 2025-12-29_22：40：53.html
+2025-12-29 14:41:42 - INFO - ================================================================================
+2025-12-29 14:41:42 - INFO -    ⏭️  Skipping macOS metadata file: ._2025-12-29_22：40：53.html
+2025-12-29 22:48:56 - INFO - 
+================================================================================
+2025-12-29 22:48:56 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-29 22:48:56 - INFO - ================================================================================
+2025-12-29 22:48:56 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-29 22:48:56 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2025-12-29 22:48:56 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2025-12-29 22:48:56 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2025-12-29 22:48:56 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2025-12-29 22:48:56 - INFO -    Validation:  gpt-4o (strategic insights)
+2025-12-29 22:48:56 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-29 22:48:56 - INFO - ================================================================================
+2025-12-30 10:39:03 - INFO - 
+================================================================================
+2025-12-30 10:39:03 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2025-12-30 10:39:03 - INFO - ================================================================================
+2025-12-30 10:39:03 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2025-12-30 10:39:03 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2025-12-30 10:39:03 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2025-12-30 10:39:03 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2025-12-30 10:39:03 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2025-12-30 10:39:03 - INFO -    Validation:  gpt-4o (strategic insights)
+2025-12-30 10:39:03 - INFO - 
+⏳ Waiting for HTML files...
+2025-12-30 10:39:03 - INFO - ================================================================================
+2026-01-03 08:19:40 - INFO - 
+================================================================================
+2026-01-03 08:19:40 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-03 08:19:40 - INFO - ================================================================================
+2026-01-03 08:19:40 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-03 08:19:40 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-03 08:19:40 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-03 08:19:40 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-03 08:19:40 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-03 08:19:40 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-03 08:19:40 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-03 08:19:40 - INFO - ================================================================================
+2026-01-04 08:32:38 - INFO - 
+================================================================================
+2026-01-04 08:32:38 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-04 08:32:38 - INFO - ================================================================================
+2026-01-04 08:32:38 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-04 08:32:38 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-04 08:32:38 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-04 08:32:38 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-04 08:32:38 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-04 08:32:38 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-04 08:32:38 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-04 08:32:38 - INFO - ================================================================================
+2026-01-04 08:33:40 - INFO - 
+================================================================================
+2026-01-04 08:33:40 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-04 08:33:40 - INFO - ================================================================================
+2026-01-04 08:33:40 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-04 08:33:40 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-04 08:33:40 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-04 08:33:40 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-04 08:33:40 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-04 08:33:40 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-04 08:33:40 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-04 08:33:40 - INFO - ================================================================================
+2026-01-06 21:05:15 - INFO - 
+================================================================================
+2026-01-06 21:05:15 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-06 21:05:15 - INFO - ================================================================================
+2026-01-06 21:05:15 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-06 21:05:15 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-06 21:05:15 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-06 21:05:15 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-06 21:05:15 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-06 21:05:15 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-06 21:05:15 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-06 21:05:15 - INFO - ================================================================================
+2026-01-08 08:19:42 - INFO - 
+================================================================================
+2026-01-08 08:19:42 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-08 08:19:42 - INFO - ================================================================================
+2026-01-08 08:19:42 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-08 08:19:42 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-08 08:19:42 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-08 08:19:42 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-08 08:19:42 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-08 08:19:42 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-08 08:19:42 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-08 08:19:42 - INFO - ================================================================================
+2026-01-09 08:18:40 - INFO - 
+================================================================================
+2026-01-09 08:18:40 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-09 08:18:40 - INFO - ================================================================================
+2026-01-09 08:18:40 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-09 08:18:40 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-09 08:18:40 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-09 08:18:40 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-09 08:18:40 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-09 08:18:40 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-09 08:18:40 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-09 08:18:40 - INFO - ================================================================================
+2026-01-12 16:18:26 - INFO - 
+================================================================================
+2026-01-12 16:18:26 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-12 16:18:26 - INFO - ================================================================================
+2026-01-12 16:18:26 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-12 16:18:26 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-12 16:18:26 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-12 16:18:26 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-12 16:18:26 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-12 16:18:26 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-12 16:18:26 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-12 16:18:26 - INFO - ================================================================================
+2026-01-14 10:11:01 - INFO - 
+================================================================================
+2026-01-14 10:11:01 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-14 10:11:01 - INFO - ================================================================================
+2026-01-14 10:11:01 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-14 10:11:01 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-14 10:11:01 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-14 10:11:01 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-14 10:11:01 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-14 10:11:01 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-14 10:11:01 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-14 10:11:01 - INFO - ================================================================================
+2026-01-15 10:37:46 - INFO -    ⏭️  Skipping macOS metadata file: ._Unconfirmed 107307.crdownload
+2026-01-15 10:37:49 - INFO - 
+📥 New file detected: 2026-01-15_18：37：37.html
+2026-01-15 10:37:49 - INFO -    ⏳ Waiting for file transfer to complete...
+2026-01-15 10:37:50 - INFO -    📊 Receiving: 7273.5 KB...
+2026-01-15 10:37:53 - INFO -    ✅ Transfer complete: 7273.5 KB
+2026-01-15 10:37:53 - INFO - ================================================================================
+2026-01-15 10:37:53 - INFO - 🚀 Processing: 2026-01-15_18：37：37.html
+2026-01-15 10:37:53 - INFO -    File size: 7273.5 KB
+2026-01-15 10:37:53 - INFO - ================================================================================
+2026-01-15 10:37:53 - INFO - 
+📋 Step 1: Reading and Cleaning HTML...
+2026-01-15 10:37:53 - INFO -    ✅ Read 7,448,066 characters from file
+2026-01-15 10:37:53 - INFO -    📄 Processing HTML: 7,448,066 characters (7273.5 KB)
+2026-01-15 10:37:53 - INFO -    ✅ Found 4 JSON-LD structured data blocks
+2026-01-15 10:37:53 - INFO -    🗑️  Removed 215 non-content tags
+2026-01-15 10:37:53 - INFO -    🗑️  Removed 2 HTML comments
+2026-01-15 10:37:53 - INFO -    🖼️  Removed 24 Base64 inline images
+2026-01-15 10:37:53 - INFO -    ✅ Cleaning complete: 7273.5KB → 220.6KB (97.0% reduction)
+2026-01-15 10:37:53 - INFO -    📊 Estimated tokens: ~56,485
+2026-01-15 10:37:53 - INFO - 
+🔍 Step 2A: Forming Hypothesis...
+2026-01-15 10:37:53 - INFO - 🔍 Step 2A: Forming Hypothesis (GPT-4o-mini)...
+2026-01-15 10:37:58 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-15 10:37:58 - INFO -    💰 Cost: $0.0023 (15,009 in, 101 out)
+2026-01-15 10:37:58 - INFO -    📋 Page Type: search results
+2026-01-15 10:37:58 - INFO -    🌐 Source: Micro Center
+2026-01-15 10:37:58 - INFO -    📦 Category: Desktop Computers
+2026-01-15 10:37:58 - INFO -    🔢 Items: multiple (estimate 16)
+2026-01-15 10:37:58 - INFO -    ✅ Confidence: high
+2026-01-15 10:37:58 - INFO - 
+⚡ Step 2B: Extracting Data...
+2026-01-15 10:37:58 - INFO - ⚡ Step 2B: Extracting Data (Gemini gemini-2.0-flash)...
+2026-01-15 10:37:58 - INFO - AFC is enabled with max remote calls: 10.
+2026-01-15 10:38:25 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2026-01-15 10:38:25 - INFO -    💰 Cost: $0.0073 (73,242 in, 6,114 out)
+2026-01-15 10:38:25 - INFO -    📦 Extracted 16 items
+2026-01-15 10:38:25 - INFO - 
+📝 Step 3A: Formatting Data...
+2026-01-15 10:38:25 - INFO - 📝 Step 3A: Formatting Data (GPT-4o-mini)...
+2026-01-15 10:40:10 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-15 10:40:10 - INFO -    💰 Cost: $0.0033 (5,606 in, 4,078 out)
+2026-01-15 10:40:10 - INFO -    ✅ Formatted 16 items into markdown
+2026-01-15 10:40:10 - INFO - 
+✅ Step 3B: Validation & Insights...
+2026-01-15 10:40:10 - INFO - ✅ Step 3B: Validation & Insights (GPT-4o)...
+2026-01-15 10:40:16 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-15 10:40:16 - INFO -    💰 Cost: $0.0079 (2,134 in, 254 out)
+2026-01-15 10:40:16 - INFO -    ✅ Status: SUCCESS
+2026-01-15 10:40:16 - INFO -    📊 Items: 16
+2026-01-15 10:40:16 - INFO -    ⭐ Quality: excellent
+2026-01-15 10:40:16 - INFO - 
+📊 Step 4: Generating Output Files...
+2026-01-15 10:40:16 - INFO - 📊 Step 4: Generating Reports...
+2026-01-15 10:40:16 - INFO -    📄 Generated reports:
+2026-01-15 10:40:16 - INFO -       - 20260115-1040-Microcenter-Desktop-Computers-list.md
+2026-01-15 10:40:16 - INFO -       - 20260115-1040-Microcenter-Desktop-Computers-list.json
+2026-01-15 10:40:16 - INFO -       - 20260115-1040-Microcenter-Desktop-Computers-list_DEBUG.json
+2026-01-15 10:40:16 - INFO - 
+================================================================================
+2026-01-15 10:40:16 - INFO - ✅ SUCCESS - Archived: 2026-01-15_18：37：37.html
+2026-01-15 10:40:16 - INFO - ================================================================================
+2026-01-15 10:40:16 - INFO -    ⏭️  Skipping macOS metadata file: ._2026-01-15_18：37：37.html

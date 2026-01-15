@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "timestamp": "20251229-1441",
+    "original_file": "2025-12-29_22：40：53.html",
+    "status": "success",
+    "page_type": "category listing",
+    "source": "America's Tire",
+    "category": "tires"
+  },
+  "hypothesis": {
+    "page_type": "category listing",
+    "source": "America's Tire",
+    "category": "tires",
+    "item_count": "multiple (estimate)",
+    "expected_fields": [
+      "product name",
+      "price",
+      "brand",
+      "size",
+      "availability",
+      "ratings"
+    ],
+    "confidence": "high",
+    "notes": "The page includes navigation for different tire categories, filters, and a driving profile section, indicating a focus on tire products for vehicles."
+  },
+  "extracted_data": {
+    "items": [
+      {
+        "brand": "Michelin",
+        "name": "Defender LTX M/S2",
+        "size": "275 /55 R20 117T XL BSW",
+        "price": "280.00",
+        "price_unit": "/EA",
+        "reviews": "2005 Reviews",
+        "gbb_rating": "Best",
+        "tire_category": "All Season",
+        "availability": "7+ in stock at",
+        "store_availability": "My Store",
+        "dry_road_rating": 5,
+        "wet_road_rating": 5,
+        "tread_life_estimate": "61K-82K",
+        "product_code": "127418"
+      },
+      {
+        "brand": "Bridgestone",
+        "name": "Dueler LX",
+        "size": "275 /55 R20 113T SL BSW",
+        "price": "239.00",
+        "price_unit": "/EA",
+        "reviews": "1413 Reviews",
+        "gbb_rating": "Best",
+        "tire_category": "All Season",
+        "availability": "6 in stock at",
+        "store_availability": "4595 stevens creek blvd",
+        "store_distance": "3.5 mi away",
+        "dry_road_rating": 5,
+        "wet_road_rating": 5,
+        "tread_life_estimate": "41K-54K",
+        "product_code": "101360"
+      },
+      {
+        "brand": "BFGoodrich",
+        "name": "Trail-Terrain T/A",
+        "size": "275 /55 R20 113T SL OWL",
+        "price": "255.00",
+        "price_unit": "/EA",
+        "reviews": "287 Reviews",
+        "gbb_rating": "Best",
+        "tire_category": "All Terrain",
+        "availability": "5 in stock at",
+        "store_availability": "My Store",
+        "dry_road_rating": 5,
+        "wet_road_rating": 5,
+        "tread_life_estimate": "48K-64K",
+        "product_code": "104114"
+      },
+      {
+        "brand": "Michelin",
+        "name": "LTX M/S2",
+        "size": "275 /55 R20 113H SL BSW",
+        "price": "302.00",
+        "price_unit": "/EA",
+        "reviews": "4040 Reviews",
+        "gbb_rating": "Best",
+        "tire_category": "All Season",
+        "availability": "4 in stock at",
+        "store_availability": "4595 stevens creek blvd",
+        "store_distance": "3.5 mi away",
+        "dry_road_rating": 5,
+        "wet_road_rating": 5,
+        "tread_life_estimate": "34K-45K",
+        "product_code": "127294"
+      },
+      {
+        "brand": "BFGoodrich",
+        "name": "All Terrain T/A KO3",
+        "size": "LT275 /55 R20 115S D1 RBL",
+        "price": "312.00",
+        "price_unit": "/EA",
+        "reviews": "584 Reviews",
+        "gbb_rating": "Best",
+        "tire_category": "All Terrain",
+        "availability": "4 in stock at",
+        "store_availability": "4595 stevens creek blvd",
+        "store_distance": "3.5 mi away",
+        "dry_road_rating": 5,
+        "wet_road_rating": 5,
+        "tread_life_estimate": "54K-74K",
+        "product_code": "157627"
+      }
+    ]
+  },
+  "validation": {
+    "hypothesis_match": true,
+    "expected_items": "multiple",
+    "actual_items": 5,
+    "data_quality": "excellent",
+    "completeness": "all items formatted",
+    "notes": "All expected fields were extracted and formatted correctly. No missing data points were identified."
+  },
+  "insights": {
+    "executive_summary": "The extraction successfully captured detailed information on five tire products from America's Tire, including brand, size, price, and availability. This data is crucial for comparative analysis and decision-making regarding tire purchases.",
+    "key_findings": "The price range for the tires is $239.00 to $312.00 per unit. All products have high ratings and are categorized as 'Best' in their respective categories. Availability varies slightly, with most items in stock at the specified locations.",
+    "recommendation": "Proceed with comparative analysis using the extracted data to evaluate the best tire options based on price, ratings, and availability."
+  },
+  "statistics": {
+    "total_items": 5,
+    "key_metrics": "Price range: $239.00 - $312.00, Condition: All items rated 'Best', Availability: 4-7+ in stock"
+  }
+}
