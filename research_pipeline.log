@@ -3518,3 +3518,45 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 2026-01-15 10:40:16 - INFO - ✅ SUCCESS - Archived: 2026-01-15_18：37：37.html
 2026-01-15 10:40:16 - INFO - ================================================================================
 2026-01-15 10:40:16 - INFO -    ⏭️  Skipping macOS metadata file: ._2026-01-15_18：37：37.html
+2026-01-18 09:24:12 - INFO - 
+================================================================================
+2026-01-18 09:24:12 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-18 09:24:12 - INFO - ================================================================================
+2026-01-18 09:24:12 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-18 09:24:12 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-18 09:24:12 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-18 09:24:12 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-18 09:24:12 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-18 09:24:12 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-18 09:24:12 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-18 09:24:12 - INFO - ================================================================================
+2026-01-18 09:26:04 - INFO - 
+================================================================================
+2026-01-18 09:26:04 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-18 09:26:04 - INFO - ================================================================================
+2026-01-18 09:26:04 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-18 09:26:04 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-18 09:26:04 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-18 09:26:04 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-18 09:26:04 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-18 09:26:04 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-18 09:26:04 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-18 09:26:04 - INFO - ================================================================================
+2026-01-19 08:08:09 - INFO - 
+================================================================================
+2026-01-19 08:08:09 - INFO - 🚀 SMART EXTRACTION PIPELINE - STARTED
+2026-01-19 08:08:09 - INFO - ================================================================================
+2026-01-19 08:08:09 - INFO - 📂 Monitoring: /home/pi5/projects/web-parser/Pi_Inbox/Research_Queue
+2026-01-19 08:08:09 - INFO - 
+🔧 API Configuration (Two-Step Validation):
+2026-01-19 08:08:09 - INFO -    Hypothesis:  gpt-4o-mini (classification)
+2026-01-19 08:08:09 - INFO -    Extraction:  gemini-2.0-flash (big context)
+2026-01-19 08:08:09 - INFO -    Formatting:  gpt-4o-mini (mechanical work)
+2026-01-19 08:08:09 - INFO -    Validation:  gpt-4o (strategic insights)
+2026-01-19 08:08:09 - INFO - 
+⏳ Waiting for HTML files...
+2026-01-19 08:08:09 - INFO - ================================================================================
